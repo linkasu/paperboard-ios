@@ -10,10 +10,12 @@ import UIKit
 
 class MainInputViewController: UIViewController {
   
+  @IBOutlet private weak var inputCollection: UICollectionView!
+  @IBOutlet private weak var inputField: UITextField!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    inputField.isUserInteractionEnabled = false //disable system keyboard
   }
-  
 }
 
