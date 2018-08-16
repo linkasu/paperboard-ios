@@ -25,7 +25,8 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   private weak var collection: UICollectionView?
   
   private (set) var sections = [SquareSection]()
-  
+  private (set) var sectionSize: Int = 0
+
   var numberOfColumns: Int = 3 {
     didSet {
       reload()
@@ -49,6 +50,8 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
       return
     }
     sections.append(SquareSection(size: possibleSize, values: tempAlphabet))
+    sectionSize = sections.count
+    sections = [sections, sections, sections].flatMap({ $0 })
     //
   }
   
