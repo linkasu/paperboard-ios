@@ -26,26 +26,26 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   
   private (set) var sections = [SquareSection]()
   
-  var numberOfColumns: Int = 2 {
+  var numberOfColumns: Int = 3 {
     didSet {
       reload()
     }
   }
   
-  private func reload() {
+  func reload() {
     //update sections data
     let squareSize = numberOfColumns * numberOfColumns
     var tempAlphabet = alphabet
     sections.removeAll()
     while tempAlphabet.count > squareSize {
       let sectionValues = tempAlphabet.prefix(squareSize)
-      sections.append(SquareSection(size: squareSize, values: sectionValues.map{ $0 }))
+      sections.append(SquareSection(size: numberOfColumns, values: sectionValues.map{ $0 }))
       tempAlphabet = tempAlphabet.dropFirst(squareSize).map{ $0 }
     }
     guard !tempAlphabet.isEmpty else {
       return
     }
-    guard let possibleSize = (1...numberOfColumns).first(where: { $0 * $0 >= tempAlphabet.count }) else {
+    guard let possibleSize = (1...numberOfColumns).first(where: { ($0 * $0) >= tempAlphabet.count }) else {
       return
     }
     sections.append(SquareSection(size: possibleSize, values: tempAlphabet))
