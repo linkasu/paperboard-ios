@@ -18,6 +18,7 @@
 		0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB582125C43E00F6F62A /* UIKit+Localizable.swift */; };
 		0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB5B2125CAB500F6F62A /* InputCollectionViewCell.swift */; };
 		0E20AB5E2125CAB500F6F62A /* InputCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */; };
+		0E20AB602125CB7100F6F62A /* InputCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB5F2125CB7100F6F62A /* InputCollectionDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0E20AB582125C43E00F6F62A /* UIKit+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Localizable.swift"; sourceTree = "<group>"; };
 		0E20AB5B2125CAB500F6F62A /* InputCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputCollectionViewCell.xib; sourceTree = "<group>"; };
+		0E20AB5F2125CB7100F6F62A /* InputCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCollectionDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				0E20AB5B2125CAB500F6F62A /* InputCollectionViewCell.swift */,
 				0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */,
+				0E20AB5F2125CB7100F6F62A /* InputCollectionDataSource.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				0E20AB282125B93F00F6F62A /* AppDelegate.swift in Sources */,
 				0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */,
 				0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */,
+				0E20AB602125CB7100F6F62A /* InputCollectionDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
