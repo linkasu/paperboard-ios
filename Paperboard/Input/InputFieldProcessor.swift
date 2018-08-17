@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputFieldProcessor: NSObject {
+class InputFieldProcessor: NSObject, UITextFieldDelegate {
   var onUpdate: ((String) -> Void)?
   
   private (set) var currentValue: String = "" {
@@ -29,4 +29,13 @@ class InputFieldProcessor: NSObject {
     currentValue = String(currentValue.dropLast())
   }
 
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    return false
+  }
+  
+  func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    textField.inputView = UIView(frame: CGRect.zero)
+    return true
+  }
+  
 }

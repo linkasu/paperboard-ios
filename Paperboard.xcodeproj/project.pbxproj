@@ -23,6 +23,7 @@
 		0E20AB6F21270F1900F6F62A /* InputCollectionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */; };
 		0E20AB71212713AE00F6F62A /* InputFieldProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB70212713AE00F6F62A /* InputFieldProcessor.swift */; };
 		0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB722127155F00F6F62A /* Collection+Safe.swift */; };
+		0E20AB7521271C7600F6F62A /* ClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7421271C7600F6F62A /* ClearTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCollectionProcessor.swift; sourceTree = "<group>"; };
 		0E20AB70212713AE00F6F62A /* InputFieldProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldProcessor.swift; sourceTree = "<group>"; };
 		0E20AB722127155F00F6F62A /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		0E20AB7421271C7600F6F62A /* ClearTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				0E20AB612125DB3000F6F62A /* InputCollectionLayout.swift */,
 				0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */,
 				0E20AB70212713AE00F6F62A /* InputFieldProcessor.swift */,
+				0E20AB7421271C7600F6F62A /* ClearTextField.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */,
 				0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */,
 				0E20AB602125CB7100F6F62A /* InputCollectionDataSource.swift in Sources */,
+				0E20AB7521271C7600F6F62A /* ClearTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
