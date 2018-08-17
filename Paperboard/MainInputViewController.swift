@@ -18,6 +18,10 @@ class MainInputViewController: UIViewController {
   private let inputFieldProcessor = InputFieldProcessor()
   private var inputCollectionProcessor: InputCollectionProcessor!
   
+  @IBAction private func onClearButtonTouched(_ sender: UIButton!) {
+    inputFieldProcessor.clear()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     //TODO: Relocate setup and linking in storyboard

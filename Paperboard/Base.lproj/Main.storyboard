@@ -80,6 +80,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.clear"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onClearButtonTouched:" destination="3hb-Gl-INB" eventType="touchUpInside" id="XWl-eV-Lsz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6V-VI-fdM">
                                                 <rect key="frame" x="381.5" y="0.0" width="182.5" height="48"/>
