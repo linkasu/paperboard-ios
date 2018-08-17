@@ -10,8 +10,35 @@ import UIKit
 
 class SelectableCollectionDelegate: NSObject, UICollectionViewDelegate {
   var onCellSelected: ((IndexPath) -> Void)?
-  
-  func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     onCellSelected?(indexPath)
+  }
+}
+
+class InputCollectionProcessor: SelectableCollectionDelegate {
+  private let inputSource: InputCollectionDataSource
+  
+  init(withSource source: InputCollectionDataSource) {
+    inputSource = source
+    super.init()
+  }
+  
+  func scrollsToMiddleSection(_ scrollView: UIScrollView) {
+    let sectionSize = CGFloat(inputSource.sectionSize) * scrollView.frame.width
+    let offset = scrollView.contentOffset.x
+    if offset < sectionSize {
+      scrollView.setContentOffset(CGPoint(x: offset+sectionSize, y: 0), animated: false)
+    }
+    if offset >= 2 * sectionSize {
+      scrollView.setContentOffset(CGPoint(x: offset-sectionSize, y: 0), animated: false)
+    }
+  }
+  
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    scrollsToMiddleSection(scrollView)
+  }
+  
+  func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    scrollsToMiddleSection(scrollView)
   }
 }
