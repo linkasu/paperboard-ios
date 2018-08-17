@@ -15,8 +15,8 @@ extension UINavigationItem {
       return title
     }
     set {
-      if let newValue = localizableTitle {
-        title = NSLocalizedString(newValue, comment: "")
+      if let nValue = newValue {
+        title = NSLocalizedString(nValue, comment: "")
       } else {
         title = nil
       }
@@ -27,11 +27,11 @@ extension UINavigationItem {
 extension UIButton {
   @IBInspectable var localizableTitle: String? {
     get {
-      return title(for: .normal)
+      return nil
     }
     set {
-      if let newValue = localizableTitle {
-        setTitle(NSLocalizedString(newValue, comment: ""), for: .normal)
+      if let nValue = newValue {
+        setTitle(NSLocalizedString(nValue, comment: ""), for: .normal)
       } else {
         setTitle(nil, for: .normal)
       }
