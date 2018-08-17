@@ -35,6 +35,9 @@ class InputFieldProcessor: NSObject, UITextFieldDelegate {
   
   func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
     textField.inputView = UIView(frame: CGRect.zero)
+    textField.inputAccessoryView = UIView(frame: CGRect.zero)
+    textField.inputAssistantItem.leadingBarButtonGroups.removeAll()
+    textField.inputAssistantItem.trailingBarButtonGroups.removeAll()
     return true
   }
   

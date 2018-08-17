@@ -85,6 +85,23 @@ class MainInputViewController: UIViewController {
     inputCollectionProcessor.scrollsToMiddleSection(inputCollection)
     inputField.becomeFirstResponder()
   }
+  
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    let visibleIndex = inputCollection.indexPathsForVisibleItems.min()
+    let section = visibleIndex?.section
+    coordinator.animate(
+      alongsideTransition: { [weak self] context in
+      },
+      completion: { [weak self] (context) in
+        self?.inputLayout.prepare()
 
+        if let nIndexPath = visibleIndex {
+          self?.inputCollection.reloadData()
+          self?.inputCollection.scrollToItem(at: nIndexPath, at: .left, animated: false)
+
+        }
+    })
+  }
 }
 
