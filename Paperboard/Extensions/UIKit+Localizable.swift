@@ -38,3 +38,33 @@ extension UIButton {
     }
   }
 }
+
+extension UIBarButtonItem {
+  @IBInspectable var localizableTitle: String? {
+    get {
+      return title
+    }
+    set {
+      if let nValue = newValue {
+        title = NSLocalizedString(nValue, comment: "")
+      } else {
+        title = nil
+      }
+    }
+  }
+}
+
+extension UILabel {
+  @IBInspectable var localizableText: String? {
+    get {
+      return text
+    }
+    set {
+      if let nValue = newValue {
+        text = NSLocalizedString(nValue, comment: "")
+      } else {
+        text = nil
+      }
+    }
+  }
+}

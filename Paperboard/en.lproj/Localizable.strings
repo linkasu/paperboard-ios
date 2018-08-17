@@ -18,3 +18,5 @@
 "settings.title" = "Настройки";
 "settings.dialog.columns" = "Выбрать количество столбцов";
 "settings.dialog.cancel" = "Отмена";
+"settings.columns.title" = "Количество столбцов";
+

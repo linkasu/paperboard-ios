@@ -150,6 +150,14 @@
                         <viewLayoutGuide key="safeArea" id="5hj-ip-iPV"/>
                     </view>
                     <navigationItem key="navigationItem" title="LINKa. Paperboard" id="q7n-LF-aKO">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="X1U-4z-9DN">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="settings.title"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="showSettings:" destination="3hb-Gl-INB" id="YXZ-GB-wEs"/>
+                            </connections>
+                        </barButtonItem>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.title"/>
                         </userDefinedRuntimeAttributes>
