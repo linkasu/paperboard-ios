@@ -11,6 +11,9 @@ import UIKit
 private let inputCellXib = "InputCollectionViewCell"
 private let inputCellReuse = "InputCellReuseID"
 
+/*
+ * Generate cells from alphabet
+ */
 class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   
   struct SquareSection {
@@ -19,7 +22,13 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   }
   
   private var alphabet: [String] = {
-    return " abcdefghi".map({ String($0) })
+    guard let firstLetter = Unicode.Scalar.init("а"), let lastLetter = Unicode.Scalar.init("я") else {
+      NSLog("can't build alphabet source...")
+      return []
+    }
+    var letters = (firstLetter.value...lastLetter.value).compactMap{ UnicodeScalar($0) }.map{ String($0) }
+    letters.insert(" ", at: 0)
+    return letters
   }()
   
   private weak var collection: UICollectionView?
