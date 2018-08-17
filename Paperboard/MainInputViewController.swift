@@ -21,6 +21,11 @@ class MainInputViewController: UIViewController {
   private let inputFieldProcessor = InputFieldProcessor()
   private let speechProcessor = TextToSpeechProcessor()
   private var inputCollectionProcessor: InputCollectionProcessor!
+  private let settings = SettingsProcessor()
+  
+  @IBAction private func showSettings(_ sender: UIBarButtonItem!) {
+    settings.showSettings(onController: self, byBarButton: sender)
+  }
   
   @IBAction private func onSpeechButtonTouched(_ sender: UIButton!) {
     guard !inputFieldProcessor.currentValue.isEmpty else {
@@ -55,6 +60,7 @@ class MainInputViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     //TODO: Relocate setup and linking in storyboard
+    inputSource.numberOfColumns = (SettingsManager().getSettingValue(.columns) as? NSNumber)?.intValue ?? 3
     inputSource.setup(forCollection: inputCollection)
     inputField.delegate = inputFieldProcessor
     inputCollectionProcessor = InputCollectionProcessor(withSource: inputSource)
@@ -76,6 +82,17 @@ class MainInputViewController: UIViewController {
     inputCollectionProcessor.onScrollEnded = { [weak self] in
       self?.allowScrollInteraction(true)
     }
+    
+    settings.onColumnAmountChanged = { [weak self] newColumns in
+      guard let `self` = self else {
+        return
+      }
+      self.inputSource.numberOfColumns = newColumns
+      self.inputLayout.prepare()
+      self.inputCollection.reloadData()
+      self.inputCollection.setCollectionViewLayout(self.inputLayout, animated: true)
+      self.inputCollectionProcessor.scrollsToMiddleSection(self.inputCollection)
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -89,17 +106,13 @@ class MainInputViewController: UIViewController {
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransition(to: size, with: coordinator)
     let visibleIndex = inputCollection.indexPathsForVisibleItems.min()
-    let section = visibleIndex?.section
     coordinator.animate(
-      alongsideTransition: { [weak self] context in
-      },
+      alongsideTransition: nil,
       completion: { [weak self] (context) in
         self?.inputLayout.prepare()
-
         if let nIndexPath = visibleIndex {
           self?.inputCollection.reloadData()
           self?.inputCollection.scrollToItem(at: nIndexPath, at: .left, animated: false)
-
         }
     })
   }
