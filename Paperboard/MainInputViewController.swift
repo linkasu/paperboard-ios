@@ -22,6 +22,10 @@ class MainInputViewController: UIViewController {
     inputFieldProcessor.clear()
   }
   
+  @IBAction private func onBackspaceButtonTouched(_ sender: UIButton!) {
+    inputFieldProcessor.backSpace()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     //TODO: Relocate setup and linking in storyboard
