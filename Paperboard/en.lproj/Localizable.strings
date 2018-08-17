@@ -12,7 +12,9 @@
 "input.backspace" = "ШАГ НАЗАД";
 "input.clear" = "СТЕРЕТЬ";
 "input.talk" = "СКАЗАТЬ";
+"input.alphabet" = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
 //MARK: Settings
 
+"settings.title" = "Настройки";
 "settings.dialog.columns" = "Выбрать количество столбцов";
 "settings.dialog.cancel" = "Отмена";

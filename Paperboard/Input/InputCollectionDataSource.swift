@@ -22,12 +22,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   }
   
   private var alphabet: [String] = {
-    //TODO: issues#4 - Make it depend on app language
-    guard let firstLetter = Unicode.Scalar.init("а"), let lastLetter = Unicode.Scalar.init("я") else {
-      NSLog("can't build alphabet source...")
-      return []
-    }
-    var letters = (firstLetter.value...lastLetter.value).compactMap{ UnicodeScalar($0) }.map{ String($0) }
+    var letters = NSLocalizedString("input.alphabet", comment: "").map{ String($0) }
     letters.insert(" ", at: 0)
     return letters
   }()
