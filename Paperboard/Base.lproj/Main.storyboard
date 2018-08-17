@@ -48,10 +48,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sD3-hK-vVp">
                                 <rect key="frame" x="4" y="84" width="113.5" height="184"/>
                                 <color key="backgroundColor" white="0.9034264352586534" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onPrevButtonTouched:" destination="3hb-Gl-INB" eventType="touchUpInside" id="lZD-bx-P97"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM9-hj-G9L">
                                 <rect key="frame" x="450.5" y="84" width="113.5" height="184"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onNextButtonTouched:" destination="3hb-Gl-INB" eventType="touchUpInside" id="9vX-9P-aEW"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZ9-SY-jm6">
                                 <rect key="frame" x="0.0" y="272" width="568" height="48"/>
@@ -109,7 +115,7 @@
                                     <constraint firstAttribute="trailing" secondItem="YX1-Ar-TbS" secondAttribute="trailing" constant="2" id="pYI-rM-7h8"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sYm-5H-3gi">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sYm-5H-3gi">
                                 <rect key="frame" x="121.5" y="84" width="325" height="184"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="JH6-el-Nyi"/>
@@ -148,6 +154,8 @@
                     <connections>
                         <outlet property="inputCollection" destination="sYm-5H-3gi" id="fdL-S7-AAA"/>
                         <outlet property="inputField" destination="O6o-Dx-IGk" id="ieB-qg-A3X"/>
+                        <outlet property="nextButton" destination="bM9-hj-G9L" id="S83-NT-Hi0"/>
+                        <outlet property="prevButton" destination="sD3-hK-vVp" id="Fma-rT-w3i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvY-Sd-cww" userLabel="First Responder" sceneMemberID="firstResponder"/>
