@@ -103,6 +103,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.talk"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onSpeechButtonTouched:" destination="3hb-Gl-INB" eventType="touchUpInside" id="coD-o2-wZd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

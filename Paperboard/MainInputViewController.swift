@@ -19,7 +19,15 @@ class MainInputViewController: UIViewController {
   private let inputSource = InputCollectionDataSource()
   private let inputLayout = InputCollectionLayout()
   private let inputFieldProcessor = InputFieldProcessor()
+  private let speechProcessor = TextToSpeechProcessor()
   private var inputCollectionProcessor: InputCollectionProcessor!
+  
+  @IBAction private func onSpeechButtonTouched(_ sender: UIButton!) {
+    guard !inputFieldProcessor.currentValue.isEmpty else {
+      return
+    }
+    speechProcessor.speechText(inputFieldProcessor.currentValue)
+  }
   
   @IBAction private func onClearButtonTouched(_ sender: UIButton!) {
     inputFieldProcessor.clear()
