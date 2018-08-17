@@ -22,6 +22,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   }
   
   private var alphabet: [String] = {
+    //TODO: issues#4 - Make it depend on app language
     guard let firstLetter = Unicode.Scalar.init("а"), let lastLetter = Unicode.Scalar.init("я") else {
       NSLog("can't build alphabet source...")
       return []
@@ -61,7 +62,6 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     sections.append(SquareSection(size: possibleSize, values: tempAlphabet))
     sectionSize = sections.count
     sections = [sections, sections, sections].flatMap({ $0 })
-    //
   }
   
   func setup(forCollection collectionView: UICollectionView) {
