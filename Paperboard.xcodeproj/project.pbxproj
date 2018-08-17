@@ -20,7 +20,9 @@
 		0E20AB5E2125CAB500F6F62A /* InputCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */; };
 		0E20AB602125CB7100F6F62A /* InputCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB5F2125CB7100F6F62A /* InputCollectionDataSource.swift */; };
 		0E20AB622125DB3000F6F62A /* InputCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB612125DB3000F6F62A /* InputCollectionLayout.swift */; };
+		0E20AB6F21270F1900F6F62A /* InputCollectionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */; };
 		0E20AB71212713AE00F6F62A /* InputFieldProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB70212713AE00F6F62A /* InputFieldProcessor.swift */; };
+		0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB722127155F00F6F62A /* Collection+Safe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +62,9 @@
 		0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputCollectionViewCell.xib; sourceTree = "<group>"; };
 		0E20AB5F2125CB7100F6F62A /* InputCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCollectionDataSource.swift; sourceTree = "<group>"; };
 		0E20AB612125DB3000F6F62A /* InputCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCollectionLayout.swift; sourceTree = "<group>"; };
+		0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCollectionProcessor.swift; sourceTree = "<group>"; };
 		0E20AB70212713AE00F6F62A /* InputFieldProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldProcessor.swift; sourceTree = "<group>"; };
+		0E20AB722127155F00F6F62A /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0E20AB582125C43E00F6F62A /* UIKit+Localizable.swift */,
+				0E20AB722127155F00F6F62A /* Collection+Safe.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */,
 				0E20AB5F2125CB7100F6F62A /* InputCollectionDataSource.swift */,
 				0E20AB612125DB3000F6F62A /* InputCollectionLayout.swift */,
+				0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */,
 				0E20AB70212713AE00F6F62A /* InputFieldProcessor.swift */,
 			);
 			path = Input;
@@ -297,9 +303,11 @@
 			files = (
 				0E20AB71212713AE00F6F62A /* InputFieldProcessor.swift in Sources */,
 				0E20AB2A2125B93F00F6F62A /* MainInputViewController.swift in Sources */,
+				0E20AB6F21270F1900F6F62A /* InputCollectionProcessor.swift in Sources */,
 				0E20AB282125B93F00F6F62A /* AppDelegate.swift in Sources */,
 				0E20AB622125DB3000F6F62A /* InputCollectionLayout.swift in Sources */,
 				0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */,
+				0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */,
 				0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */,
 				0E20AB602125CB7100F6F62A /* InputCollectionDataSource.swift in Sources */,
 			);
