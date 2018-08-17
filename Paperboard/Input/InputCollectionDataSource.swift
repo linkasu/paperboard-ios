@@ -69,6 +69,10 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     collectionView.dataSource = self
   }
   
+  func letter(forIndexPath indexPath: IndexPath) -> String? {
+    return sections[safe: indexPath.section]?.values[safe: indexPath.row]
+  }
+  
   func numberOfSections(in collectionView: UICollectionView) -> Int {
     return sections.count
   }
@@ -79,7 +83,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: inputCellReuse, for: indexPath)
-    (cell as? InputCollectionViewCell)?.fill(with: sections[indexPath.section].values[indexPath.row])
+    (cell as? InputCollectionViewCell)?.fill(with: letter(forIndexPath: indexPath) ?? "")
     return cell
   }
 }
