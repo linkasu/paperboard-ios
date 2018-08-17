@@ -90,8 +90,8 @@ class MainInputViewController: UIViewController {
       self.inputSource.numberOfColumns = newColumns
       self.inputLayout.prepare()
       self.inputCollection.reloadData()
-      self.inputCollection.setCollectionViewLayout(self.inputLayout, animated: true)
-      self.inputCollectionProcessor.scrollsToMiddleSection(self.inputCollection)
+      self.inputCollection.setCollectionViewLayout(self.inputLayout, animated: false)
+      self.inputCollection.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
     }
   }
   
