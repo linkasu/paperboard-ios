@@ -50,4 +50,9 @@ class InputCollectionProcessor: SelectableCollectionDelegate {
     let nextOffset = scrollView.contentOffset.x + scrollView.frame.width
     scrollView.setContentOffset(CGPoint(x: nextOffset, y: 0), animated: true)
   }
+  
+  func scrollPrev(_ scrollView: UIScrollView) {
+    let nextOffset = scrollView.contentOffset.x - scrollView.frame.width
+    scrollView.setContentOffset(CGPoint(x: nextOffset, y: 0), animated: true)
+  }
 }
