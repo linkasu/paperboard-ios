@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YandexMobileMetrica
 
 class MainInputViewController: UIViewController {
   
@@ -32,6 +33,7 @@ class MainInputViewController: UIViewController {
       return
     }
     speechProcessor.speechText(inputFieldProcessor.currentValue)
+    YMMYandexMetrica.reportEvent("say")
   }
   
   @IBAction private func onClearButtonTouched(_ sender: UIButton!) {
