@@ -27,6 +27,7 @@
                     <subviews>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="uH9-Ty-Ltw">
                             <rect key="frame" x="14" y="54" width="252" height="31"/>
+                            <color key="tintColor" red="0.98431372549019602" green="0.80000000000000004" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="sliderChanged:forEvent:" destination="-1" eventType="valueChanged" id="zRl-uX-hsC"/>
                             </connections>
