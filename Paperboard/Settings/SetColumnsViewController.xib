@@ -57,7 +57,9 @@
                                 <constraint firstAttribute="width" constant="46" id="6Vi-Ek-Q0n"/>
                                 <constraint firstAttribute="height" constant="30" id="NS0-l2-cO7"/>
                             </constraints>
-                            <state key="normal" title="OK"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" red="0.98431372549999996" green="0.80000000000000004" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                             <connections>
                                 <action selector="okPressed:" destination="-1" eventType="touchUpInside" id="cir-7m-1y8"/>
                             </connections>

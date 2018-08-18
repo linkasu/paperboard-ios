@@ -13,7 +13,7 @@ class SettingsProcessor: NSObject {
   func showSettings(onController controller: UIViewController, byBarButton barButton: UIBarButtonItem) {
     
     let settingsAlert = UIAlertController(title: NSLocalizedString("settings.title", comment: ""), message: nil, preferredStyle: .actionSheet)
-    
+    settingsAlert.view.tintColor = #colorLiteral(red: 0.9843137255, green: 0.8, blue: 0.1882352941, alpha: 1)
     settingsAlert.addAction(
       UIAlertAction(
         title: NSLocalizedString("settings.dialog.columns", comment: ""),

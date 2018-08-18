@@ -155,6 +155,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="LINKa. Paperboard" id="q7n-LF-aKO">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="X1U-4z-9DN">
+                            <color key="tintColor" red="0.98431372549999996" green="0.80000000000000004" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="settings.title"/>
                             </userDefinedRuntimeAttributes>
