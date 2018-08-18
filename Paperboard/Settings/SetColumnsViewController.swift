@@ -19,10 +19,10 @@ class SetColumnsViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let value = (settings.getSettingValue(.columns) as? NSNumber)?.floatValue ?? columnsSLider.minimumValue
-    thumbLabel.text = "\(Int(roundf(value)))"
+    let value = (settings.getSettingValue(.columns) as? Int) ?? 2
+    thumbLabel.text = "\(value)"
 
-    columnsSLider.setValue(value, animated: true)
+    columnsSLider.setValue(Float(value), animated: true)
     // Do any additional setup after loading the view.
   }
   
@@ -52,7 +52,7 @@ class SetColumnsViewController: UIViewController {
     let intValue = Int(finalValue)
     onAmountChanges?(intValue)
     thumbLabel.text = "\(intValue)"
-    settings.update(.columns, withValue: NSNumber(value: finalValue))
+    settings.update(.columns, withValue: intValue)
     UIView.animate(withDuration: 0.25) {
       sender.setValue(finalValue, animated: true)
       self.updateThumbLabel(onSlider: sender, toValue: finalValue)
@@ -68,7 +68,7 @@ class SetColumnsViewController: UIViewController {
     let setColumnsVC = SetColumnsViewController(nibName: "SetColumnsViewController", bundle: nil)
     setColumnsVC.modalPresentationStyle = .overFullScreen
     setColumnsVC.onAmountChanges = callback
-    controller.present(setColumnsVC, animated: true, completion: nil)
+    controller.present(setColumnsVC, animated: false, completion: nil)
     return setColumnsVC
   }
   
