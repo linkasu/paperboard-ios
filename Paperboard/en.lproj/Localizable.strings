@@ -8,15 +8,15 @@
 
 //MARK: Main input screen
 
-"input.title" = "LINKa. Бумажная клавиатура";
-"input.backspace" = "ШАГ НАЗАД";
-"input.clear" = "СТЕРЕТЬ";
-"input.talk" = "СКАЗАТЬ";
-"input.alphabet" = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+"input.title" = "LINKa. Paperboard";
+"input.backspace" = "BACKSPACE";
+"input.clear" = "CLEAR";
+"input.talk" = "SAY";
+"input.alphabet" = "abcdefghijklmnopqrstuvwxyz";
 //MARK: Settings
 
-"settings.title" = "Настройки";
-"settings.dialog.columns" = "Выбрать количество столбцов";
-"settings.dialog.cancel" = "Отмена";
-"settings.columns.title" = "Количество столбцов";
+"settings.title" = "Settings";
+"settings.dialog.columns" = "Choose a count of columns";
+"settings.dialog.cancel" = "Cancel";
+"settings.columns.title" = "Count of columns";
 
