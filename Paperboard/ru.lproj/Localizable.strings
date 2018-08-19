@@ -8,7 +8,7 @@
 
 //MARK: Main input screen
 
-"input.title" = "LINK'a. Бумажная клавиатура";
+"input.title" = "LINKa. Бумажная клавиатура";
 "input.backspace" = "ШАГ НАЗАД";
 "input.clear" = "СТЕРЕТЬ";
 "input.talk" = "СКАЗАТЬ";
