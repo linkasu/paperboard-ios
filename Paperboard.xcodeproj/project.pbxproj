@@ -29,6 +29,7 @@
 		0E20AB7F212729B400F6F62A /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7E212729B400F6F62A /* SettingsManager.swift */; };
 		0E20AB822127386200F6F62A /* SetColumnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB802127386200F6F62A /* SetColumnsViewController.swift */; };
 		0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB812127386200F6F62A /* SetColumnsViewController.xib */; };
+		0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5433392129CD0B00DBC3DD /* InfoPlist.strings */; };
 		4B4F3825B8B07B2DA6B31FA9 /* Pods_Paperboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */; };
 		5F845FD02FEC56FA07AEC8DF /* Pods_PaperboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9FD14C75AB461CA4B97016 /* Pods_PaperboardTests.framework */; };
 		70C805EC626B82DDBB75AF77 /* Pods_PaperboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */; };
@@ -81,6 +82,13 @@
 		0E20AB7E212729B400F6F62A /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		0E20AB802127386200F6F62A /* SetColumnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColumnsViewController.swift; sourceTree = "<group>"; };
 		0E20AB812127386200F6F62A /* SetColumnsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetColumnsViewController.xib; sourceTree = "<group>"; };
+		0E5433382129CD0B00DBC3DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E54333B2129CD2600DBC3DD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0E54333C2129CD2600DBC3DD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0E54333D2129CD2600DBC3DD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E54333E2129CE7200DBC3DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0E54333F2129CE7200DBC3DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0E5433402129CE7200DBC3DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperboardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9FD14C75AB461CA4B97016 /* Pods_PaperboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paperboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +163,7 @@
 				0E20AB332125B94200F6F62A /* Info.plist */,
 				0E20AB7821271F5600F6F62A /* Localizable.strings */,
 				0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */,
+				0E5433392129CD0B00DBC3DD /* InfoPlist.strings */,
 			);
 			path = Paperboard;
 			sourceTree = "<group>";
@@ -323,6 +332,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				de,
 			);
 			mainGroup = 0E20AB1B2125B93F00F6F62A;
 			productRefGroup = 0E20AB252125B93F00F6F62A /* Products */;
@@ -342,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E20AB322125B94200F6F62A /* LaunchScreen.storyboard in Resources */,
+				0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */,
 				0E20AB7621271F5600F6F62A /* Localizable.strings in Resources */,
 				0E20AB2F2125B94200F6F62A /* Assets.xcassets in Resources */,
 				0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */,
@@ -489,6 +501,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				0E20AB312125B94200F6F62A /* Base */,
+				0E54333B2129CD2600DBC3DD /* ru */,
+				0E54333E2129CE7200DBC3DD /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -497,8 +511,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				0E20AB7721271F5600F6F62A /* en */,
+				0E54333C2129CD2600DBC3DD /* ru */,
+				0E54333F2129CE7200DBC3DD /* de */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		0E5433392129CD0B00DBC3DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E5433382129CD0B00DBC3DD /* en */,
+				0E54333D2129CD2600DBC3DD /* ru */,
+				0E5433402129CE7200DBC3DD /* de */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -508,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -568,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
