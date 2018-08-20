@@ -83,6 +83,7 @@ class MainInputViewController: UIViewController {
     
     inputCollectionProcessor.onScrollEnded = { [weak self] in
       self?.allowScrollInteraction(true)
+      self?.updateButtonsTitles()
     }
     
     settings.onColumnAmountChanged = { [weak self] newColumns in
@@ -94,7 +95,32 @@ class MainInputViewController: UIViewController {
       self.inputCollection.reloadData()
       self.inputCollection.setCollectionViewLayout(self.inputLayout, animated: false)
       self.inputCollection.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
+      self.updateButtonsTitles()
     }
+    
+    prevButton.titleLabel?.textAlignment = .center
+    nextButton.titleLabel?.textAlignment = .center
+    prevButton.titleLabel?.numberOfLines = 2
+    nextButton.titleLabel?.numberOfLines = 2
+    
+    self.updateButtonsTitles()
+  }
+  
+  private func updateButtonsTitles() {
+    let currentSection = Int(roundf(Float(inputCollection.contentOffset.x / inputCollection.frame.width)))
+    let totalSections = inputSource.sections.count
+    let nextSection = (currentSection + 1) % totalSections
+    let prevSection = (currentSection - 1 + totalSections) % totalSections
+    let titleProduce: ((Int) -> String) = { sectionNumber -> String in
+      let values = self.inputSource.sections[sectionNumber].values
+      if values.count < 5 {
+        return values.joined(separator: ",")
+      }
+      return [values.prefix(2), ["..."], values.suffix(1)].flatMap({ $0 }).joined(separator: ",")
+    }
+    
+    prevButton.setTitle("⬅️\n" + titleProduce(prevSection), for: .normal)
+    nextButton.setTitle("➡️\n" + titleProduce(nextSection), for: .normal)
   }
   
   override func viewWillAppear(_ animated: Bool) {
