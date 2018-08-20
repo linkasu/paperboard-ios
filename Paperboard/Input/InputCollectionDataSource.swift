@@ -23,7 +23,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   
   private var alphabet: [String] = {
     var letters = NSLocalizedString("input.alphabet", comment: "").map{ String($0) }
-    letters.insert(" ", at: 0)
+    letters.insert("_", at: 0)
     return letters
   }()
   

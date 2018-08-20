@@ -75,8 +75,11 @@ class MainInputViewController: UIViewController {
     }
     
     inputCollectionProcessor.onCellSelected = { [weak self] indexPath in
-      guard let letter = self?.inputSource.letter(forIndexPath: indexPath) else {
+      guard var letter = self?.inputSource.letter(forIndexPath: indexPath) else {
         return
+      }
+      if letter == "_" {
+        letter = " "
       }
       self?.inputFieldProcessor.appendLetter(letter)
     }
