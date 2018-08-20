@@ -97,6 +97,12 @@ class MainInputViewController: UIViewController {
       self.inputCollection.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
       self.updateButtonsTitles()
     }
+    
+    prevButton.titleLabel?.textAlignment = .center
+    nextButton.titleLabel?.textAlignment = .center
+    prevButton.titleLabel?.numberOfLines = 2
+    nextButton.titleLabel?.numberOfLines = 2
+    
     self.updateButtonsTitles()
   }
   
@@ -113,8 +119,8 @@ class MainInputViewController: UIViewController {
       return [values.prefix(2), ["..."], values.suffix(1)].flatMap({ $0 }).joined(separator: ",")
     }
     
-    prevButton.setTitle(titleProduce(prevSection), for: .normal)
-    nextButton.setTitle(titleProduce(nextSection), for: .normal)
+    prevButton.setTitle("⬅️\n" + titleProduce(prevSection), for: .normal)
+    nextButton.setTitle("➡️\n" + titleProduce(nextSection), for: .normal)
   }
   
   override func viewWillAppear(_ animated: Bool) {
