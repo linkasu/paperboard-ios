@@ -122,8 +122,8 @@ class MainInputViewController: UIViewController {
       return [values.prefix(2), ["..."], values.suffix(1)].flatMap({ $0 }).joined(separator: ",")
     }
     
-    prevButton.setTitle("⬅️\n" + titleProduce(prevSection), for: .normal)
-    nextButton.setTitle("➡️\n" + titleProduce(nextSection), for: .normal)
+    prevButton.setTitle("⬅️\n" + titleProduce(prevSection).uppercased(), for: .normal)
+    nextButton.setTitle("➡️\n" + titleProduce(nextSection).uppercased(), for: .normal)
   }
   
   override func viewWillAppear(_ animated: Bool) {
