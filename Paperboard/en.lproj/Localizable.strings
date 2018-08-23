@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Paperboard
+
+  Created by Andrey Tchernov on 16.08.2018.
+  Copyright © 2018 Ice Rock. All rights reserved.
+*/
+
+//MARK: Main input screen
+
+"input.title" = "LINKa. Paperboard";
+"input.backspace" = "BACKSPACE";
+"input.clear" = "CLEAR";
+"input.talk" = "SAY";
+"input.alphabet" = "abcdefghijklmnopqrstuvwxyz";
+//MARK: Settings
+
+"settings.title" = "Settings";
+"settings.dialog.columns" = "Choose a count of columns";
+"settings.dialog.cancel" = "Cancel";
+"settings.columns.title" = "Count of columns";
+
