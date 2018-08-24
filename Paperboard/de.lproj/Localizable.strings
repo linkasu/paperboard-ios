@@ -8,15 +8,13 @@
 
 //MARK: Main input screen
 
-"input.title" = "LINKa. Бумажная клавиатура";
-"input.backspace" = "ШАГ НАЗАД";
-"input.clear" = "СТЕРЕТЬ";
-"input.talk" = "СКАЗАТЬ";
-"input.alphabet" = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-//MARK: Settings
+"input.title" = "LINKa. Papiertastatur";
+"input.backspace" = "Rückgängig";
+"input.clear" = "Löschen";
+"input.talk" = "Aussprechen";
+"input.alphabet" = "abcdefghijklmnopqrstuvwxyzäöüß";
 
-"settings.title" = "Настройки";
-"settings.dialog.columns" = "Выбрать количество столбцов";
-"settings.dialog.cancel" = "Отмена";
-"settings.columns.title" = "Количество столбцов";
-
+"settings.title" = "Einstellungen";
+"settings.dialog.columns" = "Die Spaltenanzahl festlegen";
+"settings.dialog.cancel" = "Abbrechen";
+"settings.columns.title" = "Spaltenanzahl";
