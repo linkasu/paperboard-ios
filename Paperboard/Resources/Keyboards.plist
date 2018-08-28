@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>voiceName</key>
+		<string>Samantha</string>
+		<key>locale</key>
+		<string>en-us</string>
+		<key>alphabet</key>
+		<string>abcdefghijklmnopqrstuvwxyz</string>
+		<key>rightToLeft</key>
+		<false/>
+		<key>voiceId</key>
+		<string>com.apple.ttsbundle.Samantha-compact</string>
+	</dict>
+</array>
+</plist>

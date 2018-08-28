@@ -13,6 +13,7 @@ class SettingsManager: NSObject {
   
   enum Settings: String {
     case columns
+    case locale
     
     fileprivate var defaultsKey: String {
       get {

@@ -30,6 +30,7 @@
 		0E20AB822127386200F6F62A /* SetColumnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB802127386200F6F62A /* SetColumnsViewController.swift */; };
 		0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB812127386200F6F62A /* SetColumnsViewController.xib */; };
 		0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5433392129CD0B00DBC3DD /* InfoPlist.strings */; };
+		0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E734BA82135A67B0000D02F /* Keyboards.plist */; };
 		4B4F3825B8B07B2DA6B31FA9 /* Pods_Paperboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */; };
 		5F845FD02FEC56FA07AEC8DF /* Pods_PaperboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9FD14C75AB461CA4B97016 /* Pods_PaperboardTests.framework */; };
 		70C805EC626B82DDBB75AF77 /* Pods_PaperboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */; };
@@ -89,6 +90,7 @@
 		0E54333E2129CE7200DBC3DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0E54333F2129CE7200DBC3DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0E5433402129CE7200DBC3DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E734BA82135A67B0000D02F /* Keyboards.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keyboards.plist; sourceTree = "<group>"; };
 		1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperboardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9FD14C75AB461CA4B97016 /* Pods_PaperboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paperboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,18 +154,16 @@
 		0E20AB262125B93F00F6F62A /* Paperboard */ = {
 			isa = PBXGroup;
 			children = (
+				0E734BA72135A6260000D02F /* Resources */,
 				0E20AB7B2127286E00F6F62A /* Settings */,
 				0E20AB5A2125CA8300F6F62A /* Input */,
 				0E20AB572125C42B00F6F62A /* Extensions */,
 				0E20AB272125B93F00F6F62A /* AppDelegate.swift */,
 				0E20AB292125B93F00F6F62A /* MainInputViewController.swift */,
 				0E20AB2B2125B93F00F6F62A /* Main.storyboard */,
-				0E20AB2E2125B94200F6F62A /* Assets.xcassets */,
 				0E20AB302125B94200F6F62A /* LaunchScreen.storyboard */,
 				0E20AB332125B94200F6F62A /* Info.plist */,
-				0E20AB7821271F5600F6F62A /* Localizable.strings */,
 				0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */,
-				0E5433392129CD0B00DBC3DD /* InfoPlist.strings */,
 			);
 			path = Paperboard;
 			sourceTree = "<group>";
@@ -218,6 +218,17 @@
 				0E20AB812127386200F6F62A /* SetColumnsViewController.xib */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		0E734BA72135A6260000D02F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E20AB7821271F5600F6F62A /* Localizable.strings */,
+				0E5433392129CD0B00DBC3DD /* InfoPlist.strings */,
+				0E20AB2E2125B94200F6F62A /* Assets.xcassets */,
+				0E734BA82135A67B0000D02F /* Keyboards.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7147890B49E1686873B6F8E2 /* Frameworks */ = {
@@ -357,6 +368,7 @@
 				0E20AB7621271F5600F6F62A /* Localizable.strings in Resources */,
 				0E20AB2F2125B94200F6F62A /* Assets.xcassets in Resources */,
 				0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */,
+				0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */,
 				0E20AB5E2125CAB500F6F62A /* InputCollectionViewCell.xib in Resources */,
 				0E20AB2D2125B93F00F6F62A /* Main.storyboard in Resources */,
 			);

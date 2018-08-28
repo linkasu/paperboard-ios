@@ -9,7 +9,10 @@
 import UIKit
 
 class SettingsProcessor: NSObject {
+  
   var onColumnAmountChanged: ((Int) -> Void)?
+  var onKeyboardChanged: ((Keyboard) -> Void)?
+  
   func showSettings(onController controller: UIViewController, byBarButton barButton: UIBarButtonItem) {
     
     let settingsAlert = UIAlertController(title: NSLocalizedString("settings.title", comment: ""), message: nil, preferredStyle: .actionSheet)
@@ -37,5 +40,24 @@ class SettingsProcessor: NSObject {
   
   private func showColumnsSetting(onController controller: UIViewController) {
     SetColumnsViewController.push(from: controller, withChangesCallback: onColumnAmountChanged)
+  }
+  
+  func loadKeyboards() -> [Keyboard] {
+    let decoder = PropertyListDecoder()
+
+    guard let plist = Bundle.main.url(forResource: "Keyboards", withExtension: "plist"),
+      let data = try? Data(contentsOf: plist),
+      let keyboards = try? decoder.decode([Keyboard].self, from: data) else {
+      return []
+    }
+    return keyboards
+  }
+  
+  struct Keyboard: Decodable {
+    let voiceId: String
+    let voiceName: String
+    let alphabet: String
+    let rightToLeft: Bool
+    let locale: String
   }
 }
