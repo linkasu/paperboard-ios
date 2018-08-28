@@ -38,6 +38,10 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     }
   }
   
+  func printableVariant(ofLetter letter: String) -> String {
+    return letter == "␣" ? " " : letter
+  }
+  
   func reload() {
     //update sections data
     let squareSize = numberOfColumns * numberOfColumns

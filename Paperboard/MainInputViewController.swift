@@ -75,13 +75,11 @@ class MainInputViewController: UIViewController {
     }
     
     inputCollectionProcessor.onCellSelected = { [weak self] indexPath in
-      guard var letter = self?.inputSource.letter(forIndexPath: indexPath) else {
+      guard let source = self?.inputSource,
+        let letter = source.letter(forIndexPath: indexPath) else {
         return
       }
-      if letter == "_" {
-        letter = " "
-      }
-      self?.inputFieldProcessor.appendLetter(letter)
+      self?.inputFieldProcessor.appendLetter(source.printableVariant(ofLetter: letter))
     }
     
     inputCollectionProcessor.onScrollEnded = { [weak self] in
