@@ -88,13 +88,17 @@ class SettingsProcessor: NSObject {
       //TODO: show errors
       return
     }
-    let index = keyboards.index(where: { $0.locale == currentKeyboard?.locale }) ?? 0
+    var keyboardTitles = keyboards.map({ "\($0.voiceName) - \(NSLocale.current.localizedString(forLanguageCode: $0.locale) ?? "Localize me: settings.keyboard.unknownLanguage") (\($0.locale))"})
+    keyboardTitles.insert("Localize me: settings.keyboard.default", at: 0)
+    
+    let index = keyboards.index(where: { $0.voiceId == currentKeyboard?.voiceId }) ?? 0
     let picker = ActionSheetStringPicker(
       title: "Localize me: settings.keyboard.title",
-      rows: keyboards.map({ "\($0.voiceName) - \(NSLocale.current.localizedString(forLanguageCode: $0.locale) ?? "Localize me: settings.keyboard.unknownLanguage")" }),
+      rows: keyboardTitles,
       initialSelection: index,
       doneBlock: { (picker, newIndex, newValue) in
-        self.currentKeyboard = self.keyboards[newIndex]
+        
+        self.currentKeyboard = newIndex == 0 ? nil : self.keyboards[newIndex - 1]
     },
       cancel: { _ in },
       origin: barButton)
