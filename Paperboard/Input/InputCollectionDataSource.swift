@@ -49,7 +49,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   func reload() {
     //update sections data
     let squareSize = numberOfColumns * numberOfColumns
-    var tempAlphabet = currentKeyboard?.alphabet.map({ String($0) }) ?? alphabet
+    var tempAlphabet = currentKeyboard?.alphabet.replacingOccurrences(of: " ", with: "").map({ String($0) }) ?? alphabet
     tempAlphabet.insert("␣", at: 0)
     sections.removeAll()
     while tempAlphabet.count > squareSize {
