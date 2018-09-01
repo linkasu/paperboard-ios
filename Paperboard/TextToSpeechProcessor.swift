@@ -12,6 +12,7 @@ import AVFoundation
 class TextToSpeechProcessor: NSObject {
   
   private let synthesizer = AVSpeechSynthesizer()
+  private let settings = SettingsProcessor()
   
   override init() {
     super.init()
@@ -19,6 +20,10 @@ class TextToSpeechProcessor: NSObject {
   }
   
   func speechText(_ text: String) {
-    synthesizer.speak(AVSpeechUtterance.init(string: text))
+    let utterance = AVSpeechUtterance(string: text)
+    if let voiceId = settings.currentKeyboard?.voiceId, let voice = AVSpeechSynthesisVoice(identifier: voiceId) {
+      utterance.voice = voice
+    }
+    synthesizer.speak(utterance)
   }
 }
