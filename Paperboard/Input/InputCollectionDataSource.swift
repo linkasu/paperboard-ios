@@ -22,7 +22,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   }
   
   private var alphabet: [String] = {
-    return NSLocalizedString("input.alphabet", comment: "").map{ String($0) }
+    return NSLocalizedString("input.alphabet", comment: "").split(separator: " ").map{ String($0) }
   }()
   
   private weak var collection: UICollectionView?
@@ -49,7 +49,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   func reload() {
     //update sections data
     let squareSize = numberOfColumns * numberOfColumns
-    var tempAlphabet = currentKeyboard?.alphabet.replacingOccurrences(of: " ", with: "").map({ String($0) }) ?? alphabet
+    var tempAlphabet = currentKeyboard?.alphabet.split(separator: " ").map{ String($0) } ?? alphabet
     tempAlphabet.insert("␣", at: 0)
     sections.removeAll()
     while tempAlphabet.count > squareSize {
