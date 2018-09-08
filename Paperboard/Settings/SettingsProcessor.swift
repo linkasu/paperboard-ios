@@ -7,9 +7,50 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
 
 class SettingsProcessor: NSObject {
+  
   var onColumnAmountChanged: ((Int) -> Void)?
+  var onKeyboardChanged: ((Keyboard) -> Void)?
+  
+  private let storage = SettingsStorage()
+  
+  private var keyboards: [Keyboard] = {
+    let decoder = PropertyListDecoder()
+    guard let plist = Bundle.main.url(forResource: "Keyboards", withExtension: "plist"),
+      let data = try? Data(contentsOf: plist),
+      let keyboards = try? decoder.decode([Keyboard].self, from: data) else {
+        return []
+    }
+    return keyboards
+  }()
+  
+  var currentColumns: Int {
+    get {
+      return (storage.getSettingValue(.columns) as? NSNumber)?.intValue ?? 3
+    }
+    set {
+      storage.update(.columns, withValue: NSNumber(integerLiteral: newValue))
+      onColumnAmountChanged?(newValue)
+    }
+  }
+  
+  var currentKeyboard: Keyboard? {
+    get {
+      guard let locale = storage.getSettingValue(.locale) as? String else {
+        return nil
+      }
+      return keyboards.first(where: { $0.locale == locale })
+    }
+    set {
+      storage.update(.columns, withValue: newValue?.locale)
+      if let nKeyboard = newValue {
+        onKeyboardChanged?(nKeyboard)
+      }
+    }
+  }
+  
   func showSettings(onController controller: UIViewController, byBarButton barButton: UIBarButtonItem) {
     
     let settingsAlert = UIAlertController(title: NSLocalizedString("settings.title", comment: ""), message: nil, preferredStyle: .actionSheet)
@@ -22,7 +63,14 @@ class SettingsProcessor: NSObject {
           self.showColumnsSetting(onController: controller)
       })
     )
-    
+    settingsAlert.addAction(
+      UIAlertAction(
+        title: NSLocalizedString("settings.dialog.keyboard", comment: ""),
+        style: .default,
+        handler: { _ in
+          self.showKeyboardSettings(atBarButton: barButton)
+      })
+    )
     settingsAlert.addAction(
       UIAlertAction(
         title: NSLocalizedString("settings.dialog.cancel", comment: ""),
@@ -35,7 +83,44 @@ class SettingsProcessor: NSObject {
     controller.present(settingsAlert, animated: true, completion: nil)
   }
   
+  private func showKeyboardSettings(atBarButton barButton: UIBarButtonItem) {
+    guard !keyboards.isEmpty else {
+      //TODO: show errors
+      return
+    }
+    var keyboardTitles = keyboards.map({ "\($0.voiceName) - \(NSLocale.current.localizedString(forLanguageCode: $0.locale) ?? "settings.keyboard.unknownLanguage") (\($0.locale))"})
+    keyboardTitles.insert("settings.keyboard.default", at: 0)
+    
+    let index = keyboards.index(where: { $0.voiceId == currentKeyboard?.voiceId }) ?? 0
+    let picker = ActionSheetStringPicker(
+      title: "settings.keyboard.title",
+      rows: keyboardTitles,
+      initialSelection: index,
+      doneBlock: { (picker, newIndex, newValue) in
+        
+        self.currentKeyboard = newIndex == 0 ? nil : self.keyboards[newIndex - 1]
+    },
+      cancel: { _ in },
+      origin: barButton)
+    picker?.popoverDisabled = true
+    picker?.show()
+    //controller.present(picker, animated: true, completion: nil)
+  }
+  
   private func showColumnsSetting(onController controller: UIViewController) {
-    SetColumnsViewController.push(from: controller, withChangesCallback: onColumnAmountChanged)
+    let setColumnsVC = SetColumnsViewController.create()
+    setColumnsVC.initialValue = currentColumns
+    setColumnsVC.onAmountChanges = { newValue in
+      self.currentColumns = newValue
+    }
+    controller.present(setColumnsVC, animated: false, completion: nil)
+  }
+  
+  struct Keyboard: Decodable {
+    let voiceId: String
+    let voiceName: String
+    let alphabet: String
+    let rightToLeft: Bool
+    let locale: String
   }
 }

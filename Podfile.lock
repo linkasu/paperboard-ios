@@ -1,18 +1,22 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.3.0)
   - YandexMobileMetrica (3.2.0):
     - YandexMobileMetrica/Static (= 3.2.0)
   - YandexMobileMetrica/Static (3.2.0)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - YandexMobileMetrica (= 3.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
     - YandexMobileMetrica
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   YandexMobileMetrica: f18374ee6977a4cd1d0a86298a0df4ad7baf4135
 
-PODFILE CHECKSUM: 8a426590c7e4426739164ae67a4b865cb073ad81
+PODFILE CHECKSUM: d73d29f422c6910153818edb6610639d1d1db278
 
 COCOAPODS: 1.5.3

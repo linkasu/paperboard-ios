@@ -12,11 +12,14 @@
 "input.backspace" = "ШАГ НАЗАД";
 "input.clear" = "СТЕРЕТЬ";
 "input.talk" = "СКАЗАТЬ";
-"input.alphabet" = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+"input.alphabet" = "а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я";
 //MARK: Settings
 
 "settings.title" = "Настройки";
 "settings.dialog.columns" = "Выбрать количество столбцов";
 "settings.dialog.cancel" = "Отмена";
 "settings.columns.title" = "Количество столбцов";
-
+"settings.dialog.keyboard" = "Голос и язык ввода";
+"settings.keyboard.default" = "По умолчанию";
+"settings.keyboard.title" = "Голос и язык ввода";
+"settings.keyboard.unknownLanguage" = "Не определен";
