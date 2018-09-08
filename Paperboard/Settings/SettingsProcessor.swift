@@ -65,7 +65,7 @@ class SettingsProcessor: NSObject {
     )
     settingsAlert.addAction(
       UIAlertAction(
-        title: NSLocalizedString("Localize me: settings.dialog.keyboard", comment: ""),
+        title: NSLocalizedString("settings.dialog.keyboard", comment: ""),
         style: .default,
         handler: { _ in
           self.showKeyboardSettings(atBarButton: barButton)
@@ -88,12 +88,12 @@ class SettingsProcessor: NSObject {
       //TODO: show errors
       return
     }
-    var keyboardTitles = keyboards.map({ "\($0.voiceName) - \(NSLocale.current.localizedString(forLanguageCode: $0.locale) ?? "Localize me: settings.keyboard.unknownLanguage") (\($0.locale))"})
-    keyboardTitles.insert("Localize me: settings.keyboard.default", at: 0)
+    var keyboardTitles = keyboards.map({ "\($0.voiceName) - \(NSLocale.current.localizedString(forLanguageCode: $0.locale) ?? "settings.keyboard.unknownLanguage") (\($0.locale))"})
+    keyboardTitles.insert("settings.keyboard.default", at: 0)
     
     let index = keyboards.index(where: { $0.voiceId == currentKeyboard?.voiceId }) ?? 0
     let picker = ActionSheetStringPicker(
-      title: "Localize me: settings.keyboard.title",
+      title: "settings.keyboard.title",
       rows: keyboardTitles,
       initialSelection: index,
       doneBlock: { (picker, newIndex, newValue) in

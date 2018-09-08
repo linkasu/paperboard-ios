@@ -19,4 +19,7 @@
 "settings.dialog.columns" = "Выбрать количество столбцов";
 "settings.dialog.cancel" = "Отмена";
 "settings.columns.title" = "Количество столбцов";
-
+"settings.dialog.keyboard" = "Голос и язык ввода";
+"settings.keyboard.default" = "По умолчанию";
+"settings.keyboard.title" = "Голос и язык ввода";
+"settings.keyboard.unknownLanguage" = "Не определен";
