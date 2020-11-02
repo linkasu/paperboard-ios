@@ -8,11 +8,12 @@
 
 import Foundation
 
-class SettingsManager: NSObject {
+class SettingsStorage: NSObject {
   private let defaults = UserDefaults.standard
   
   enum Settings: String {
     case columns
+    case locale
     
     fileprivate var defaultsKey: String {
       get {

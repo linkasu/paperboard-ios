@@ -62,7 +62,9 @@ class MainInputViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     //TODO: Relocate setup and linking in storyboard
-    inputSource.numberOfColumns = (SettingsManager().getSettingValue(.columns) as? NSNumber)?.intValue ?? 3
+    inputSource.numberOfColumns = settings.currentColumns
+    inputSource.currentKeyboard = settings.currentKeyboard
+    
     inputSource.setup(forCollection: inputCollection)
     inputField.delegate = inputFieldProcessor
     inputCollectionProcessor = InputCollectionProcessor(withSource: inputSource)
@@ -75,13 +77,11 @@ class MainInputViewController: UIViewController {
     }
     
     inputCollectionProcessor.onCellSelected = { [weak self] indexPath in
-      guard var letter = self?.inputSource.letter(forIndexPath: indexPath) else {
+      guard let source = self?.inputSource,
+        let letter = source.letter(forIndexPath: indexPath) else {
         return
       }
-      if letter == "_" {
-        letter = " "
-      }
-      self?.inputFieldProcessor.appendLetter(letter)
+      self?.inputFieldProcessor.appendLetter(source.printableVariant(ofLetter: letter))
     }
     
     inputCollectionProcessor.onScrollEnded = { [weak self] in
@@ -94,12 +94,17 @@ class MainInputViewController: UIViewController {
         return
       }
       self.inputSource.numberOfColumns = newColumns
-      self.inputLayout.prepare()
-      self.inputCollection.reloadData()
-      self.inputCollection.setCollectionViewLayout(self.inputLayout, animated: false)
-      self.inputCollection.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
-      self.updateButtonsTitles()
+      self.updateCollection()
     }
+    
+    settings.onKeyboardChanged = { [weak self] newKeyboard in
+      guard let `self` = self else {
+        return
+      }
+      self.inputSource.currentKeyboard = newKeyboard
+      self.updateCollection()
+    }
+    
     
     prevButton.titleLabel?.textAlignment = .center
     nextButton.titleLabel?.textAlignment = .center
@@ -107,6 +112,14 @@ class MainInputViewController: UIViewController {
     nextButton.titleLabel?.numberOfLines = 2
     
     self.updateButtonsTitles()
+  }
+  
+  private func updateCollection() {
+    inputLayout.prepare()
+    inputCollection.reloadData()
+    inputCollection.setCollectionViewLayout(self.inputLayout, animated: false)
+    inputCollection.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
+    updateButtonsTitles()
   }
   
   private func updateButtonsTitles() {

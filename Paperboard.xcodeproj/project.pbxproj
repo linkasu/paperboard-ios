@@ -26,10 +26,11 @@
 		0E20AB7621271F5600F6F62A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB7821271F5600F6F62A /* Localizable.strings */; };
 		0E20AB7A2127247100F6F62A /* TextToSpeechProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */; };
 		0E20AB7D2127289000F6F62A /* SettingsProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */; };
-		0E20AB7F212729B400F6F62A /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7E212729B400F6F62A /* SettingsManager.swift */; };
+		0E20AB7F212729B400F6F62A /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7E212729B400F6F62A /* SettingsStorage.swift */; };
 		0E20AB822127386200F6F62A /* SetColumnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB802127386200F6F62A /* SetColumnsViewController.swift */; };
 		0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB812127386200F6F62A /* SetColumnsViewController.xib */; };
 		0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5433392129CD0B00DBC3DD /* InfoPlist.strings */; };
+		0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E734BA82135A67B0000D02F /* Keyboards.plist */; };
 		4B4F3825B8B07B2DA6B31FA9 /* Pods_Paperboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */; };
 		5F845FD02FEC56FA07AEC8DF /* Pods_PaperboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9FD14C75AB461CA4B97016 /* Pods_PaperboardTests.framework */; };
 		70C805EC626B82DDBB75AF77 /* Pods_PaperboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */; };
@@ -79,7 +80,7 @@
 		0E20AB7721271F5600F6F62A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechProcessor.swift; sourceTree = "<group>"; };
 		0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProcessor.swift; sourceTree = "<group>"; };
-		0E20AB7E212729B400F6F62A /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		0E20AB7E212729B400F6F62A /* SettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
 		0E20AB802127386200F6F62A /* SetColumnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColumnsViewController.swift; sourceTree = "<group>"; };
 		0E20AB812127386200F6F62A /* SetColumnsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetColumnsViewController.xib; sourceTree = "<group>"; };
 		0E5433382129CD0B00DBC3DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		0E54333E2129CE7200DBC3DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0E54333F2129CE7200DBC3DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0E5433402129CE7200DBC3DD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E734BA82135A67B0000D02F /* Keyboards.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keyboards.plist; sourceTree = "<group>"; };
 		1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperboardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9FD14C75AB461CA4B97016 /* Pods_PaperboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paperboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,18 +154,16 @@
 		0E20AB262125B93F00F6F62A /* Paperboard */ = {
 			isa = PBXGroup;
 			children = (
+				0E734BA72135A6260000D02F /* Resources */,
 				0E20AB7B2127286E00F6F62A /* Settings */,
 				0E20AB5A2125CA8300F6F62A /* Input */,
 				0E20AB572125C42B00F6F62A /* Extensions */,
 				0E20AB272125B93F00F6F62A /* AppDelegate.swift */,
 				0E20AB292125B93F00F6F62A /* MainInputViewController.swift */,
 				0E20AB2B2125B93F00F6F62A /* Main.storyboard */,
-				0E20AB2E2125B94200F6F62A /* Assets.xcassets */,
 				0E20AB302125B94200F6F62A /* LaunchScreen.storyboard */,
 				0E20AB332125B94200F6F62A /* Info.plist */,
-				0E20AB7821271F5600F6F62A /* Localizable.strings */,
 				0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */,
-				0E5433392129CD0B00DBC3DD /* InfoPlist.strings */,
 			);
 			path = Paperboard;
 			sourceTree = "<group>";
@@ -213,11 +213,22 @@
 			isa = PBXGroup;
 			children = (
 				0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */,
-				0E20AB7E212729B400F6F62A /* SettingsManager.swift */,
+				0E20AB7E212729B400F6F62A /* SettingsStorage.swift */,
 				0E20AB802127386200F6F62A /* SetColumnsViewController.swift */,
 				0E20AB812127386200F6F62A /* SetColumnsViewController.xib */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		0E734BA72135A6260000D02F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E20AB7821271F5600F6F62A /* Localizable.strings */,
+				0E5433392129CD0B00DBC3DD /* InfoPlist.strings */,
+				0E20AB2E2125B94200F6F62A /* Assets.xcassets */,
+				0E734BA82135A67B0000D02F /* Keyboards.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7147890B49E1686873B6F8E2 /* Frameworks */ = {
@@ -254,6 +265,7 @@
 				0E20AB202125B93F00F6F62A /* Sources */,
 				0E20AB212125B93F00F6F62A /* Frameworks */,
 				0E20AB222125B93F00F6F62A /* Resources */,
+				69C8D16D82BA481E167CAB61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,6 +369,7 @@
 				0E20AB7621271F5600F6F62A /* Localizable.strings in Resources */,
 				0E20AB2F2125B94200F6F62A /* Assets.xcassets in Resources */,
 				0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */,
+				0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */,
 				0E20AB5E2125CAB500F6F62A /* InputCollectionViewCell.xib in Resources */,
 				0E20AB2D2125B93F00F6F62A /* Main.storyboard in Resources */,
 			);
@@ -415,6 +428,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		69C8D16D82BA481E167CAB61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Paperboard/Pods-Paperboard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Paperboard/Pods-Paperboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		80B56C953251EB8F3D2A0B18 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,7 +473,7 @@
 			files = (
 				0E20AB71212713AE00F6F62A /* InputFieldProcessor.swift in Sources */,
 				0E20AB822127386200F6F62A /* SetColumnsViewController.swift in Sources */,
-				0E20AB7F212729B400F6F62A /* SettingsManager.swift in Sources */,
+				0E20AB7F212729B400F6F62A /* SettingsStorage.swift in Sources */,
 				0E20AB2A2125B93F00F6F62A /* MainInputViewController.swift in Sources */,
 				0E20AB6F21270F1900F6F62A /* InputCollectionProcessor.swift in Sources */,
 				0E20AB282125B93F00F6F62A /* AppDelegate.swift in Sources */,
