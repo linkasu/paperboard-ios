@@ -8,6 +8,7 @@ target 'Paperboard' do
   # Pods for Paperboard
   pod 'YandexMobileMetrica', '3.2.0'
   pod 'ActionSheetPicker-3.0'
+  pod 'Firebase/Analytics'
 
   target 'PaperboardTests' do
     inherit! :search_paths
