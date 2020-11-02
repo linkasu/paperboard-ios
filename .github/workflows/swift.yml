@@ -20,6 +20,7 @@ jobs:
       shell: bash
     - uses: actions/checkout@v2
     - name: Build
+      working-directory: "Sources/"
       run: swift build -v
     - name: Run tests
       run: swift test -v
