@@ -50,7 +50,12 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     //update sections data
     let squareSize = numberOfColumns * numberOfColumns
     var tempAlphabet = currentKeyboard?.alphabet.split(separator: " ").map{ String($0) } ?? alphabet
-    tempAlphabet.insert("␣", at: 0)
+        tempAlphabet.insert("␣", at: 0)
+    let numbers = Array("1234567890").map{String($0)}
+    let marks = Array(".,!?/*+-=@#$%()<>").map{String($0)}
+    tempAlphabet+=numbers
+    tempAlphabet+=marks
+    
     sections.removeAll()
     while tempAlphabet.count > squareSize {
       let sectionValues = tempAlphabet.prefix(squareSize)

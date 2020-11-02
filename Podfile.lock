@@ -9,7 +9,7 @@ DEPENDENCIES:
   - YandexMobileMetrica (= 3.2.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - ActionSheetPicker-3.0
     - YandexMobileMetrica
 
@@ -19,4 +19,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d73d29f422c6910153818edb6610639d1d1db278
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4
