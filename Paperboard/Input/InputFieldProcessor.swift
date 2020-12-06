@@ -10,7 +10,8 @@ import UIKit
 
 class InputFieldProcessor: NSObject, UITextFieldDelegate {
   var onUpdate: ((String) -> Void)?
-  
+  var caps = false
+    
   private (set) var currentValue: String = "" {
     didSet {
       onUpdate?(currentValue)
@@ -18,11 +19,15 @@ class InputFieldProcessor: NSObject, UITextFieldDelegate {
   }
   
   func appendLetter(_ letter: String) {
-    currentValue.append(letter)
+    currentValue.append(caps ? letter.uppercased() : letter)
   }
   
   func clear() {
     currentValue = ""
+  }
+
+  func capsLock() {
+    caps = !caps
   }
   
   func backSpace() {
