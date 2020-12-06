@@ -54,7 +54,11 @@ class MainInputViewController: UIViewController {
     inputFieldProcessor.clear()
   }
   
-  @IBAction private func onPrevButtonTouched(_ sender: UIButton!) {
+  @IBAction func onCapsLocktouched(_ sender: Any) {
+    inputFieldProcessor.capsLock()
+  }
+    
+    @IBAction private func onPrevButtonTouched(_ sender: UIButton!) {
     inputCollectionProcessor.scrollPrev(inputCollection)
     allowScrollInteraction(false)
   }
