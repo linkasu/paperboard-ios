@@ -8,7 +8,6 @@
 
 import UIKit
 import YandexMobileMetrica
-import CoreMotion
 
 class MainInputViewController: UIViewController {
   
@@ -25,19 +24,6 @@ class MainInputViewController: UIViewController {
   private var inputCollectionProcessor: InputCollectionProcessor!
   private let settings = SettingsProcessor()
   
-  private var motionManager: CMMotionManager!
-  private var motionManagerHandleQueue: OperationQueue!
-  private var motionManagerUpdatesBuffer: [Double] = []
-  private var motionManagerFlushBufferTimer: Timer!
-    
-    private var throttler: Throttler? = nil
-    public var throttlingInterval: Int = 0 {
-        didSet {
-            throttler = Throttler(seconds: throttlingInterval)
-        }
-    }
-    
-    
   @IBAction private func showSettings(_ sender: UIBarButtonItem!) {
     settings.showSettings(onController: self, byBarButton: sender)
   }
@@ -76,11 +62,6 @@ class MainInputViewController: UIViewController {
     self.prevButton.isUserInteractionEnabled = allowed
     self.nextButton.isUserInteractionEnabled = allowed
   }
-    
-    deinit {
-        motionManagerFlushBufferTimer.invalidate()
-        motionManagerFlushBufferTimer = nil
-    }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -135,43 +116,6 @@ class MainInputViewController: UIViewController {
     nextButton.titleLabel?.numberOfLines = 2
     
     self.updateButtonsTitles()
-    
-    
-    motionManagerHandleQueue = OperationQueue()
-    motionManagerHandleQueue.maxConcurrentOperationCount = 1
-    motionManagerHandleQueue.name = "CMMotionManager.Updates"
-    motionManager = CMMotionManager()
-    
-    motionManagerFlushBufferTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] (t) in
-        guard t.isValid else { return }
-        
-        self?.motionManagerHandleQueue.addOperation({ [weak self] in
-            if let min = self?.motionManagerUpdatesBuffer.min(), let max = self?.motionManagerUpdatesBuffer.max() {
-                guard (max - min) > 0.18 else { return }
-                
-                self?.throttler?.throttle {
-                    DispatchQueue.main.async {
-                        if min < 0 { //move right
-                            self?.prevButton.sendActions(for: .touchUpInside)
-                        } else { //move left
-                            self?.nextButton.sendActions(for: .touchUpInside)
-                        }
-                    }
-                }
-            }
-            self?.motionManagerUpdatesBuffer = []
-        })
-    }
-    
-    motionManager.startAccelerometerUpdates(to: motionManagerHandleQueue) { [weak self] (data, error) in
-        guard let data = data else { return }
-        
-        self?.motionManagerUpdatesBuffer.append(data.acceleration.y)
-    }
-    
-    motionManager.accelerometerUpdateInterval = 0.2
-    
-    throttlingInterval = 2
   }
   
   private func updateCollection() {
@@ -220,31 +164,6 @@ class MainInputViewController: UIViewController {
         }
     })
   }
-}
-
-
-public class Throttler {
-    
-    private let queue: DispatchQueue = DispatchQueue.global(qos: .background)
-    
-    private var job: DispatchWorkItem = DispatchWorkItem(block: {})
-    private var previousRun: Date = Date.distantPast
-    private var maxInterval: Int
-    
-    init(seconds: Int) {
-        self.maxInterval = seconds
-    }
-    
-    
-    func throttle(block: @escaping () -> ()) {
-        job.cancel()
-        job = DispatchWorkItem(){ [weak self] in
-            self?.previousRun = Date()
-            block()
-        }
-        let delay = Date.second(from: previousRun) > maxInterval ? 0 : maxInterval
-        queue.asyncAfter(deadline: .now() + Double(delay), execute: job)
-    }
 }
 
 private extension Date {
