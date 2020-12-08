@@ -23,7 +23,8 @@ class MainInputViewController: UIViewController {
   private let speechProcessor = TextToSpeechProcessor()
   private var inputCollectionProcessor: InputCollectionProcessor!
   private let settings = SettingsProcessor()
-  
+    private let defaultColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+
   @IBAction private func showSettings(_ sender: UIBarButtonItem!) {
     settings.showSettings(onController: self, byBarButton: sender)
   }
@@ -40,8 +41,11 @@ class MainInputViewController: UIViewController {
     inputFieldProcessor.clear()
   }
   
-  @IBAction func onCapsLocktouched(_ sender: Any) {
-    inputFieldProcessor.capsLock()
+    @IBOutlet weak var capsLockButton: UIButton!
+    
+    @IBAction func onCapsLocktouched(_ sender: Any) {
+        inputFieldProcessor.capsLock()
+        capsLockButton.backgroundColor = inputFieldProcessor.caps ? UIColor.lightGray : defaultColor
   }
     
     @IBAction private func onPrevButtonTouched(_ sender: UIButton!) {
