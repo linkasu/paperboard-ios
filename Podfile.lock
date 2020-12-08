@@ -63,19 +63,14 @@ PODS:
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
-  - YandexMobileMetrica (3.2.0):
-    - YandexMobileMetrica/Static (= 3.2.0)
-  - YandexMobileMetrica/Static (3.2.0)
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0
   - Firebase/Analytics
-  - YandexMobileMetrica (= 3.2.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - ActionSheetPicker-3.0
-    - YandexMobileMetrica
   trunk:
     - Firebase
     - FirebaseAnalytics
@@ -100,8 +95,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: ffb2f4159f2c897c6e8992bd7fbcdef8a300589c
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
-  YandexMobileMetrica: f18374ee6977a4cd1d0a86298a0df4ad7baf4135
 
-PODFILE CHECKSUM: ca561b548310c048d27e1b2ea140b43ac398d208
+PODFILE CHECKSUM: 6c3a1f8389645079e6e5796e9f4dec83ac5bcb04
 
 COCOAPODS: 1.8.4
