@@ -10,7 +10,7 @@ import UIKit
 
 class InputCollectionViewCell: UICollectionViewCell {
   
-  @IBOutlet private weak var characterLabel: UILabel!
+  @IBOutlet weak var characterLabel: UILabel!
   
   func fill(with value: String) {
     characterLabel.text = value

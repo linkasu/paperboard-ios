@@ -73,10 +73,8 @@ DEPENDENCIES:
   - YandexMobileMetrica (= 3.2.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - ActionSheetPicker-3.0
-    - YandexMobileMetrica
   trunk:
+    - ActionSheetPicker-3.0
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -87,6 +85,7 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
+    - YandexMobileMetrica
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
@@ -104,4 +103,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ca561b548310c048d27e1b2ea140b43ac398d208
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

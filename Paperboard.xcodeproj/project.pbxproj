@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,18 @@
 		4B4F3825B8B07B2DA6B31FA9 /* Pods_Paperboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */; };
 		5F845FD02FEC56FA07AEC8DF /* Pods_PaperboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9FD14C75AB461CA4B97016 /* Pods_PaperboardTests.framework */; };
 		70C805EC626B82DDBB75AF77 /* Pods_PaperboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */; };
+		B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07516B5257F64C200BC905F /* KeyboardViewController.swift */; };
+		B07516BA257F64C200BC905F /* PaperboardKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B07516D4257F67CB00BC905F /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB722127155F00F6F62A /* Collection+Safe.swift */; };
+		B07516D5257F67CB00BC905F /* UIKit+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB582125C43E00F6F62A /* UIKit+Localizable.swift */; };
+		B07516EA257F6A0000BC905F /* InputCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB612125DB3000F6F62A /* InputCollectionLayout.swift */; };
+		B07516EF257F6A5000BC905F /* InputCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB5F2125CB7100F6F62A /* InputCollectionDataSource.swift */; };
+		B07516F4257F6ADB00BC905F /* InputCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB5B2125CAB500F6F62A /* InputCollectionViewCell.swift */; };
+		B07516FA257F6B5100BC905F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07516F9257F6B5100BC905F /* Settings.swift */; };
+		B0751708257F6DDD00BC905F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07516F9257F6B5100BC905F /* Settings.swift */; };
+		B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7E212729B400F6F62A /* SettingsStorage.swift */; };
+		B075172A257F76BA00BC905F /* InputCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */; };
+		B075172F257F7A6900BC905F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB7821271F5600F6F62A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +63,28 @@
 			remoteGlobalIDString = 0E20AB232125B93F00F6F62A;
 			remoteInfo = Paperboard;
 		};
+		B07516B8257F64C200BC905F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E20AB1C2125B93F00F6F62A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B07516B2257F64C200BC905F;
+			remoteInfo = PaperboardKeyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B07516BB257F64C200BC905F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B07516BA257F64C200BC905F /* PaperboardKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00AEE43A88986E2895D1A2D8 /* Pods-Paperboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paperboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paperboard/Pods-Paperboard.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +131,10 @@
 		6EB97321D070173986C89CF1 /* Pods-PaperboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC306E1A1BEC1FA8AC1F4878 /* Pods-PaperboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE4CAEE8BB897A632AAF2C8F /* Pods-PaperboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardTests/Pods-PaperboardTests.release.xcconfig"; sourceTree = "<group>"; };
+		B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PaperboardKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07516B5257F64C200BC905F /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		B07516B7257F64C200BC905F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B07516F9257F6B5100BC905F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B15BD7E7338FCD8E696350EB /* Pods-Paperboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paperboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paperboard/Pods-Paperboard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +163,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B07516B0257F64C200BC905F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -135,6 +179,7 @@
 				0E20AB262125B93F00F6F62A /* Paperboard */,
 				0E20AB3B2125B94200F6F62A /* PaperboardTests */,
 				0E20AB462125B94200F6F62A /* PaperboardUITests */,
+				B07516B4257F64C200BC905F /* PaperboardKeyboard */,
 				0E20AB252125B93F00F6F62A /* Products */,
 				CBB95E8F8449D8800C01C004 /* Pods */,
 				7147890B49E1686873B6F8E2 /* Frameworks */,
@@ -147,6 +192,7 @@
 				0E20AB242125B93F00F6F62A /* Paperboard.app */,
 				0E20AB382125B94200F6F62A /* PaperboardTests.xctest */,
 				0E20AB432125B94200F6F62A /* PaperboardUITests.xctest */,
+				B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,6 +262,7 @@
 				0E20AB7E212729B400F6F62A /* SettingsStorage.swift */,
 				0E20AB802127386200F6F62A /* SetColumnsViewController.swift */,
 				0E20AB812127386200F6F62A /* SetColumnsViewController.xib */,
+				B07516F9257F6B5100BC905F /* Settings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -239,6 +286,15 @@
 				1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B07516B4257F64C200BC905F /* PaperboardKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B07516B5257F64C200BC905F /* KeyboardViewController.swift */,
+				B07516B7257F64C200BC905F /* Info.plist */,
+			);
+			path = PaperboardKeyboard;
 			sourceTree = "<group>";
 		};
 		CBB95E8F8449D8800C01C004 /* Pods */ = {
@@ -266,10 +322,12 @@
 				0E20AB212125B93F00F6F62A /* Frameworks */,
 				0E20AB222125B93F00F6F62A /* Resources */,
 				69C8D16D82BA481E167CAB61 /* [CP] Embed Pods Frameworks */,
+				B07516BB257F64C200BC905F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B07516B9257F64C200BC905F /* PBXTargetDependency */,
 			);
 			name = Paperboard;
 			productName = Paperboard;
@@ -314,13 +372,30 @@
 			productReference = 0E20AB432125B94200F6F62A /* PaperboardUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B07516B2257F64C200BC905F /* PaperboardKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B07516BE257F64C200BC905F /* Build configuration list for PBXNativeTarget "PaperboardKeyboard" */;
+			buildPhases = (
+				B07516AF257F64C200BC905F /* Sources */,
+				B07516B0257F64C200BC905F /* Frameworks */,
+				B07516B1257F64C200BC905F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaperboardKeyboard;
+			productName = PaperboardKeyboard;
+			productReference = B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0E20AB1C2125B93F00F6F62A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Ice Rock";
 				TargetAttributes = {
@@ -334,6 +409,9 @@
 					0E20AB422125B94200F6F62A = {
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = 0E20AB232125B93F00F6F62A;
+					};
+					B07516B2257F64C200BC905F = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
@@ -355,6 +433,7 @@
 				0E20AB232125B93F00F6F62A /* Paperboard */,
 				0E20AB372125B94200F6F62A /* PaperboardTests */,
 				0E20AB422125B94200F6F62A /* PaperboardUITests */,
+				B07516B2257F64C200BC905F /* PaperboardKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -386,6 +465,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07516B1257F64C200BC905F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B075172A257F76BA00BC905F /* InputCollectionViewCell.xib in Resources */,
+				B075172F257F7A6900BC905F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +567,7 @@
 				0E20AB622125DB3000F6F62A /* InputCollectionLayout.swift in Sources */,
 				0E20AB7A2127247100F6F62A /* TextToSpeechProcessor.swift in Sources */,
 				0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */,
+				B07516FA257F6B5100BC905F /* Settings.swift in Sources */,
 				0E20AB7D2127289000F6F62A /* SettingsProcessor.swift in Sources */,
 				0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */,
 				0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */,
@@ -503,6 +592,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B07516AF257F64C200BC905F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07516EA257F6A0000BC905F /* InputCollectionLayout.swift in Sources */,
+				B07516F4257F6ADB00BC905F /* InputCollectionViewCell.swift in Sources */,
+				B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */,
+				B07516D4257F67CB00BC905F /* Collection+Safe.swift in Sources */,
+				B0751708257F6DDD00BC905F /* Settings.swift in Sources */,
+				B07516D5257F67CB00BC905F /* UIKit+Localizable.swift in Sources */,
+				B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */,
+				B07516EF257F6A5000BC905F /* InputCollectionDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -515,6 +619,11 @@
 			isa = PBXTargetDependency;
 			target = 0E20AB232125B93F00F6F62A /* Paperboard */;
 			targetProxy = 0E20AB442125B94200F6F62A /* PBXContainerItemProxy */;
+		};
+		B07516B9257F64C200BC905F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B07516B2257F64C200BC905F /* PaperboardKeyboard */;
+			targetProxy = B07516B8257F64C200BC905F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -680,9 +789,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B15BD7E7338FCD8E696350EB /* Pods-Paperboard.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
 				INFOPLIST_FILE = Paperboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -701,9 +812,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 00AEE43A88986E2895D1A2D8 /* Pods-Paperboard.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
 				INFOPLIST_FILE = Paperboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -800,6 +913,53 @@
 			};
 			name = Release;
 		};
+		B07516BC257F64C200BC905F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
+				INFOPLIST_FILE = PaperboardKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.PaperboardKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B07516BD257F64C200BC905F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
+				INFOPLIST_FILE = PaperboardKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.PaperboardKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -835,6 +995,15 @@
 			buildConfigurations = (
 				0E20AB532125B94200F6F62A /* Debug */,
 				0E20AB542125B94200F6F62A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B07516BE257F64C200BC905F /* Build configuration list for PBXNativeTarget "PaperboardKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07516BC257F64C200BC905F /* Debug */,
+				B07516BD257F64C200BC905F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

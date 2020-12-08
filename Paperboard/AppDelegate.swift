@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     
     YMMYandexMetrica.activate(with: YMMYandexMetricaConfiguration.init(apiKey: "ddd48356-81f7-4567-bf41-14a42b1a8de8")!)
-    FirebaseApp.configure()
+    //FirebaseApp.configure()
     return true
   }
 

@@ -40,6 +40,10 @@ class InputCollectionLayout: UICollectionViewLayout {
     guard let bounds = collectionView?.bounds, let source = inputSource else {
       return
     }
+    print(collectionView?.superview?.frame)
+    print("BOUNDS")
+    print(bounds)
+    
     let cgSpacing = CGFloat(spacing.floatValue)
 
     items.removeAll()

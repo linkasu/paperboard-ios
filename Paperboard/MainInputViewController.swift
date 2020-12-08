@@ -22,10 +22,10 @@ class MainInputViewController: UIViewController {
   private let inputFieldProcessor = InputFieldProcessor()
   private let speechProcessor = TextToSpeechProcessor()
   private var inputCollectionProcessor: InputCollectionProcessor!
-  private let settings = SettingsProcessor()
+  private let settingsProcessor = SettingsProcessor()
   
   @IBAction private func showSettings(_ sender: UIBarButtonItem!) {
-    settings.showSettings(onController: self, byBarButton: sender)
+    settingsProcessor.showSettings(onController: self, byBarButton: sender)
   }
   
   @IBAction private func onSpeechButtonTouched(_ sender: UIButton!) {
@@ -66,8 +66,8 @@ class MainInputViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     //TODO: Relocate setup and linking in storyboard
-    inputSource.numberOfColumns = settings.currentColumns
-    inputSource.currentKeyboard = settings.currentKeyboard
+    inputSource.numberOfColumns = settingsProcessor.currentColumns
+    inputSource.currentKeyboard = settingsProcessor.currentKeyboard
     
     inputSource.setup(forCollection: inputCollection)
     inputField.delegate = inputFieldProcessor
@@ -93,7 +93,7 @@ class MainInputViewController: UIViewController {
       self?.updateButtonsTitles()
     }
     
-    settings.onColumnAmountChanged = { [weak self] newColumns in
+    settingsProcessor.settings.onColumnAmountChanged = { [weak self] newColumns in
       guard let `self` = self else {
         return
       }
@@ -101,14 +101,13 @@ class MainInputViewController: UIViewController {
       self.updateCollection()
     }
     
-    settings.onKeyboardChanged = { [weak self] newKeyboard in
+    settingsProcessor.settings.onKeyboardChanged = { [weak self] newKeyboard in
       guard let `self` = self else {
         return
       }
       self.inputSource.currentKeyboard = newKeyboard
       self.updateCollection()
     }
-    
     
     prevButton.titleLabel?.textAlignment = .center
     nextButton.titleLabel?.textAlignment = .center

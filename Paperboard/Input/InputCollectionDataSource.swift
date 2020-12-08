@@ -36,7 +36,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     }
   }
   
-  var currentKeyboard: SettingsProcessor.Keyboard? {
+  var currentKeyboard: Settings.Keyboard? {
     didSet {
       reload()
     }
@@ -92,7 +92,9 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: inputCellReuse, for: indexPath)
-    (cell as? InputCollectionViewCell)?.fill(with: letter(forIndexPath: indexPath) ?? "")
+    let collectionCell = cell as? InputCollectionViewCell
+    collectionCell?.fill(with: letter(forIndexPath: indexPath) ?? "")
+    collectionCell?.characterLabel.textColor = UIColor.black
     return cell
   }
 }
