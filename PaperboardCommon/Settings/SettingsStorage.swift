@@ -9,25 +9,35 @@
 import Foundation
 
 class SettingsStorage: NSObject {
-  private let defaults = UserDefaults.standard
-  
-  enum Settings: String {
-    case columns
-    case locale
-    
-    fileprivate var defaultsKey: String {
-      get {
-        return "settings.\(self.rawValue)"
-      }
+    private let defaults: UserDefaults
+        
+    enum Settings: String {
+        case columns
+        case locale
+        
+        fileprivate var defaultsKey: String {
+            get {
+                return "settings.\(self.rawValue)"
+            }
+        }
     }
-  }
-  
-  func update(_ setting: Settings, withValue value: Any?) {
-    defaults.set(value, forKey: setting.defaultsKey)
-    defaults.synchronize()
-  }
-  
-  func getSettingValue(_ setting: Settings) -> Any? {
-    return defaults.object(forKey: setting.defaultsKey)
-  }
+    
+    override init() {
+        if let appGroupDefaults = UserDefaults.init(suiteName: Constants.appGroup) {
+            defaults = appGroupDefaults
+        } else {
+            defaults = UserDefaults.standard
+        }
+        super.init()
+    }
+
+    
+    func update(_ setting: Settings, withValue value: Any?) {
+        defaults.set(value, forKey: setting.defaultsKey)
+        defaults.synchronize()
+    }
+    
+    func getSettingValue(_ setting: Settings) -> Any? {
+        return defaults.object(forKey: setting.defaultsKey)
+    }
 }

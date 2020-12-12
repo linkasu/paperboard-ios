@@ -45,8 +45,11 @@ class Settings {
     var currentKeyboard: Keyboard? {
       get {
         guard let locale = storage.getSettingValue(.locale) as? String else {
+            print("Nothing in storage :)")
           return nil
         }
+        print("===========LOCALE")
+        print(locale)
         return keyboards.first(where: { $0.locale == locale })
       }
       set {

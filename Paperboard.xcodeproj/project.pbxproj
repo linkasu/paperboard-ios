@@ -48,6 +48,9 @@
 		B075172A257F76BA00BC905F /* InputCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */; };
 		B075172F257F7A6900BC905F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB7821271F5600F6F62A /* Localizable.strings */; };
 		B0A18CD8258497B400069689 /* TextToSpeechProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */; };
+		B0BCF93F2584C9A600ADCBB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF93E2584C9A600ADCBB3 /* Constants.swift */; };
+		B0BCF9442584CA4B00ADCBB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF93E2584C9A600ADCBB3 /* Constants.swift */; };
+		B0BCF9472584CAC800ADCBB3 /* Keyboards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E734BA82135A67B0000D02F /* Keyboards.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,9 @@
 		B07516B5257F64C200BC905F /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		B07516B7257F64C200BC905F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B07516F9257F6B5100BC905F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B0BCF9282584C5CA00ADCBB3 /* Paperboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Paperboard.entitlements; sourceTree = "<group>"; };
+		B0BCF9292584C6DB00ADCBB3 /* PaperboardKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PaperboardKeyboard.entitlements; sourceTree = "<group>"; };
+		B0BCF93E2584C9A600ADCBB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B15BD7E7338FCD8E696350EB /* Pods-Paperboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paperboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paperboard/Pods-Paperboard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				66DF1A7E25838B36000F68D8 /* PaperboardCommon */,
-				0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */,
 				0E20AB262125B93F00F6F62A /* Paperboard */,
 				B07516B4257F64C200BC905F /* PaperboardKeyboard */,
 				0E20AB252125B93F00F6F62A /* Products */,
@@ -166,6 +171,7 @@
 		0E20AB262125B93F00F6F62A /* Paperboard */ = {
 			isa = PBXGroup;
 			children = (
+				B0BCF9282584C5CA00ADCBB3 /* Paperboard.entitlements */,
 				0E734BA72135A6260000D02F /* Resources */,
 				0E20AB7B2127286E00F6F62A /* Settings */,
 				0E20AB5A2125CA8300F6F62A /* Input */,
@@ -209,10 +215,8 @@
 		0E734BA72135A6260000D02F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0E20AB7821271F5600F6F62A /* Localizable.strings */,
 				0E5433392129CD0B00DBC3DD /* InfoPlist.strings */,
 				0E20AB2E2125B94200F6F62A /* Assets.xcassets */,
-				0E734BA82135A67B0000D02F /* Keyboards.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,10 +224,13 @@
 		66DF1A7E25838B36000F68D8 /* PaperboardCommon */ = {
 			isa = PBXGroup;
 			children = (
+				B0BCF94A2584CAD100ADCBB3 /* Resources */,
+				B0BCF93D2584C99500ADCBB3 /* TextToSpeech */,
 				B0A18CDD25849A2F00069689 /* Settings */,
 				66DF1A8525838B7F000F68D8 /* View Controllers */,
 				66DF1A8425838B6C000F68D8 /* Input */,
 				0E20AB572125C42B00F6F62A /* Extensions */,
+				B0BCF93E2584C9A600ADCBB3 /* Constants.swift */,
 			);
 			path = PaperboardCommon;
 			sourceTree = "<group>";
@@ -262,6 +269,7 @@
 		B07516B4257F64C200BC905F /* PaperboardKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				B0BCF9292584C6DB00ADCBB3 /* PaperboardKeyboard.entitlements */,
 				B07516B5257F64C200BC905F /* KeyboardViewController.swift */,
 				B07516B7257F64C200BC905F /* Info.plist */,
 			);
@@ -275,6 +283,23 @@
 				0E20AB7E212729B400F6F62A /* SettingsStorage.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		B0BCF93D2584C99500ADCBB3 /* TextToSpeech */ = {
+			isa = PBXGroup;
+			children = (
+				0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */,
+			);
+			path = TextToSpeech;
+			sourceTree = "<group>";
+		};
+		B0BCF94A2584CAD100ADCBB3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E734BA82135A67B0000D02F /* Keyboards.plist */,
+				0E20AB7821271F5600F6F62A /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CBB95E8F8449D8800C01C004 /* Pods */ = {
@@ -339,7 +364,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Ice Rock";
+				ORGANIZATIONNAME = Exyte;
 				TargetAttributes = {
 					0E20AB232125B93F00F6F62A = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -392,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B075172A257F76BA00BC905F /* InputCollectionViewCell.xib in Resources */,
+				B0BCF9472584CAC800ADCBB3 /* Keyboards.plist in Resources */,
 				666CF293258380F6008D1872 /* MainKeyboardViewController.xib in Resources */,
 				B075172F257F7A6900BC905F /* Localizable.strings in Resources */,
 			);
@@ -443,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E20AB71212713AE00F6F62A /* InputFieldProcessor.swift in Sources */,
+				B0BCF93F2584C9A600ADCBB3 /* Constants.swift in Sources */,
 				0E20AB822127386200F6F62A /* SetColumnsViewController.swift in Sources */,
 				0E20AB7F212729B400F6F62A /* SettingsStorage.swift in Sources */,
 				0E20AB2A2125B93F00F6F62A /* MainInputViewController.swift in Sources */,
@@ -476,6 +503,7 @@
 				B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */,
 				66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */,
 				B07516EF257F6A5000BC905F /* InputCollectionDataSource.swift in Sources */,
+				B0BCF9442584CA4B00ADCBB3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +681,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Paperboard/Paperboard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZXCM5CJ7P;
@@ -676,6 +705,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Paperboard/Paperboard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZXCM5CJ7P;
@@ -697,6 +727,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = PaperboardKeyboard/PaperboardKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZXCM5CJ7P;
@@ -721,6 +752,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = PaperboardKeyboard/PaperboardKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZXCM5CJ7P;

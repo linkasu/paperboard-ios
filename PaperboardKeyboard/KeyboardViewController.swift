@@ -29,10 +29,13 @@ class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("I AM HERE")
         heightConstraint = self.view.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.7)
         heightConstraint.isActive = true
         inputSource.numberOfColumns = settings.currentColumns
         inputSource.currentKeyboard = settings.currentKeyboard
+        
+        print(settings.currentKeyboard)
         
         self.addChild(keyboardViewContoller)
         self.view.addSubview(keyboardViewContoller.view)
