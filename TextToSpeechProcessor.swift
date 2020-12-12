@@ -12,7 +12,7 @@ import AVFoundation
 class TextToSpeechProcessor: NSObject {
   
   private let synthesizer = AVSpeechSynthesizer()
-  private let settings = SettingsProcessor()
+  private let settings = Settings()
   
   override init() {
     super.init()

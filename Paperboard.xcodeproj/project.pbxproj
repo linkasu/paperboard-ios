@@ -51,6 +51,7 @@
 		B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7E212729B400F6F62A /* SettingsStorage.swift */; };
 		B075172A257F76BA00BC905F /* InputCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */; };
 		B075172F257F7A6900BC905F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB7821271F5600F6F62A /* Localizable.strings */; };
+		B0A18CD8258497B400069689 /* TextToSpeechProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				66DF1A7E25838B36000F68D8 /* PaperboardCommon */,
+				0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */,
 				0E20AB262125B93F00F6F62A /* Paperboard */,
 				0E20AB3B2125B94200F6F62A /* PaperboardTests */,
 				0E20AB462125B94200F6F62A /* PaperboardUITests */,
@@ -216,7 +218,6 @@
 				0E20AB2B2125B93F00F6F62A /* Main.storyboard */,
 				0E20AB302125B94200F6F62A /* LaunchScreen.storyboard */,
 				0E20AB332125B94200F6F62A /* Info.plist */,
-				0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */,
 			);
 			path = Paperboard;
 			sourceTree = "<group>";
@@ -637,6 +638,7 @@
 				B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */,
 				B07516D4257F67CB00BC905F /* Collection+Safe.swift in Sources */,
 				B0751708257F6DDD00BC905F /* Settings.swift in Sources */,
+				B0A18CD8258497B400069689 /* TextToSpeechProcessor.swift in Sources */,
 				B07516D5257F67CB00BC905F /* UIKit+Localizable.swift in Sources */,
 				66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */,
 				B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */,
