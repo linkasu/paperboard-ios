@@ -12,8 +12,6 @@
 		0E20AB2D2125B93F00F6F62A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB2B2125B93F00F6F62A /* Main.storyboard */; };
 		0E20AB2F2125B94200F6F62A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB2E2125B94200F6F62A /* Assets.xcassets */; };
 		0E20AB322125B94200F6F62A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB302125B94200F6F62A /* LaunchScreen.storyboard */; };
-		0E20AB3D2125B94200F6F62A /* PaperboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB3C2125B94200F6F62A /* PaperboardTests.swift */; };
-		0E20AB482125B94200F6F62A /* PaperboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB472125B94200F6F62A /* PaperboardUITests.swift */; };
 		0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB582125C43E00F6F62A /* UIKit+Localizable.swift */; };
 		0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB5B2125CAB500F6F62A /* InputCollectionViewCell.swift */; };
 		0E20AB5E2125CAB500F6F62A /* InputCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */; };
@@ -32,13 +30,11 @@
 		0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5433392129CD0B00DBC3DD /* InfoPlist.strings */; };
 		0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E734BA82135A67B0000D02F /* Keyboards.plist */; };
 		4B4F3825B8B07B2DA6B31FA9 /* Pods_Paperboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */; };
-		5F845FD02FEC56FA07AEC8DF /* Pods_PaperboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9FD14C75AB461CA4B97016 /* Pods_PaperboardTests.framework */; };
 		666CF28025837F0C008D1872 /* MainKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */; };
 		666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
 		666CF293258380F6008D1872 /* MainKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */; };
 		66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */; };
 		66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
-		70C805EC626B82DDBB75AF77 /* Pods_PaperboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */; };
 		B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07516B5257F64C200BC905F /* KeyboardViewController.swift */; };
 		B07516BA257F64C200BC905F /* PaperboardKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B07516D4257F67CB00BC905F /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB722127155F00F6F62A /* Collection+Safe.swift */; };
@@ -55,20 +51,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0E20AB392125B94200F6F62A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0E20AB1C2125B93F00F6F62A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E20AB232125B93F00F6F62A;
-			remoteInfo = Paperboard;
-		};
-		0E20AB442125B94200F6F62A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0E20AB1C2125B93F00F6F62A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E20AB232125B93F00F6F62A;
-			remoteInfo = Paperboard;
-		};
 		B07516B8257F64C200BC905F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0E20AB1C2125B93F00F6F62A /* Project object */;
@@ -101,12 +83,6 @@
 		0E20AB2E2125B94200F6F62A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E20AB312125B94200F6F62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E20AB332125B94200F6F62A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E20AB382125B94200F6F62A /* PaperboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E20AB3C2125B94200F6F62A /* PaperboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperboardTests.swift; sourceTree = "<group>"; };
-		0E20AB3E2125B94200F6F62A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E20AB432125B94200F6F62A /* PaperboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E20AB472125B94200F6F62A /* PaperboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperboardUITests.swift; sourceTree = "<group>"; };
-		0E20AB492125B94200F6F62A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E20AB582125C43E00F6F62A /* UIKit+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Localizable.swift"; sourceTree = "<group>"; };
 		0E20AB5B2125CAB500F6F62A /* InputCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E20AB5C2125CAB500F6F62A /* InputCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -155,22 +131,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E20AB352125B94200F6F62A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F845FD02FEC56FA07AEC8DF /* Pods_PaperboardTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E20AB402125B94200F6F62A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70C805EC626B82DDBB75AF77 /* Pods_PaperboardUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B07516B0257F64C200BC905F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,8 +147,6 @@
 				66DF1A7E25838B36000F68D8 /* PaperboardCommon */,
 				0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */,
 				0E20AB262125B93F00F6F62A /* Paperboard */,
-				0E20AB3B2125B94200F6F62A /* PaperboardTests */,
-				0E20AB462125B94200F6F62A /* PaperboardUITests */,
 				B07516B4257F64C200BC905F /* PaperboardKeyboard */,
 				0E20AB252125B93F00F6F62A /* Products */,
 				CBB95E8F8449D8800C01C004 /* Pods */,
@@ -200,8 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				0E20AB242125B93F00F6F62A /* Paperboard.app */,
-				0E20AB382125B94200F6F62A /* PaperboardTests.xctest */,
-				0E20AB432125B94200F6F62A /* PaperboardUITests.xctest */,
 				B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */,
 			);
 			name = Products;
@@ -220,24 +176,6 @@
 				0E20AB332125B94200F6F62A /* Info.plist */,
 			);
 			path = Paperboard;
-			sourceTree = "<group>";
-		};
-		0E20AB3B2125B94200F6F62A /* PaperboardTests */ = {
-			isa = PBXGroup;
-			children = (
-				0E20AB3C2125B94200F6F62A /* PaperboardTests.swift */,
-				0E20AB3E2125B94200F6F62A /* Info.plist */,
-			);
-			path = PaperboardTests;
-			sourceTree = "<group>";
-		};
-		0E20AB462125B94200F6F62A /* PaperboardUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0E20AB472125B94200F6F62A /* PaperboardUITests.swift */,
-				0E20AB492125B94200F6F62A /* Info.plist */,
-			);
-			path = PaperboardUITests;
 			sourceTree = "<group>";
 		};
 		0E20AB572125C42B00F6F62A /* Extensions */ = {
@@ -262,10 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */,
-				0E20AB7E212729B400F6F62A /* SettingsStorage.swift */,
 				0E20AB802127386200F6F62A /* SetColumnsViewController.swift */,
 				0E20AB812127386200F6F62A /* SetColumnsViewController.xib */,
-				B07516F9257F6B5100BC905F /* Settings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -284,6 +220,7 @@
 		66DF1A7E25838B36000F68D8 /* PaperboardCommon */ = {
 			isa = PBXGroup;
 			children = (
+				B0A18CDD25849A2F00069689 /* Settings */,
 				66DF1A8525838B7F000F68D8 /* View Controllers */,
 				66DF1A8425838B6C000F68D8 /* Input */,
 				0E20AB572125C42B00F6F62A /* Extensions */,
@@ -331,6 +268,15 @@
 			path = PaperboardKeyboard;
 			sourceTree = "<group>";
 		};
+		B0A18CDD25849A2F00069689 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B07516F9257F6B5100BC905F /* Settings.swift */,
+				0E20AB7E212729B400F6F62A /* SettingsStorage.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		CBB95E8F8449D8800C01C004 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,44 +314,6 @@
 			productReference = 0E20AB242125B93F00F6F62A /* Paperboard.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0E20AB372125B94200F6F62A /* PaperboardTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0E20AB4F2125B94200F6F62A /* Build configuration list for PBXNativeTarget "PaperboardTests" */;
-			buildPhases = (
-				54C110B65292861BF8ACBB5D /* [CP] Check Pods Manifest.lock */,
-				0E20AB342125B94200F6F62A /* Sources */,
-				0E20AB352125B94200F6F62A /* Frameworks */,
-				0E20AB362125B94200F6F62A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0E20AB3A2125B94200F6F62A /* PBXTargetDependency */,
-			);
-			name = PaperboardTests;
-			productName = PaperboardTests;
-			productReference = 0E20AB382125B94200F6F62A /* PaperboardTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0E20AB422125B94200F6F62A /* PaperboardUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0E20AB522125B94200F6F62A /* Build configuration list for PBXNativeTarget "PaperboardUITests" */;
-			buildPhases = (
-				21AF78AE3986FEE4952A4A06 /* [CP] Check Pods Manifest.lock */,
-				0E20AB3F2125B94200F6F62A /* Sources */,
-				0E20AB402125B94200F6F62A /* Frameworks */,
-				0E20AB412125B94200F6F62A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0E20AB452125B94200F6F62A /* PBXTargetDependency */,
-			);
-			name = PaperboardUITests;
-			productName = PaperboardUITests;
-			productReference = 0E20AB432125B94200F6F62A /* PaperboardUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		B07516B2257F64C200BC905F /* PaperboardKeyboard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B07516BE257F64C200BC905F /* Build configuration list for PBXNativeTarget "PaperboardKeyboard" */;
@@ -436,14 +344,6 @@
 					0E20AB232125B93F00F6F62A = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
-					0E20AB372125B94200F6F62A = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 0E20AB232125B93F00F6F62A;
-					};
-					0E20AB422125B94200F6F62A = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 0E20AB232125B93F00F6F62A;
-					};
 					B07516B2257F64C200BC905F = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -465,8 +365,6 @@
 			projectRoot = "";
 			targets = (
 				0E20AB232125B93F00F6F62A /* Paperboard */,
-				0E20AB372125B94200F6F62A /* PaperboardTests */,
-				0E20AB422125B94200F6F62A /* PaperboardUITests */,
 				B07516B2257F64C200BC905F /* PaperboardKeyboard */,
 			);
 		};
@@ -489,20 +387,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E20AB362125B94200F6F62A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E20AB412125B94200F6F62A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B07516B1257F64C200BC905F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,42 +400,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		21AF78AE3986FEE4952A4A06 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PaperboardUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		54C110B65292861BF8ACBB5D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PaperboardTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		69C8D16D82BA481E167CAB61 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -613,22 +461,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E20AB342125B94200F6F62A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E20AB3D2125B94200F6F62A /* PaperboardTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0E20AB3F2125B94200F6F62A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E20AB482125B94200F6F62A /* PaperboardUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B07516AF257F64C200BC905F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -650,16 +482,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0E20AB3A2125B94200F6F62A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0E20AB232125B93F00F6F62A /* Paperboard */;
-			targetProxy = 0E20AB392125B94200F6F62A /* PBXContainerItemProxy */;
-		};
-		0E20AB452125B94200F6F62A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0E20AB232125B93F00F6F62A /* Paperboard */;
-			targetProxy = 0E20AB442125B94200F6F62A /* PBXContainerItemProxy */;
-		};
 		B07516B9257F64C200BC905F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B07516B2257F64C200BC905F /* PaperboardKeyboard */;
@@ -871,88 +693,6 @@
 			};
 			name = Release;
 		};
-		0E20AB502125B94200F6F62A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 507D3D72F6940E59194A39B5 /* Pods-PaperboardTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PaperboardTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.icerockdevelop.paperboard.PaperboardTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paperboard.app/Paperboard";
-			};
-			name = Debug;
-		};
-		0E20AB512125B94200F6F62A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE4CAEE8BB897A632AAF2C8F /* Pods-PaperboardTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PaperboardTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.icerockdevelop.paperboard.PaperboardTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Paperboard.app/Paperboard";
-			};
-			name = Release;
-		};
-		0E20AB532125B94200F6F62A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EB97321D070173986C89CF1 /* Pods-PaperboardUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PaperboardUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.icerockdevelop.paperboard.PaperboardUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Paperboard;
-			};
-			name = Debug;
-		};
-		0E20AB542125B94200F6F62A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC306E1A1BEC1FA8AC1F4878 /* Pods-PaperboardUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PaperboardUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.icerockdevelop.paperboard.PaperboardUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Paperboard;
-			};
-			name = Release;
-		};
 		B07516BC257F64C200BC905F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1017,24 +757,6 @@
 			buildConfigurations = (
 				0E20AB4D2125B94200F6F62A /* Debug */,
 				0E20AB4E2125B94200F6F62A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0E20AB4F2125B94200F6F62A /* Build configuration list for PBXNativeTarget "PaperboardTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E20AB502125B94200F6F62A /* Debug */,
-				0E20AB512125B94200F6F62A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0E20AB522125B94200F6F62A /* Build configuration list for PBXNativeTarget "PaperboardUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E20AB532125B94200F6F62A /* Debug */,
-				0E20AB542125B94200F6F62A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
