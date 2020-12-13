@@ -32,29 +32,35 @@ class MainKeyboardViewController: UIViewController {
     let defaultColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
     
     @IBAction private func onSpeechButtonTouched(_ sender: UIButton!) {
+        UIDevice.current.playInputClick()
         speechProcessor.speechText(inputProcessor.getText())
     }
     
     @IBAction private func onClearButtonTouched(_ sender: UIButton!) {
+        UIDevice.current.playInputClick()
         inputProcessor.clear()
     }
     
     @IBAction func onCapsLocktouched(_ sender: Any) {
+        UIDevice.current.playInputClick()
         inputProcessor.capsLock()
         capsLockButton.backgroundColor = inputProcessor.isCaps() ? UIColor.lightGray : defaultColor
     }
     
     @IBAction private func onPrevButtonTouched(_ sender: UIButton!) {
+        UIDevice.current.playInputClick()
         inputCollectionProcessor.scrollPrev(inputCollectionView)
         allowScrollInteraction(false)
     }
     
     @IBAction private func onNextButtonTouched(_ sender: UIButton!) {
+        UIDevice.current.playInputClick()
         inputCollectionProcessor.scrollNext(inputCollectionView)
         allowScrollInteraction(false)
     }
     
     @IBAction private func onBackspaceButtonTouched(_ sender: UIButton!) {
+        UIDevice.current.playInputClick()
         inputProcessor.backspace()
     }
     
@@ -82,6 +88,7 @@ class MainKeyboardViewController: UIViewController {
         inputCollectionView.allowsSelection = true
         
         inputCollectionProcessor.onCellSelected = { [weak self] indexPath in
+            UIDevice.current.playInputClick()
             guard let source = self?.inputSource,
                   let letter = source.letter(forIndexPath: indexPath) else {
                 return

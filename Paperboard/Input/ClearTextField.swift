@@ -9,7 +9,7 @@
 import UIKit
 
 class ClearTextField: UITextField {
-  override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
-    return false
-  }
+    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        return false
+    }
 }
