@@ -9,10 +9,18 @@
 import UIKit
 
 class InputCollectionViewCell: UICollectionViewCell {
-  
-  @IBOutlet weak var characterLabel: UILabel!
-  
-  func fill(with value: String) {
-    characterLabel.text = value
-  }
+    
+    @IBOutlet weak var characterButton: KeyboardButton!
+    var onButtonPressed: (() -> Void)?
+    
+    func fill(with value: String) {
+        UIView.performWithoutAnimation {
+            characterButton.setTitle(value, for: UIControl.State.normal)
+            characterButton.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func onPressed(_ sender: Any) {
+        onButtonPressed?()
+    }
 }

@@ -28,7 +28,9 @@ class KeyboardViewController: UIInputViewController {
         keyboardViewContoller.view.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         keyboardViewContoller.view.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         
-        keyboardViewContoller.inputProcessor = InputKeyboardProcessor(documentProxy: textDocumentProxy)
+        keyboardViewContoller.inputProcessor = InputKeyboardProcessor(
+            documentProxy: textDocumentProxy
+        )
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,6 +47,17 @@ class KeyboardViewController: UIInputViewController {
         } else {
             keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .vertical }
             heightConstraint.constant = UIScreen.main.bounds.height * 0.7
+        }
+    }
+    
+    override func textDidChange(_ textInput: UITextInput?) {
+        switch textDocumentProxy.keyboardAppearance {
+        case .dark:
+            keyboardViewContoller.setColorScheme(.dark)
+        case .light:
+            keyboardViewContoller.setColorScheme(.light)
+        default:
+            break
         }
     }
 }

@@ -20,13 +20,9 @@ class MainInputViewController: MainKeyboardViewController {
     
     override func viewDidLoad() {
         inputProcessor = InputFieldProcessor(inputField: inputField)
-        
-        prevButton.titleLabel?.textAlignment = .center
-        nextButton.titleLabel?.textAlignment = .center
-        prevButton.titleLabel?.numberOfLines = 2
-        nextButton.titleLabel?.numberOfLines = 2
-        
         super.viewDidLoad()
+        
+        setColorScheme(.light)
     }
     
     override func viewWillAppear(_ animated: Bool) {

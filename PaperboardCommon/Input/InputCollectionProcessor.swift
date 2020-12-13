@@ -9,10 +9,6 @@
 import UIKit
 
 class SelectableCollectionDelegate: NSObject, UICollectionViewDelegate {
-  var onCellSelected: ((IndexPath) -> Void)?
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    onCellSelected?(indexPath)
-  }
 }
 
 class InputCollectionProcessor: SelectableCollectionDelegate {

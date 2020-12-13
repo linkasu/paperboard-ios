@@ -57,6 +57,10 @@
 		B0BCF96B2585E1EF00ADCBB3 /* MainKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */; };
 		B0D3683D25864036007CBF35 /* UIView+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3683C25864036007CBF35 /* UIView+Audio.swift */; };
 		B0D3683E25864036007CBF35 /* UIView+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3683C25864036007CBF35 /* UIView+Audio.swift */; };
+		B0D36847258645FD007CBF35 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36846258645FD007CBF35 /* KeyboardButton.swift */; };
+		B0D3684C25864647007CBF35 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36846258645FD007CBF35 /* KeyboardButton.swift */; };
+		B0D36854258648FB007CBF35 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36853258648FB007CBF35 /* Styles.swift */; };
+		B0D3685B258649CF007CBF35 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36853258648FB007CBF35 /* Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +139,8 @@
 		B0BCF95C2585D55E00ADCBB3 /* InputKeyboardProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputKeyboardProcessor.swift; sourceTree = "<group>"; };
 		B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Second.swift"; sourceTree = "<group>"; };
 		B0D3683C25864036007CBF35 /* UIView+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Audio.swift"; sourceTree = "<group>"; };
+		B0D36846258645FD007CBF35 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
+		B0D36853258648FB007CBF35 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		B15BD7E7338FCD8E696350EB /* Pods-Paperboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paperboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paperboard/Pods-Paperboard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,6 +242,8 @@
 		66DF1A7E25838B36000F68D8 /* PaperboardCommon */ = {
 			isa = PBXGroup;
 			children = (
+				B0D36852258648F2007CBF35 /* Styles */,
+				B0D36845258645EC007CBF35 /* Views */,
 				B0BCF94A2584CAD100ADCBB3 /* Resources */,
 				B0BCF93D2584C99500ADCBB3 /* TextToSpeech */,
 				B0A18CDD25849A2F00069689 /* Settings */,
@@ -314,6 +322,22 @@
 				0E20AB7821271F5600F6F62A /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B0D36845258645EC007CBF35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0D36846258645FD007CBF35 /* KeyboardButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0D36852258648F2007CBF35 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				B0D36853258648FB007CBF35 /* Styles.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		CBB95E8F8449D8800C01C004 /* Pods */ = {
@@ -492,10 +516,12 @@
 				B0D3683D25864036007CBF35 /* UIView+Audio.swift in Sources */,
 				0E20AB7A2127247100F6F62A /* TextToSpeechProcessor.swift in Sources */,
 				0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */,
+				B0D36854258648FB007CBF35 /* Styles.swift in Sources */,
 				666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */,
 				B07516FA257F6B5100BC905F /* Settings.swift in Sources */,
 				0E20AB7D2127289000F6F62A /* SettingsProcessor.swift in Sources */,
 				B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */,
+				B0D36847258645FD007CBF35 /* KeyboardButton.swift in Sources */,
 				B0BCF9662585DA1500ADCBB3 /* Date+Second.swift in Sources */,
 				0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */,
 				0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */,
@@ -517,12 +543,14 @@
 				B0A18CD8258497B400069689 /* TextToSpeechProcessor.swift in Sources */,
 				B0BCF9592585D4F700ADCBB3 /* InputProcessor.swift in Sources */,
 				B07516D5257F67CB00BC905F /* UIKit+Localizable.swift in Sources */,
+				B0D3685B258649CF007CBF35 /* Styles.swift in Sources */,
 				66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */,
 				B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */,
 				B0BCF9632585DA0E00ADCBB3 /* Date+Second.swift in Sources */,
 				B0D3683E25864036007CBF35 /* UIView+Audio.swift in Sources */,
 				66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */,
 				B07516EF257F6A5000BC905F /* InputCollectionDataSource.swift in Sources */,
+				B0D3684C25864647007CBF35 /* KeyboardButton.swift in Sources */,
 				B0BCF9442584CA4B00ADCBB3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

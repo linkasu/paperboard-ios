@@ -11,13 +11,13 @@ import UIKit
 class MainKeyboardViewController: UIViewController {
     
     @IBOutlet weak var inputCollectionView: UICollectionView!
-    @IBOutlet weak var prevButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var prevButton: KeyboardButton!
+    @IBOutlet weak var nextButton: KeyboardButton!
     
-    @IBOutlet weak var backspaceButton: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
-    @IBOutlet weak var capsLockButton: UIButton!
-    @IBOutlet weak var talkButton: UIButton!
+    @IBOutlet weak var backspaceButton: KeyboardButton!
+    @IBOutlet weak var clearButton: KeyboardButton!
+    @IBOutlet weak var capsLockButton: KeyboardButton!
+    @IBOutlet weak var talkButton: KeyboardButton!
     
     @IBOutlet var buttonsStackViews: [UIStackView]!
     
@@ -44,7 +44,7 @@ class MainKeyboardViewController: UIViewController {
     @IBAction func onCapsLocktouched(_ sender: Any) {
         UIDevice.current.playInputClick()
         inputProcessor.capsLock()
-        capsLockButton.backgroundColor = inputProcessor.isCaps() ? UIColor.lightGray : defaultColor
+        capsLockButton.isPressed = inputProcessor.isCaps()
     }
     
     @IBAction private func onPrevButtonTouched(_ sender: UIButton!) {
@@ -87,7 +87,7 @@ class MainKeyboardViewController: UIViewController {
         inputCollectionView.delegate = inputCollectionProcessor
         inputCollectionView.allowsSelection = true
         
-        inputCollectionProcessor.onCellSelected = { [weak self] indexPath in
+        inputSource.onCellSelected = { [weak self] indexPath in
             UIDevice.current.playInputClick()
             guard let source = self?.inputSource,
                   let letter = source.letter(forIndexPath: indexPath) else {
@@ -112,6 +112,11 @@ class MainKeyboardViewController: UIViewController {
             self.inputSource.currentKeyboard = newKeyboard
             self.updateCollection()
         }
+        
+        prevButton.titleLabel?.textAlignment = .center
+        nextButton.titleLabel?.textAlignment = .center
+        prevButton.titleLabel?.numberOfLines = 2
+        nextButton.titleLabel?.numberOfLines = 2
         
         updateButtonsTitles()
     }
@@ -144,5 +149,38 @@ class MainKeyboardViewController: UIViewController {
     private func allowScrollInteraction(_ allowed: Bool) {
         prevButton.isUserInteractionEnabled = allowed
         nextButton.isUserInteractionEnabled = allowed
+    }
+    
+    func setColorScheme(_ colorScheme: PaperboardColorScheme) {
+        let colorScheme = PaperboardColors(colorScheme: colorScheme)
+        
+        inputSource.colorScheme = colorScheme
+        view.backgroundColor = colorScheme.backgroundColor
+        inputCollectionView.backgroundColor = colorScheme.backgroundColor
+        
+        for view in view.subviews {
+            if let button = view as? KeyboardButton {
+                configure(button: button, colorScheme: colorScheme)
+            }
+        }
+        
+        for cell in inputCollectionView.visibleCells {
+            if let inputCell = cell as? InputCollectionViewCell {
+                configure(button: inputCell.characterButton, colorScheme: colorScheme)
+            }
+        }
+        
+        configure(button: clearButton, colorScheme: colorScheme)
+        configure(button: backspaceButton, colorScheme: colorScheme)
+        configure(button: capsLockButton, colorScheme: colorScheme)
+        configure(button: talkButton, colorScheme: colorScheme)
+    }
+    
+    func configure(button: KeyboardButton, colorScheme: PaperboardColors) {
+        button.setTitleColor(colorScheme.buttonTextColor, for: [])
+        button.tintColor = colorScheme.buttonTextColor
+        
+        button.defaultBackgroundColor = colorScheme.buttonBackgroundColor
+        button.highlightBackgroundColor = colorScheme.buttonHighlightColor
     }
 }
