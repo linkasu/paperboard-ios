@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6o-Dx-IGk" customClass="ClearTextField" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="8" y="8" width="552" height="48"/>
+                                <rect key="frame" x="4" y="8" width="560" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Knh-Cw-dgh"/>
@@ -161,10 +161,10 @@
                             <constraint firstItem="O6o-Dx-IGk" firstAttribute="top" secondItem="5hj-ip-iPV" secondAttribute="top" constant="8" id="KdJ-u7-QcT"/>
                             <constraint firstItem="sD3-hK-vVp" firstAttribute="top" secondItem="O6o-Dx-IGk" secondAttribute="bottom" constant="4" id="PeS-Mu-E9m"/>
                             <constraint firstItem="pZ9-SY-jm6" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.15" id="Uoh-nl-niF"/>
-                            <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="O6o-Dx-IGk" secondAttribute="trailing" constant="8" id="cts-sT-1rh"/>
+                            <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="O6o-Dx-IGk" secondAttribute="trailing" constant="4" id="cts-sT-1rh"/>
                             <constraint firstItem="pZ9-SY-jm6" firstAttribute="bottom" secondItem="5hj-ip-iPV" secondAttribute="bottom" id="d1e-o8-cIg"/>
                             <constraint firstItem="sYm-5H-3gi" firstAttribute="leading" secondItem="sD3-hK-vVp" secondAttribute="trailing" constant="4" id="kQF-Mx-8fx"/>
-                            <constraint firstItem="O6o-Dx-IGk" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" constant="8" id="pDp-F7-qSo"/>
+                            <constraint firstItem="O6o-Dx-IGk" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" constant="4" id="pDp-F7-qSo"/>
                             <constraint firstItem="pZ9-SY-jm6" firstAttribute="top" secondItem="sYm-5H-3gi" secondAttribute="bottom" constant="4" id="pFX-e4-lQp"/>
                             <constraint firstItem="bM9-hj-G9L" firstAttribute="leading" secondItem="sYm-5H-3gi" secondAttribute="trailing" constant="4" id="uCG-R8-Uhf"/>
                             <constraint firstItem="pZ9-SY-jm6" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" id="vyu-Ky-gbc"/>
