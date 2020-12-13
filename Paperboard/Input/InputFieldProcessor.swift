@@ -29,10 +29,7 @@ class InputFieldProcessor: NSObject, UITextFieldDelegate, InputProcessor {
     }
     
     func backspace() {
-        if let text = textField.text {
-            let newText = text.dropLast()
-            textField.text = String(newText)
-        }
+        textField.deleteBackward()
     }
     
     func isCaps() -> Bool {
