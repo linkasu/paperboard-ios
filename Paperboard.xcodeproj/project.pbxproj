@@ -30,9 +30,7 @@
 		0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5433392129CD0B00DBC3DD /* InfoPlist.strings */; };
 		0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E734BA82135A67B0000D02F /* Keyboards.plist */; };
 		4B4F3825B8B07B2DA6B31FA9 /* Pods_Paperboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */; };
-		666CF28025837F0C008D1872 /* MainKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */; };
 		666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
-		666CF293258380F6008D1872 /* MainKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */; };
 		66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */; };
 		66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
 		B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07516B5257F64C200BC905F /* KeyboardViewController.swift */; };
@@ -51,6 +49,12 @@
 		B0BCF93F2584C9A600ADCBB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF93E2584C9A600ADCBB3 /* Constants.swift */; };
 		B0BCF9442584CA4B00ADCBB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF93E2584C9A600ADCBB3 /* Constants.swift */; };
 		B0BCF9472584CAC800ADCBB3 /* Keyboards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E734BA82135A67B0000D02F /* Keyboards.plist */; };
+		B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */; };
+		B0BCF9592585D4F700ADCBB3 /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */; };
+		B0BCF95D2585D55E00ADCBB3 /* InputKeyboardProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF95C2585D55E00ADCBB3 /* InputKeyboardProcessor.swift */; };
+		B0BCF9632585DA0E00ADCBB3 /* Date+Second.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */; };
+		B0BCF9662585DA1500ADCBB3 /* Date+Second.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */; };
+		B0BCF96B2585E1EF00ADCBB3 /* MainKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,9 @@
 		B0BCF9282584C5CA00ADCBB3 /* Paperboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Paperboard.entitlements; sourceTree = "<group>"; };
 		B0BCF9292584C6DB00ADCBB3 /* PaperboardKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PaperboardKeyboard.entitlements; sourceTree = "<group>"; };
 		B0BCF93E2584C9A600ADCBB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProcessor.swift; sourceTree = "<group>"; };
+		B0BCF95C2585D55E00ADCBB3 /* InputKeyboardProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputKeyboardProcessor.swift; sourceTree = "<group>"; };
+		B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Second.swift"; sourceTree = "<group>"; };
 		B15BD7E7338FCD8E696350EB /* Pods-Paperboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paperboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paperboard/Pods-Paperboard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +196,7 @@
 			children = (
 				0E20AB582125C43E00F6F62A /* UIKit+Localizable.swift */,
 				0E20AB722127155F00F6F62A /* Collection+Safe.swift */,
+				B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 				0E20AB5F2125CB7100F6F62A /* InputCollectionDataSource.swift */,
 				0E20AB612125DB3000F6F62A /* InputCollectionLayout.swift */,
 				0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */,
+				B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -251,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				666CF28525837F83008D1872 /* MainKeyboardViewController.swift */,
-				666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -270,7 +278,9 @@
 			isa = PBXGroup;
 			children = (
 				B0BCF9292584C6DB00ADCBB3 /* PaperboardKeyboard.entitlements */,
+				666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */,
 				B07516B5257F64C200BC905F /* KeyboardViewController.swift */,
+				B0BCF95C2585D55E00ADCBB3 /* InputKeyboardProcessor.swift */,
 				B07516B7257F64C200BC905F /* Info.plist */,
 			);
 			path = PaperboardKeyboard;
@@ -402,7 +412,6 @@
 			files = (
 				0E20AB322125B94200F6F62A /* LaunchScreen.storyboard in Resources */,
 				0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */,
-				666CF28025837F0C008D1872 /* MainKeyboardViewController.xib in Resources */,
 				0E20AB7621271F5600F6F62A /* Localizable.strings in Resources */,
 				0E20AB2F2125B94200F6F62A /* Assets.xcassets in Resources */,
 				0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */,
@@ -416,9 +425,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BCF96B2585E1EF00ADCBB3 /* MainKeyboardViewController.xib in Resources */,
 				B075172A257F76BA00BC905F /* InputCollectionViewCell.xib in Resources */,
 				B0BCF9472584CAC800ADCBB3 /* Keyboards.plist in Resources */,
-				666CF293258380F6008D1872 /* MainKeyboardViewController.xib in Resources */,
 				B075172F257F7A6900BC905F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +490,8 @@
 				666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */,
 				B07516FA257F6B5100BC905F /* Settings.swift in Sources */,
 				0E20AB7D2127289000F6F62A /* SettingsProcessor.swift in Sources */,
+				B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */,
+				B0BCF9662585DA1500ADCBB3 /* Date+Second.swift in Sources */,
 				0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */,
 				0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */,
 				0E20AB602125CB7100F6F62A /* InputCollectionDataSource.swift in Sources */,
@@ -496,11 +507,14 @@
 				B07516F4257F6ADB00BC905F /* InputCollectionViewCell.swift in Sources */,
 				B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */,
 				B07516D4257F67CB00BC905F /* Collection+Safe.swift in Sources */,
+				B0BCF95D2585D55E00ADCBB3 /* InputKeyboardProcessor.swift in Sources */,
 				B0751708257F6DDD00BC905F /* Settings.swift in Sources */,
 				B0A18CD8258497B400069689 /* TextToSpeechProcessor.swift in Sources */,
+				B0BCF9592585D4F700ADCBB3 /* InputProcessor.swift in Sources */,
 				B07516D5257F67CB00BC905F /* UIKit+Localizable.swift in Sources */,
 				66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */,
 				B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */,
+				B0BCF9632585DA0E00ADCBB3 /* Date+Second.swift in Sources */,
 				66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */,
 				B07516EF257F6A5000BC905F /* InputCollectionDataSource.swift in Sources */,
 				B0BCF9442584CA4B00ADCBB3 /* Constants.swift in Sources */,
@@ -691,7 +705,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.su.linka.paperboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -715,7 +729,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.su.linka.paperboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -740,7 +754,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.PaperboardKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.su.linka.paperboard.PaperboardKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -764,7 +778,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.PaperboardKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.su.linka.paperboard.PaperboardKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
