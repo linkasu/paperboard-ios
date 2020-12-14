@@ -9,13 +9,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainKeyboardViewController" customModule="PaperboardKeyboard" customModuleProvider="target">
             <connections>
-                <outlet property="backspaceButton" destination="3fr-uj-gcm" id="Ftt-JT-1f7"/>
-                <outlet property="capsLockButton" destination="X8C-W1-afl" id="pg4-8O-lcE"/>
-                <outlet property="clearButton" destination="Efp-G9-tUj" id="awA-fF-Zff"/>
+                <outlet property="backspaceButton" destination="X8C-W1-afl" id="i10-d4-j2Q"/>
+                <outlet property="capsLockButton" destination="3fr-uj-gcm" id="nbs-b7-yIh"/>
+                <outlet property="clearButton" destination="XDC-fS-7vl" id="JfH-lG-zKq"/>
                 <outlet property="inputCollectionView" destination="BSL-4D-eUF" id="vaS-4I-de4"/>
                 <outlet property="nextButton" destination="Oca-Gn-3x2" id="ePX-ng-gqz"/>
                 <outlet property="prevButton" destination="VgV-Pm-hww" id="RBf-eS-fAG"/>
-                <outlet property="talkButton" destination="XDC-fS-7vl" id="rWp-Kg-aeb"/>
+                <outlet property="talkButton" destination="Efp-G9-tUj" id="RFF-hi-OSJ"/>
                 <outlet property="view" destination="ioi-oi-lRi" id="b2a-q2-Yf5"/>
                 <outletCollection property="buttonsStackViews" destination="Toq-j6-Udn" collectionClass="NSMutableArray" id="VU4-Ox-WPX"/>
                 <outletCollection property="buttonsStackViews" destination="Sgv-wS-kBk" collectionClass="NSMutableArray" id="KWh-w9-qBw"/>
@@ -61,28 +61,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="257.5" height="45"/>
                                             <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <state key="normal" title="caps lock">
+                                            <state key="normal" title="backspace">
                                                 <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.capslock"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.backspace"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="qya-qz-9GX"/>
+                                                <action selector="onBackspaceButtonTouched:" destination="-1" eventType="touchUpInside" id="rFA-Ae-cPC"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-fS-7vl" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="53" width="257.5" height="45"/>
                                             <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <state key="normal" title="talk">
+                                            <state key="normal" title="clear">
                                                 <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.talk"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.clear"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="onSpeechButtonTouched:" destination="-1" eventType="touchUpInside" id="5tY-yf-6fp"/>
+                                                <action selector="onClearButtonTouched:" destination="-1" eventType="touchUpInside" id="m1P-Xu-ww6"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -94,28 +94,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="257.5" height="45"/>
                                             <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <state key="normal" title="backspace">
+                                            <state key="normal" title="capslock">
                                                 <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.backspace"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.capslock"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="onBackspaceButtonTouched:" destination="-1" eventType="touchUpInside" id="0lS-w1-Naf"/>
+                                                <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="lIQ-tD-855"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efp-G9-tUj" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="53" width="257.5" height="45"/>
                                             <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <state key="normal" title="clear">
+                                            <state key="normal" title="talk">
                                                 <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.clear"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.talk"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="onClearButtonTouched:" destination="-1" eventType="touchUpInside" id="EKf-Z7-cPI"/>
+                                                <action selector="onSpeechButtonTouched:" destination="-1" eventType="touchUpInside" id="d8Q-F3-Oh7"/>
                                             </connections>
                                         </button>
                                     </subviews>
