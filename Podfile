@@ -10,14 +10,4 @@ target 'Paperboard' do
   pod 'ActionSheetPicker-3.0'
   pod 'Firebase/Analytics'
 
-  target 'PaperboardTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'PaperboardUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

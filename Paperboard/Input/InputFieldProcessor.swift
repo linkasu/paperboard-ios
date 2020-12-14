@@ -8,42 +8,61 @@
 
 import UIKit
 
-class InputFieldProcessor: NSObject, UITextFieldDelegate {
-  var onUpdate: ((String) -> Void)?
-  var caps = false
+class InputFieldProcessor: NSObject, UITextFieldDelegate, InputProcessor {
     
-  private (set) var currentValue: String = "" {
-    didSet {
-      onUpdate?(currentValue)
+    private weak var textField: UITextField!
+    private var caps = false
+    
+    init(inputField: UITextField) {
+        super.init()
+        textField = inputField
+        textField.delegate = self
     }
-  }
-  
-  func appendLetter(_ letter: String) {
-    currentValue.append(caps ? letter.uppercased() : letter)
-  }
-  
-  func clear() {
-    currentValue = ""
-  }
-
-  func capsLock() {
-    caps = !caps
-  }
-  
-  func backSpace() {
-    currentValue = String(currentValue.dropLast())
-  }
-
-  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-    return false
-  }
-  
-  func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-    textField.inputView = UIView(frame: CGRect.zero)
-    textField.inputAccessoryView = UIView(frame: CGRect.zero)
-    textField.inputAssistantItem.leadingBarButtonGroups.removeAll()
-    textField.inputAssistantItem.trailingBarButtonGroups.removeAll()
-    return true
-  }
-  
+    
+    func getText() -> String {
+        return textField.text ?? ""
+    }
+    
+    func append(text: String) {
+        let toAppend = caps ? text.uppercased() : text
+        textField.insertText(toAppend)
+    }
+    
+    func backspace() {
+        textField.deleteBackward()
+    }
+    
+    func isCaps() -> Bool {
+        return caps
+    }
+    
+    func clear() {
+        textField.text = ""
+    }
+    
+    func capsLock() {
+        caps = !caps
+    }
+    
+    func done() {
+    }
+    
+    func left() {
+    }
+    
+    func right() { 
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return false
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textField.inputView = UIView(frame: CGRect.zero)
+        textField.inputAccessoryView = UIView(frame: CGRect.zero)
+        textField.inputAssistantItem.leadingBarButtonGroups.removeAll()
+        textField.inputAssistantItem.trailingBarButtonGroups.removeAll()
+        return true
+    }
+    
 }

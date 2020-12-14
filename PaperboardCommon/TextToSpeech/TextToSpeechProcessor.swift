@@ -12,12 +12,7 @@ import AVFoundation
 class TextToSpeechProcessor: NSObject {
   
   private let synthesizer = AVSpeechSynthesizer()
-  private let settings = SettingsProcessor()
-  
-  override init() {
-    super.init()
-    print(AVSpeechSynthesisVoice.speechVoices().map({ "\($0.identifier) - \($0.name) - \($0.language)" }).joined(separator: "\n"))
-  }
+  private let settings = Settings()
   
   func speechText(_ text: String) {
     let utterance = AVSpeechUtterance(string: text)
