@@ -64,6 +64,21 @@ class MainKeyboardViewController: UIViewController {
         inputProcessor.backspace()
     }
     
+    @IBAction func onDoneButtonTouched(_ sender: Any) {
+        UIDevice.current.playInputClick()
+        inputProcessor.done()
+    }
+    
+    @IBAction func onRightButtonTouched(_ sender: Any) {
+        UIDevice.current.playInputClick()
+        inputProcessor.right()
+    }
+    
+    @IBAction func onLeftButtonTouched(_ sender: Any) {
+        UIDevice.current.playInputClick()
+        inputProcessor.left()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

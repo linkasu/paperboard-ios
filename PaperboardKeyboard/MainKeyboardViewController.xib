@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgV-Pm-hww" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="8" y="52" width="108" height="216"/>
+                    <rect key="frame" x="8" y="67.5" width="108" height="200.5"/>
                     <color key="backgroundColor" white="0.9034264353" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
                     <state key="normal">
@@ -38,7 +38,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-Gn-3x2" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="423" y="52" width="108" height="216"/>
+                    <rect key="frame" x="423" y="67.5" width="108" height="200.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
                     <state key="normal">
@@ -131,32 +131,85 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BSL-4D-eUF">
-                    <rect key="frame" x="124" y="52" width="291" height="216"/>
+                    <rect key="frame" x="124" y="67.5" width="291" height="200.5"/>
                     <collectionViewLayout key="collectionViewLayout" id="Ktg-3n-OUX"/>
                     <cells/>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-7h-tWt" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="8" y="8" width="108" height="51.5"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" image="arrow.left.square" catalog="system">
+                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="6Lp-gp-Me8"/>
+                        <action selector="onLeftButtonTouched:" destination="-1" eventType="touchUpInside" id="uME-ID-d5e"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEL-O6-BvV" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="423" y="8" width="108" height="51.5"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" image="arrow.right.square" catalog="system">
+                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="Lkj-Tc-9aY"/>
+                        <action selector="onRightButtonTouched:" destination="-1" eventType="touchUpInside" id="oZV-jN-niD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO7-4y-voE" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="124" y="8" width="291" height="51.5"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="done">
+                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.done"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="Xra-qF-wq6"/>
+                        <action selector="onDoneButtonTouched:" destination="-1" eventType="touchUpInside" id="9aD-pg-60V"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ArL-1z-1CW"/>
             <constraints>
+                <constraint firstItem="sEL-O6-BvV" firstAttribute="height" secondItem="7Tc-7h-tWt" secondAttribute="height" id="03u-dF-Bsu"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="leading" secondItem="BSL-4D-eUF" secondAttribute="trailing" constant="8" id="1T3-3K-0Wv"/>
                 <constraint firstItem="BSL-4D-eUF" firstAttribute="leading" secondItem="VgV-Pm-hww" secondAttribute="trailing" constant="8" id="4jT-IA-307"/>
-                <constraint firstItem="VgV-Pm-hww" firstAttribute="top" secondItem="ArL-1z-1CW" secondAttribute="top" constant="8" id="7NQ-Cx-PvK"/>
+                <constraint firstItem="7Tc-7h-tWt" firstAttribute="width" secondItem="ioi-oi-lRi" secondAttribute="width" multiplier="0.2" id="57r-wr-3Nl"/>
+                <constraint firstItem="sEL-O6-BvV" firstAttribute="leading" secondItem="rO7-4y-voE" secondAttribute="trailing" constant="8" id="8WC-Oj-yRC"/>
+                <constraint firstItem="7Tc-7h-tWt" firstAttribute="top" secondItem="ioi-oi-lRi" secondAttribute="top" constant="8" id="Acs-v4-IpF"/>
+                <constraint firstItem="rO7-4y-voE" firstAttribute="height" secondItem="7Tc-7h-tWt" secondAttribute="height" id="EY6-TV-oFr"/>
+                <constraint firstItem="sEL-O6-BvV" firstAttribute="top" secondItem="ioi-oi-lRi" secondAttribute="top" constant="8" id="I6L-Tt-9nV"/>
+                <constraint firstItem="rO7-4y-voE" firstAttribute="top" secondItem="ioi-oi-lRi" secondAttribute="top" constant="8" id="Iaq-9H-DfT"/>
                 <constraint firstItem="KzH-Sr-pX3" firstAttribute="trailing" secondItem="ArL-1z-1CW" secondAttribute="trailing" id="P4h-Sq-BjP"/>
                 <constraint firstItem="KzH-Sr-pX3" firstAttribute="bottom" secondItem="ArL-1z-1CW" secondAttribute="bottom" id="QbR-Wq-jdD"/>
+                <constraint firstItem="Oca-Gn-3x2" firstAttribute="top" secondItem="sEL-O6-BvV" secondAttribute="bottom" constant="8" id="Rqb-xN-uOZ"/>
+                <constraint firstItem="sEL-O6-BvV" firstAttribute="width" secondItem="7Tc-7h-tWt" secondAttribute="width" id="Xvj-AN-l9I"/>
                 <constraint firstItem="KzH-Sr-pX3" firstAttribute="top" secondItem="VgV-Pm-hww" secondAttribute="bottom" constant="8" id="a9g-rC-Ujl"/>
+                <constraint firstAttribute="trailing" secondItem="sEL-O6-BvV" secondAttribute="trailing" constant="8" id="bPb-bn-ixa"/>
+                <constraint firstItem="BSL-4D-eUF" firstAttribute="top" secondItem="rO7-4y-voE" secondAttribute="bottom" constant="8" id="c2P-VX-4i4"/>
                 <constraint firstItem="KzH-Sr-pX3" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.25" id="dLr-To-Qhj"/>
+                <constraint firstItem="rO7-4y-voE" firstAttribute="leading" secondItem="7Tc-7h-tWt" secondAttribute="trailing" constant="8" id="eIl-wE-Xh0"/>
                 <constraint firstItem="VgV-Pm-hww" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="8" id="fXn-hZ-ocd"/>
                 <constraint firstItem="KzH-Sr-pX3" firstAttribute="top" secondItem="BSL-4D-eUF" secondAttribute="bottom" constant="8" id="gre-uf-hho"/>
-                <constraint firstItem="BSL-4D-eUF" firstAttribute="top" secondItem="ArL-1z-1CW" secondAttribute="top" constant="8" id="iHk-VW-ERa"/>
                 <constraint firstItem="VgV-Pm-hww" firstAttribute="width" secondItem="ioi-oi-lRi" secondAttribute="width" multiplier="0.2" id="npU-9l-0yf"/>
+                <constraint firstItem="7Tc-7h-tWt" firstAttribute="leading" secondItem="ioi-oi-lRi" secondAttribute="leading" constant="8" id="o4L-QX-OqE"/>
+                <constraint firstItem="VgV-Pm-hww" firstAttribute="top" secondItem="7Tc-7h-tWt" secondAttribute="bottom" constant="8" id="oeB-NI-V9O"/>
                 <constraint firstItem="KzH-Sr-pX3" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" id="s0y-WK-lgW"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="width" secondItem="VgV-Pm-hww" secondAttribute="width" id="sr3-Gs-luY"/>
-                <constraint firstItem="Oca-Gn-3x2" firstAttribute="top" secondItem="ArL-1z-1CW" secondAttribute="top" constant="8" id="tQn-HW-LV1"/>
                 <constraint firstItem="KzH-Sr-pX3" firstAttribute="top" secondItem="Oca-Gn-3x2" secondAttribute="bottom" constant="8" id="tph-5D-m3b"/>
                 <constraint firstItem="ArL-1z-1CW" firstAttribute="trailing" secondItem="Oca-Gn-3x2" secondAttribute="trailing" constant="8" id="xDm-sG-8YN"/>
+                <constraint firstItem="7Tc-7h-tWt" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.125" id="ywG-U1-EqI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-84.782608695652186" y="507.25446428571428"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrow.left.square" catalog="system" width="128" height="114"/>
+        <image name="arrow.right.square" catalog="system" width="128" height="114"/>
+    </resources>
 </document>

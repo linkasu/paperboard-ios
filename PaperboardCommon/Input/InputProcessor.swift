@@ -15,4 +15,7 @@ protocol InputProcessor {
     func backspace()
     func capsLock()
     func isCaps() -> Bool
+    func left()
+    func right()
+    func done()
 }

@@ -12,8 +12,10 @@ class InputKeyboardProcessor: InputProcessor {
     private var caps = false
     
     weak var documentProxy: UITextDocumentProxy!
+    weak var inputView: UIInputViewController?
     
-    init(documentProxy: UITextDocumentProxy) {
+    init(inputView: UIInputViewController?, documentProxy: UITextDocumentProxy) {
+        self.inputView = inputView
         self.documentProxy = documentProxy
     }
     
@@ -38,11 +40,23 @@ class InputKeyboardProcessor: InputProcessor {
         documentProxy.deleteBackward()
     }
     
+    func left() {
+        documentProxy.adjustTextPosition(byCharacterOffset: -1)
+    }
+    
+    func right() {
+        documentProxy.adjustTextPosition(byCharacterOffset: 1)
+    }
+    
     func capsLock() {
         caps = !caps
     }
     
     func isCaps() -> Bool {
         return caps
+    }
+    
+    func done() {
+        inputView?.dismissKeyboard()
     }
 }

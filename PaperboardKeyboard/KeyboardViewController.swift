@@ -17,7 +17,7 @@ class KeyboardViewController: UIInputViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        heightConstraint = self.view.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.7)
+        heightConstraint = self.view.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.8)
         heightConstraint.isActive = true
         
         self.addChild(keyboardViewContoller)
@@ -29,6 +29,7 @@ class KeyboardViewController: UIInputViewController {
         keyboardViewContoller.view.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         
         keyboardViewContoller.inputProcessor = InputKeyboardProcessor(
+            inputView: self,
             documentProxy: textDocumentProxy
         )
     }
@@ -43,7 +44,7 @@ class KeyboardViewController: UIInputViewController {
     func handleRotation() {
         if UIScreen.main.bounds.width > UIScreen.main.bounds.height {
             keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .horizontal }
-            heightConstraint.constant = UIScreen.main.bounds.height * 0.7
+            heightConstraint.constant = UIScreen.main.bounds.height * 0.8
         } else {
             keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .vertical }
             heightConstraint.constant = UIScreen.main.bounds.height * 0.7

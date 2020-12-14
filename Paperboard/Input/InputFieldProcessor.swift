@@ -44,6 +44,15 @@ class InputFieldProcessor: NSObject, UITextFieldDelegate, InputProcessor {
         caps = !caps
     }
     
+    func done() {
+    }
+    
+    func left() {
+    }
+    
+    func right() { 
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
     }
