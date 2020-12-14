@@ -33,12 +33,11 @@ class KeyboardViewController: UIInputViewController {
             documentProxy: textDocumentProxy
         )
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        handleRotation()
-        keyboardViewContoller.inputCollectionView.collectionViewLayout.invalidateLayout()
+
+        self.keyboardViewContoller.inputLayout.invalidateLayout()
     }
     
     func handleRotation() {
@@ -61,4 +60,16 @@ class KeyboardViewController: UIInputViewController {
             break
         }
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        coordinator.animate(
+            alongsideTransition: nil,
+            completion: { [weak self] _ in
+                self?.handleRotation()
+                self?.keyboardViewContoller.inputCollectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: false)
+            })
+    }
+    
 }
