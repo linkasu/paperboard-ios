@@ -61,6 +61,8 @@
 		B0D3684C25864647007CBF35 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36846258645FD007CBF35 /* KeyboardButton.swift */; };
 		B0D36854258648FB007CBF35 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36853258648FB007CBF35 /* Styles.swift */; };
 		B0D3685B258649CF007CBF35 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36853258648FB007CBF35 /* Styles.swift */; };
+		651B5E6C257F6E4E00583CAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 651B5E6B257F6E4D00583CAC /* GoogleService-Info.plist */; };
+		70C805EC626B82DDBB75AF77 /* Pods_PaperboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,7 @@
 		507D3D72F6940E59194A39B5 /* Pods-PaperboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardTests/Pods-PaperboardTests.debug.xcconfig"; sourceTree = "<group>"; };
 		666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainKeyboardViewController.xib; sourceTree = "<group>"; };
 		666CF28525837F83008D1872 /* MainKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainKeyboardViewController.swift; sourceTree = "<group>"; };
+		651B5E6B257F6E4D00583CAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Paperboard/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EB97321D070173986C89CF1 /* Pods-PaperboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC306E1A1BEC1FA8AC1F4878 /* Pods-PaperboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE4CAEE8BB897A632AAF2C8F /* Pods-PaperboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardTests/Pods-PaperboardTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				66DF1A7E25838B36000F68D8 /* PaperboardCommon */,
+				651B5E6B257F6E4D00583CAC /* GoogleService-Info.plist */,
 				0E20AB262125B93F00F6F62A /* Paperboard */,
 				B07516B4257F64C200BC905F /* PaperboardKeyboard */,
 				0E20AB252125B93F00F6F62A /* Products */,
@@ -440,6 +444,7 @@
 			files = (
 				0E20AB322125B94200F6F62A /* LaunchScreen.storyboard in Resources */,
 				0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */,
+				651B5E6C257F6E4E00583CAC /* GoogleService-Info.plist in Resources */,
 				0E20AB7621271F5600F6F62A /* Localizable.strings in Resources */,
 				0E20AB2F2125B94200F6F62A /* Assets.xcassets in Resources */,
 				0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */,
@@ -729,16 +734,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Paperboard/Paperboard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZXCM5CJ7P;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 29HEQ626X2;
 				INFOPLIST_FILE = Paperboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -763,6 +769,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -6,7 +6,7 @@ target 'Paperboard' do
   use_frameworks!
 
   # Pods for Paperboard
-  pod 'YandexMobileMetrica', '3.2.0'
+#  pod 'YandexMobileMetrica', '3.2.0'
   pod 'ActionSheetPicker-3.0'
   pod 'Firebase/Analytics'
 

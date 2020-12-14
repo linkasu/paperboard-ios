@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import YandexMobileMetrica
 
 class MainInputViewController: MainKeyboardViewController {
     
