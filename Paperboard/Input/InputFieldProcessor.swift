@@ -48,9 +48,19 @@ class InputFieldProcessor: NSObject, UITextFieldDelegate, InputProcessor {
     }
     
     func left() {
+        if let selectedRange = textField.selectedTextRange {
+            if let newPosition = textField.position(from: selectedRange.start, offset: -1) {
+                textField.selectedTextRange = textField.textRange(from: newPosition, to: newPosition)
+            }
+        }
     }
     
-    func right() { 
+    func right() {
+        if let selectedRange = textField.selectedTextRange {
+            if let newPosition = textField.position(from: selectedRange.start, offset: 1) {
+                textField.selectedTextRange = textField.textRange(from: newPosition, to: newPosition)
+            }
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
