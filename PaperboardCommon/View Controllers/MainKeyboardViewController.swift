@@ -26,7 +26,11 @@ class MainKeyboardViewController: UIViewController {
     let speechProcessor = TextToSpeechProcessor()
     
     var inputCollectionProcessor: InputCollectionProcessor!
-    var inputProcessor: InputProcessor!
+    var inputProcessor: InputProcessor! {
+        didSet {
+            inputSource.inputProcessor = inputProcessor
+        }
+    }
     
     let settings = Settings()
     let defaultColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
@@ -45,6 +49,7 @@ class MainKeyboardViewController: UIViewController {
         UIDevice.current.playInputClick()
         inputProcessor.capsLock()
         capsLockButton.isPressed = inputProcessor.isCaps()
+        inputCollectionView.reloadData()
     }
     
     @IBAction private func onPrevButtonTouched(_ sender: UIButton!) {

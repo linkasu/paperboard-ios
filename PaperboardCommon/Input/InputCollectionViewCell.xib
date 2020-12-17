@@ -18,7 +18,7 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmx-nL-ITq" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
                         <rect key="frame" x="2" y="2" width="217" height="125"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                         <state key="normal" title="Button">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
