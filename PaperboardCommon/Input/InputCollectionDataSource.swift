@@ -18,6 +18,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     
     var onCellSelected: ((IndexPath) -> Void)?
     var colorScheme = PaperboardColors(colorScheme: .light)
+    var inputProcessor: InputProcessor!
     
     struct SquareSection {
         let size: Int
@@ -106,7 +107,8 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
             self?.onCellSelected?(indexPath)
         }
 
-        collectionCell.fill(with: letter(forIndexPath: indexPath) ?? "")
+        let toFill = letter(forIndexPath: indexPath) ?? ""
+        collectionCell.fill(with: inputProcessor.isCaps() ? toFill.capitalized : toFill)
         collectionCell.characterButton.setTitleColor(colorScheme.buttonTextColor, for: [])
         collectionCell.characterButton.tintColor = colorScheme.buttonTextColor
         collectionCell.characterButton.defaultBackgroundColor = colorScheme.buttonBackgroundColor
