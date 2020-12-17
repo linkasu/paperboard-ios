@@ -18,7 +18,9 @@ class SetColumnsViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    thumbLabel.text = "\(initialValue)"
+    if let value = initialValue {
+        thumbLabel.text = "\(value)"
+    }
     columnsSLider.setValue(Float(initialValue), animated: true)
     // Do any additional setup after loading the view.
   }
@@ -49,10 +51,8 @@ class SetColumnsViewController: UIViewController {
     let intValue = Int(finalValue)
     onAmountChanges?(intValue)
     thumbLabel.text = "\(intValue)"
-    UIView.animate(withDuration: 0.25) {
-      sender.setValue(finalValue, animated: true)
-      self.updateThumbLabel(onSlider: sender, toValue: finalValue)
-    }
+    sender.setValue(finalValue, animated: false)
+    updateThumbLabel(onSlider: sender, toValue: finalValue)
   }
   
   private func updateThumbLabel(onSlider slider: UISlider, toValue: Float) {
