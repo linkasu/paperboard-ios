@@ -10,5 +10,5 @@ import Foundation
 
 struct Constants {
     static let bundleId = "su.linka.paperboard"
-    static let appGroup = "group.\(Constants.bundleId)"
+    static let appGroup = "group.su.linka"
 }

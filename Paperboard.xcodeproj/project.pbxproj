@@ -30,6 +30,7 @@
 		0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5433392129CD0B00DBC3DD /* InfoPlist.strings */; };
 		0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E734BA82135A67B0000D02F /* Keyboards.plist */; };
 		4B4F3825B8B07B2DA6B31FA9 /* Pods_Paperboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */; };
+		651B5E6C257F6E4E00583CAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 651B5E6B257F6E4D00583CAC /* GoogleService-Info.plist */; };
 		666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
 		66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */; };
 		66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
@@ -61,8 +62,6 @@
 		B0D3684C25864647007CBF35 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36846258645FD007CBF35 /* KeyboardButton.swift */; };
 		B0D36854258648FB007CBF35 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36853258648FB007CBF35 /* Styles.swift */; };
 		B0D3685B258649CF007CBF35 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D36853258648FB007CBF35 /* Styles.swift */; };
-		651B5E6C257F6E4E00583CAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 651B5E6B257F6E4D00583CAC /* GoogleService-Info.plist */; };
-		70C805EC626B82DDBB75AF77 /* Pods_PaperboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCFE2D8ED9DE5FD964C269B /* Pods_PaperboardUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,9 +124,11 @@
 		2A9FD14C75AB461CA4B97016 /* Pods_PaperboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaperboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paperboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		507D3D72F6940E59194A39B5 /* Pods-PaperboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardTests/Pods-PaperboardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		651B5E6B257F6E4D00583CAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Paperboard/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65C996CB2591FC390061B26B /* PaperboardRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PaperboardRelease.entitlements; sourceTree = "<group>"; };
+		65C996CC2591FC940061B26B /* PaperboardKeyboardRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PaperboardKeyboardRelease.entitlements; sourceTree = "<group>"; };
 		666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainKeyboardViewController.xib; sourceTree = "<group>"; };
 		666CF28525837F83008D1872 /* MainKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainKeyboardViewController.swift; sourceTree = "<group>"; };
-		651B5E6B257F6E4D00583CAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Paperboard/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EB97321D070173986C89CF1 /* Pods-PaperboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC306E1A1BEC1FA8AC1F4878 /* Pods-PaperboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE4CAEE8BB897A632AAF2C8F /* Pods-PaperboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardTests/Pods-PaperboardTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 		0E20AB262125B93F00F6F62A /* Paperboard */ = {
 			isa = PBXGroup;
 			children = (
+				65C996CB2591FC390061B26B /* PaperboardRelease.entitlements */,
 				B0BCF9282584C5CA00ADCBB3 /* Paperboard.entitlements */,
 				0E734BA72135A6260000D02F /* Resources */,
 				0E20AB7B2127286E00F6F62A /* Settings */,
@@ -293,6 +295,7 @@
 		B07516B4257F64C200BC905F /* PaperboardKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				65C996CC2591FC940061B26B /* PaperboardKeyboardRelease.entitlements */,
 				B0BCF9292584C6DB00ADCBB3 /* PaperboardKeyboard.entitlements */,
 				666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */,
 				B07516B5257F64C200BC905F /* KeyboardViewController.swift */,
@@ -734,6 +737,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Paperboard/Paperboard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
@@ -759,10 +763,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Paperboard/Paperboard.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Paperboard/PaperboardRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZXCM5CJ7P;
+				DEVELOPMENT_TEAM = 29HEQ626X2;
 				INFOPLIST_FILE = Paperboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -785,9 +789,9 @@
 				CODE_SIGN_ENTITLEMENTS = PaperboardKeyboard/PaperboardKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZXCM5CJ7P;
+				DEVELOPMENT_TEAM = 29HEQ626X2;
 				INFOPLIST_FILE = PaperboardKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -795,7 +799,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.PaperboardKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -807,19 +811,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_ENTITLEMENTS = PaperboardKeyboard/PaperboardKeyboard.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PaperboardKeyboard/PaperboardKeyboardRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZXCM5CJ7P;
+				DEVELOPMENT_TEAM = 29HEQ626X2;
 				INFOPLIST_FILE = PaperboardKeyboard/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.PaperboardKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
