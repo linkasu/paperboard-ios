@@ -2,13 +2,13 @@ name: iOS starter workflow
 
 on:
   push:
-    branches: [ master, ios-action ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
 jobs:
   build:
-    name: Build and Test default scheme using any available iPhone simulator
+    name: Build Paperboard and PaperboardKeyboard schemes using any available iPhone simulator
     runs-on: macos-latest
 
     steps:
