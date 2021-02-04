@@ -14,10 +14,15 @@ class KeyboardViewController: UIInputViewController {
     
     private var heightConstraint: NSLayoutConstraint!
     
+    private let keyboardHeight: CGFloat = 0.6
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        heightConstraint = self.view.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height * 0.8)
+        let newHeight = UIScreen.main.bounds.height * keyboardHeight
+        heightConstraint = self.view.heightAnchor.constraint(equalToConstant: newHeight)
+        checkCompact(newHeight)
+        
         heightConstraint.isActive = true
         
         self.addChild(keyboardViewContoller)
@@ -32,6 +37,7 @@ class KeyboardViewController: UIInputViewController {
             inputView: self,
             documentProxy: textDocumentProxy
         )
+        
     }
 
     override func viewDidLayoutSubviews() {
@@ -41,23 +47,49 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func handleRotation() {
+        adjustSize()
+        
         if UIScreen.main.bounds.width > UIScreen.main.bounds.height {
             keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .horizontal }
-            heightConstraint.constant = UIScreen.main.bounds.height * 0.8
         } else {
             keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .vertical }
-            heightConstraint.constant = UIScreen.main.bounds.height * 0.7
         }
     }
     
+    func adjustSize() {
+        let newHeight = UIScreen.main.bounds.height * keyboardHeight
+        heightConstraint.constant = newHeight
+        checkCompact(newHeight)
+        
+        keyboardViewContoller.inputCollectionView.reloadData()
+    }
+    
+    func checkCompact(_ newHeight: CGFloat) {
+        keyboardViewContoller.inputSource.isCompact = newHeight < 300
+    }
+    
     override func textDidChange(_ textInput: UITextInput?) {
+        keyboardViewContoller.setColorScheme(getColorScheme())
+    }
+    
+    func getColorScheme() -> PaperboardColorScheme {
         switch textDocumentProxy.keyboardAppearance {
         case .dark:
-            keyboardViewContoller.setColorScheme(.dark)
+            return .dark
         case .light:
-            keyboardViewContoller.setColorScheme(.light)
+            return .light
         default:
-            break
+            if #available(iOS 12.0, *) {
+                switch traitCollection.userInterfaceStyle {
+                case .dark:
+                    return .dark
+                case .light:
+                    return .light
+                default:
+                    return .light
+                }
+            }
+            return .light
         }
     }
     

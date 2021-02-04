@@ -9,9 +9,15 @@
 import UIKit
 
 class KeyboardButton: UIButton {
+    var isCompact: Bool = false {
+        didSet {
+            updateFont()
+        }
+    }
     var isPressed: Bool = false
     var defaultBackgroundColor: UIColor = .white
     var highlightBackgroundColor: UIColor = .lightGray
+    var originalFontSize: CGFloat = -1
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,5 +40,16 @@ class KeyboardButton: UIButton {
         layer.shadowOffset = CGSize(width: 0, height: 1.0)
         layer.shadowRadius = 0.0
         layer.shadowOpacity = 0.35
+        if let titleLabel = titleLabel {
+            originalFontSize = titleLabel.font.pointSize
+        }
+        
+        updateFont()
+    }
+    
+    func updateFont() {
+        if let titleLabel = titleLabel {
+            titleLabel.font = titleLabel.font.withSize(isCompact ? 20 : originalFontSize)
+        }
     }
 }

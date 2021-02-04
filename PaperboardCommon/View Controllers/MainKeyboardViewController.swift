@@ -159,8 +159,7 @@ class MainKeyboardViewController: UIViewController {
     
     private func updateCollection() {
         inputLayout.prepare()
-        inputCollectionView
-            .reloadData()
+        inputCollectionView.reloadData()
         inputCollectionView.setCollectionViewLayout(inputLayout, animated: false)
         inputCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
         updateButtonsTitles()
