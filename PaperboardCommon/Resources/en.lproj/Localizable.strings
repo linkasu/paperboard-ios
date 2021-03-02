@@ -9,11 +9,13 @@
 //MARK: Main input screen
 "input.title" = "LINKa. Paperboard";
 "input.backspace" = "BACKSPACE";
-"input.clear" = "CLEAR";
+"input.clear" = "clear";
 "input.capslock" = "CAPS LOCK";
 "input.talk" = "SAY";
 "input.alphabet" = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
 "input.done" = "DONE";
+"input.share" = "SHARE";
+"input.space" = "space";
 
 //MARK: Settings
 "settings.title" = "Settings";

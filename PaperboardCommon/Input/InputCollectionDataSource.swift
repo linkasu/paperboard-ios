@@ -112,8 +112,8 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
         collectionCell.fill(with: inputProcessor.isCaps() ? toFill.capitalized : toFill)
         collectionCell.characterButton.setTitleColor(colorScheme.buttonTextColor, for: [])
         collectionCell.characterButton.tintColor = colorScheme.buttonTextColor
-        collectionCell.characterButton.defaultBackgroundColor = colorScheme.buttonBackgroundColor
-        collectionCell.characterButton.highlightBackgroundColor = colorScheme.buttonHighlightColor
+        collectionCell.characterButton.defaultBackgroundColor = colorScheme.mainButtonBackgroundColor
+        collectionCell.characterButton.highlightBackgroundColor = colorScheme.mainButtonHighlightColor
         collectionCell.characterButton.isCompact = isCompact
         
         return cell

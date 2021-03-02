@@ -18,6 +18,17 @@ class MainInputViewController: MainKeyboardViewController {
     }
     
     override func viewDidLoad() {
+        let statusBar =  UIView()
+        statusBar.frame = UIApplication.shared.statusBarFrame
+        statusBar.backgroundColor = UIColor.white
+        UIApplication.shared.keyWindow?.addSubview(statusBar)
+        
+        clearButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8);
+        clearButton.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 0);
+        
+        talkButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8);
+        talkButton.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 0);
+        
         inputProcessor = InputFieldProcessor(inputField: inputField)
         super.viewDidLoad()
         

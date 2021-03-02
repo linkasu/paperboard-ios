@@ -12,6 +12,7 @@ protocol InputProcessor {
     func getText() -> String
     func append(text: String)
     func clear()
+    func space()
     func backspace()
     func capsLock()
     func isCaps() -> Bool

@@ -19,6 +19,10 @@ class InputFieldProcessor: NSObject, UITextFieldDelegate, InputProcessor {
         textField.delegate = self
     }
     
+    func space() {
+        append(text: " ")
+    }
+    
     func getText() -> String {
         return textField.text ?? ""
     }

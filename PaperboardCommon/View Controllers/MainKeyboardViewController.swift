@@ -3,13 +3,12 @@
 //  Paperboard
 //
 //  Created by Dmitry Shipinev on 11.12.2020.
-//  Copyright © 2020 Ice Rock. All rights reserved.
+//  Copyright © 2020 Exyte. All rights reserved.
 //
 
 import UIKit
 
 class MainKeyboardViewController: UIViewController {
-    
     @IBOutlet weak var inputCollectionView: UICollectionView!
     @IBOutlet weak var prevButton: KeyboardButton!
     @IBOutlet weak var nextButton: KeyboardButton!
@@ -18,6 +17,11 @@ class MainKeyboardViewController: UIViewController {
     @IBOutlet weak var clearButton: KeyboardButton!
     @IBOutlet weak var capsLockButton: KeyboardButton!
     @IBOutlet weak var talkButton: KeyboardButton!
+    @IBOutlet weak var cursorRight: KeyboardButton!
+    @IBOutlet weak var cursorLeft: KeyboardButton!
+    @IBOutlet weak var settingsButton: KeyboardButton!
+    @IBOutlet weak var shareButton: KeyboardButton!
+    @IBOutlet weak var spaceButton: KeyboardButton!
     
     @IBOutlet var buttonsStackViews: [UIStackView]!
     
@@ -34,6 +38,10 @@ class MainKeyboardViewController: UIViewController {
     
     let settings = Settings()
     let defaultColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+    
+    @IBAction func onSpaceTouched(_ sender: Any) {
+        inputProcessor.space()
+    }
     
     @IBAction private func onSpeechButtonTouched(_ sender: UIButton!) {
         UIDevice.current.playInputClick()
@@ -153,8 +161,40 @@ class MainKeyboardViewController: UIViewController {
             }
             return [values.prefix(2), ["..."], values.suffix(1)].flatMap({ $0 }).joined(separator: ",")
         }
-        prevButton.setTitle("⬅️\n" + titleProduce(prevSection).uppercased(), for: .normal)
-        nextButton.setTitle("➡️\n" + titleProduce(nextSection).uppercased(), for: .normal)
+        prevButton.setTitle(titleProduce(prevSection).uppercased(), for: .normal)
+        centerVertically(button: prevButton)
+        nextButton.setTitle(titleProduce(nextSection).uppercased(), for: .normal)
+        centerVertically(button: nextButton)
+    }
+    
+    func centerVertically(button: UIButton, spacing: CGFloat = 18.0) {
+        guard let imageSize = button.imageView?.image?.size,
+              let text = button.titleLabel?.text,
+              let font = button.titleLabel?.font
+        else { return }
+        
+        button.titleEdgeInsets = UIEdgeInsets(
+            top: 0.0,
+            left: -imageSize.width,
+            bottom: -(imageSize.height + spacing),
+            right: 0.0
+        )
+        
+        let titleSize = text.size(withAttributes: [.font: font])
+        button.imageEdgeInsets = UIEdgeInsets(
+            top: -(titleSize.height + spacing),
+            left: 0.0,
+            bottom: 0.0,
+            right: -titleSize.width
+        )
+        
+        let edgeOffset = abs(titleSize.height - imageSize.height) / 2.0
+        button.contentEdgeInsets = UIEdgeInsets(
+            top: edgeOffset,
+            left: 0.0,
+            bottom: edgeOffset,
+            right: 0.0
+        )
     }
     
     private func updateCollection() {
@@ -177,29 +217,72 @@ class MainKeyboardViewController: UIViewController {
         view.backgroundColor = colorScheme.backgroundColor
         inputCollectionView.backgroundColor = colorScheme.backgroundColor
         
-        for view in view.subviews {
-            if let button = view as? KeyboardButton {
-                configure(button: button, colorScheme: colorScheme)
-            }
-        }
-        
         for cell in inputCollectionView.visibleCells {
             if let inputCell = cell as? InputCollectionViewCell {
-                configure(button: inputCell.characterButton, colorScheme: colorScheme)
+                configureMain(button: inputCell.characterButton, colorScheme: colorScheme)
             }
         }
         
-        configure(button: clearButton, colorScheme: colorScheme)
-        configure(button: backspaceButton, colorScheme: colorScheme)
-        configure(button: capsLockButton, colorScheme: colorScheme)
-        configure(button: talkButton, colorScheme: colorScheme)
+        configureMain(button: spaceButton, colorScheme: colorScheme)
+        
+        configureSystem(button: clearButton, colorScheme: colorScheme)
+        configureSystem(button: settingsButton, colorScheme: colorScheme)
+        configureSystem(button: shareButton, colorScheme: colorScheme)
+        
+        configureControl(button: cursorLeft, colorScheme: colorScheme)
+        configureControl(button: cursorRight, colorScheme: colorScheme)
+        configureControl(button: prevButton, colorScheme: colorScheme)
+        configureControl(button: nextButton, colorScheme: colorScheme)
+        configureControl(button: backspaceButton, colorScheme: colorScheme)
+        configureControl(button: capsLockButton, colorScheme: colorScheme)
+        
+        configureFocus(button: talkButton, colorScheme: colorScheme)
     }
     
-    func configure(button: KeyboardButton, colorScheme: PaperboardColors) {
+    func configureMain(button: KeyboardButton, colorScheme: PaperboardColors) {
+        configure(
+            button: button,
+            colorScheme: colorScheme,
+            background: colorScheme.mainButtonBackgroundColor,
+            highlight: colorScheme.mainButtonHighlightColor
+        )
+    }
+    
+    func configureSystem(button: KeyboardButton, colorScheme: PaperboardColors) {
+        configure(
+            button: button,
+            colorScheme: colorScheme,
+            background: colorScheme.systemButtonBackgroundColor,
+            highlight: colorScheme.systemButtonHighlightColor
+        )
+    }
+    
+    func configureControl(button: KeyboardButton, colorScheme: PaperboardColors) {
+        configure(
+            button: button,
+            colorScheme: colorScheme,
+            background: colorScheme.controlButtonBackgroundColor,
+            highlight: colorScheme.controlButtonHighlightColor
+        )
+    }
+    
+    func configureFocus(button: KeyboardButton, colorScheme: PaperboardColors) {
+        configure(
+            button: button,
+            colorScheme: colorScheme,
+            background: colorScheme.focusButtonBackgroundColor,
+            highlight: colorScheme.focusButtonHighlightColor
+        )
+        
+        button.setTitleColor(UIColor.white, for: [])
+        button.tintColor = UIColor.white
+    }
+    
+    func configure(button: KeyboardButton, colorScheme: PaperboardColors, background: UIColor, highlight: UIColor) {
         button.setTitleColor(colorScheme.buttonTextColor, for: [])
         button.tintColor = colorScheme.buttonTextColor
         
-        button.defaultBackgroundColor = colorScheme.buttonBackgroundColor
-        button.highlightBackgroundColor = colorScheme.buttonHighlightColor
+        button.defaultBackgroundColor = background
+        button.highlightBackgroundColor = highlight
     }
 }

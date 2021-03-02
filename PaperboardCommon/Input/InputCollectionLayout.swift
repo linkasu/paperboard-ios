@@ -9,7 +9,7 @@
 import UIKit
 
 class InputCollectionLayout: UICollectionViewLayout {
-  @IBInspectable var spacing: NSNumber = 4 {
+  @IBInspectable var spacing: NSNumber = 14 {
     didSet {
       self.collectionView?.reloadData()
     }

@@ -19,6 +19,10 @@ class InputKeyboardProcessor: InputProcessor {
         self.documentProxy = documentProxy
     }
     
+    func space() {
+        append(text: " ")
+    }
+    
     func getText() -> String {
         return (documentProxy.documentContextBeforeInput ?? "") + (documentProxy.documentContextAfterInput ?? "")
     }
