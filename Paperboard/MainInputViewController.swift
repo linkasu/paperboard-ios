@@ -24,9 +24,12 @@ class MainInputViewController: MainKeyboardViewController {
         }
         let textToShare = [ shareText ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.excludedActivityTypes = [ UIActivityType.airDrop ]
-        self.present(activityViewController, animated: true, completion: nil)
+        if let popOver = activityViewController.popoverPresentationController {
+            popOver.sourceView = self.view
+            activityViewController.popoverPresentationController?.sourceRect = shareButton.frame
+        }
+        present(activityViewController, animated: false, completion: nil)
     }
     
     override func viewDidLoad() {
