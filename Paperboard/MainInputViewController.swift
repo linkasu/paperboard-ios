@@ -10,11 +10,23 @@ import UIKit
 
 class MainInputViewController: MainKeyboardViewController {
     
-    @IBOutlet private weak var inputField: UITextField!
+    @IBOutlet private weak var inputField: UITextView!
     
     @IBAction private func showSettings(_ sender: UIBarButtonItem!) {
         let settingsProcessor = SettingsProcessor(settings: settings)
         settingsProcessor.showSettings(onController: self, byBarButton: sender)
+    }
+    
+    
+    @IBAction func showShare(_ sender: Any) {
+        guard let shareText = inputField.text else {
+            return
+        }
+        let textToShare = [ shareText ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop ]
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -23,11 +35,13 @@ class MainInputViewController: MainKeyboardViewController {
         statusBar.backgroundColor = UIColor.white
         UIApplication.shared.keyWindow?.addSubview(statusBar)
         
-        clearButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8);
-        clearButton.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 0);
+        clearButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8)
+        clearButton.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 0)
         
-        talkButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8);
-        talkButton.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 0);
+        talkButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8)
+        talkButton.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 0)
+        
+        inputField.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
         
         inputProcessor = InputFieldProcessor(inputField: inputField)
         super.viewDidLoad()

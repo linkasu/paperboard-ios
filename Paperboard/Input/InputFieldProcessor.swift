@@ -8,12 +8,12 @@
 
 import UIKit
 
-class InputFieldProcessor: NSObject, UITextFieldDelegate, InputProcessor {
+class InputFieldProcessor: NSObject, UITextViewDelegate, InputProcessor {
     
-    private weak var textField: UITextField!
+    private weak var textField: UITextView!
     private var caps = false
     
-    init(inputField: UITextField) {
+    init(inputField: UITextView) {
         super.init()
         textField = inputField
         textField.delegate = self
@@ -71,12 +71,11 @@ class InputFieldProcessor: NSObject, UITextFieldDelegate, InputProcessor {
         return false
     }
     
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         textField.inputView = UIView(frame: CGRect.zero)
         textField.inputAccessoryView = UIView(frame: CGRect.zero)
         textField.inputAssistantItem.leadingBarButtonGroups.removeAll()
         textField.inputAssistantItem.trailingBarButtonGroups.removeAll()
         return true
     }
-    
 }

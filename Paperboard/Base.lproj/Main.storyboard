@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,12 +36,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6o-Dx-IGk" customClass="ClearTextField" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="270" y="20" width="640" height="117.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-1t-xtC" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="236" height="117.5"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -115,6 +110,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="379-q7-dGu" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="200.5" height="144.5"/>
                                         <color key="backgroundColor" red="0.90186256170000001" green="0.90201735500000002" blue="0.9018527865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="clear" image="clear">
                                             <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -143,11 +139,13 @@
                                         </state>
                                         <connections>
                                             <action selector="onSpeechButtonTouched:" destination="3hb-Gl-INB" eventType="touchUpInside" id="5tN-Ht-iRR"/>
+                                            <action selector="showShare:" destination="3hb-Gl-INB" eventType="touchUpInside" id="SPG-p6-OMW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6V-VI-fdM" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
                                         <rect key="frame" x="939.5" y="0.0" width="200.5" height="144.5"/>
                                         <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="talk" image="say">
                                             <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -161,6 +159,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk9-eM-H0l" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
                                         <rect key="frame" x="335" y="0.0" width="470" height="144.5"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Space">
                                             <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -194,6 +193,13 @@
                                     <constraint firstItem="fk9-eM-H0l" firstAttribute="leading" secondItem="QVK-DB-j7u" secondAttribute="trailing" constant="14" id="xcY-Rm-TJf"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5zc-Iu-Fjd">
+                                <rect key="frame" x="270" y="20" width="640" height="117.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5hj-ip-iPV"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,12 +217,10 @@
                             <constraint firstItem="sD3-hK-vVp" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" constant="20" id="F3W-Rt-SUJ"/>
                             <constraint firstItem="379-q7-dGu" firstAttribute="width" secondItem="v1J-9B-lrP" secondAttribute="width" multiplier="0.17" id="FRq-ie-DhP"/>
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="00F-QI-dkF" secondAttribute="trailing" constant="20" id="I5S-wm-W3j"/>
-                            <constraint firstItem="O6o-Dx-IGk" firstAttribute="top" secondItem="5hj-ip-iPV" secondAttribute="top" constant="20" id="JLl-ta-5c3"/>
-                            <constraint firstItem="xfS-ZG-Xyo" firstAttribute="leading" secondItem="O6o-Dx-IGk" secondAttribute="trailing" constant="14" id="LBo-E8-D4d"/>
-                            <constraint firstItem="O6o-Dx-IGk" firstAttribute="leading" secondItem="pXm-1t-xtC" secondAttribute="trailing" constant="14" id="MXQ-kq-Ao1"/>
                             <constraint firstItem="HaG-Z3-8TH" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" constant="20" id="Mrj-Tb-fCW"/>
                             <constraint firstItem="sD3-hK-vVp" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.398" id="PS5-eJ-jps"/>
                             <constraint firstItem="bM9-hj-G9L" firstAttribute="leading" secondItem="sYm-5H-3gi" secondAttribute="trailing" constant="14" id="PpB-RB-Wj2"/>
+                            <constraint firstItem="5zc-Iu-Fjd" firstAttribute="top" secondItem="5hj-ip-iPV" secondAttribute="top" constant="20" id="SiW-hC-kAc"/>
                             <constraint firstItem="pXm-1t-xtC" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.143" id="WSl-pN-6hP"/>
                             <constraint firstItem="fAU-ej-Uyr" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.19" id="YEf-kf-jpT"/>
                             <constraint firstItem="fAU-ej-Uyr" firstAttribute="width" secondItem="bM9-hj-G9L" secondAttribute="width" id="ZiM-0q-vTs"/>
@@ -225,14 +229,16 @@
                             <constraint firstItem="QVK-DB-j7u" firstAttribute="width" secondItem="v1J-9B-lrP" secondAttribute="width" multiplier="0.09" id="df2-xt-9rJ"/>
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="xfS-ZG-Xyo" secondAttribute="trailing" constant="20" id="eCH-6x-cF2"/>
                             <constraint firstItem="00F-QI-dkF" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" constant="20" id="eD6-ZW-Mbo"/>
+                            <constraint firstItem="5zc-Iu-Fjd" firstAttribute="leading" secondItem="pXm-1t-xtC" secondAttribute="trailing" constant="14" id="fqL-7d-gYs"/>
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="bM9-hj-G9L" secondAttribute="trailing" constant="20" id="gDQ-j5-WHB"/>
-                            <constraint firstItem="sYm-5H-3gi" firstAttribute="top" secondItem="O6o-Dx-IGk" secondAttribute="bottom" constant="12" id="gRG-Kr-Ucn"/>
                             <constraint firstItem="xfS-ZG-Xyo" firstAttribute="top" secondItem="v1J-9B-lrP" secondAttribute="topMargin" constant="20" id="gys-wl-61D"/>
-                            <constraint firstItem="O6o-Dx-IGk" firstAttribute="height" secondItem="pXm-1t-xtC" secondAttribute="height" id="idX-ni-WkU"/>
+                            <constraint firstItem="sYm-5H-3gi" firstAttribute="top" secondItem="5zc-Iu-Fjd" secondAttribute="bottom" constant="12" id="i2O-DW-Yvp"/>
                             <constraint firstItem="pXm-1t-xtC" firstAttribute="width" secondItem="v1J-9B-lrP" secondAttribute="width" multiplier="0.2" id="ihQ-jf-0a3"/>
+                            <constraint firstItem="5zc-Iu-Fjd" firstAttribute="height" secondItem="pXm-1t-xtC" secondAttribute="height" id="kzj-Lm-zit"/>
                             <constraint firstItem="bM9-hj-G9L" firstAttribute="top" secondItem="xfS-ZG-Xyo" secondAttribute="bottom" constant="12" id="nro-ZG-RM2"/>
                             <constraint firstItem="HaG-Z3-8TH" firstAttribute="width" secondItem="sD3-hK-vVp" secondAttribute="width" id="rCL-0L-kJB"/>
                             <constraint firstItem="sD3-hK-vVp" firstAttribute="width" secondItem="pXm-1t-xtC" secondAttribute="width" id="rXJ-3L-yhV"/>
+                            <constraint firstItem="xfS-ZG-Xyo" firstAttribute="leading" secondItem="5zc-Iu-Fjd" secondAttribute="trailing" constant="14" id="raC-Wg-OiE"/>
                             <constraint firstItem="xfS-ZG-Xyo" firstAttribute="height" secondItem="pXm-1t-xtC" secondAttribute="height" id="z2V-sz-I6b"/>
                             <constraint firstItem="HaG-Z3-8TH" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.19" id="ze0-Nf-sw9"/>
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="fAU-ej-Uyr" secondAttribute="trailing" constant="20" id="zuh-5O-gCF"/>
@@ -259,7 +265,7 @@
                         <outlet property="cursorLeft" destination="pXm-1t-xtC" id="AT2-bJ-Twt"/>
                         <outlet property="cursorRight" destination="xfS-ZG-Xyo" id="cMQ-wG-eq1"/>
                         <outlet property="inputCollectionView" destination="sYm-5H-3gi" id="KEd-qx-2qZ"/>
-                        <outlet property="inputField" destination="O6o-Dx-IGk" id="ieB-qg-A3X"/>
+                        <outlet property="inputField" destination="5zc-Iu-Fjd" id="t7m-IV-Lj0"/>
                         <outlet property="nextButton" destination="bM9-hj-G9L" id="21w-FD-AzG"/>
                         <outlet property="prevButton" destination="sD3-hK-vVp" id="HJc-Iv-RFT"/>
                         <outlet property="settingsButton" destination="QVK-DB-j7u" id="JRL-zd-kjz"/>
@@ -284,5 +290,11 @@
         <image name="settings" width="44" height="44"/>
         <image name="share" width="40" height="40"/>
         <image name="shift" width="38" height="40"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

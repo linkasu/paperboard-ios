@@ -9,13 +9,13 @@
 //MARK: Main input screen
 
 "input.title" = "LINKa. Бумажная клавиатура";
-"input.backspace" = "ШАГ НАЗАД";
+"input.backspace" = "шаг назад";
 "input.clear" = "стереть";
-"input.capslock" = "CAPS LOCK";
-"input.talk" = "СКАЗАТЬ";
+"input.capslock" = "caps lock";
+"input.talk" = "сказать";
 "input.alphabet" = "а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я";
-"input.done" = "ГОТОВО";
-"input.share" = "ПОДЕЛИТЬСЯ";
+"input.done" = "готово";
+"input.share" = "поделиться";
 "input.space" = "пробел";
 
 //MARK: Settings
