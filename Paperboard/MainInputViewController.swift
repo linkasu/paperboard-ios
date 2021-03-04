@@ -30,7 +30,7 @@ class MainInputViewController: MainKeyboardViewController {
         let textToShare = [ shareText ]
         let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
         activityViewController.excludedActivityTypes = [ UIActivityType.airDrop ]
-        if let popOver = activityViewController.popoverPresentationController {
+        if let popOver = activityViewController.popoverPresentationController, let shareButton = shareButton {
             popOver.sourceView = self.view
             activityViewController.popoverPresentationController?.sourceRect = shareButton.frame
         }
@@ -44,8 +44,8 @@ class MainInputViewController: MainKeyboardViewController {
         clearButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8)
         clearButton.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 0)
         
-        talkButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8)
-        talkButton.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 0)
+        talkButton?.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8)
+        talkButton?.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, 0)
         
         inputField.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
         
@@ -115,7 +115,7 @@ class MainInputViewController: MainKeyboardViewController {
             settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.095)
             
             clearButton.setTitle(PaperboardLocalizable.clear.message(), for: .normal)
-            talkButton.setTitle(PaperboardLocalizable.talk.message(), for: .normal)
+            talkButton?.setTitle(PaperboardLocalizable.talk.message(), for: .normal)
         } else {
             cursorHeightConstraint = cursorHeightConstraint.changeMultiplier(multiplier: 0.146)
             prevButtonheightConstraint = prevButtonheightConstraint.changeMultiplier(multiplier: 0.418)
@@ -124,7 +124,7 @@ class MainInputViewController: MainKeyboardViewController {
             settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.143)
             
             clearButton.setTitle("", for: .normal)
-            talkButton.setTitle("", for: .normal)
+            talkButton?.setTitle("", for: .normal)
         }
     }
 }

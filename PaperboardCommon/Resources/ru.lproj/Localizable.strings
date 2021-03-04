@@ -18,6 +18,13 @@
 "input.share" = "поделиться";
 "input.space" = "пробел";
 
+//MARK: Keyboard
+
+"keyboard.go" = "Go";
+"keyboard.search" = "Поиск";
+"keyboard.continue" = "Продолжить";
+"keyboard.return" = "Enter";
+
 //MARK: Settings
 
 "settings.title" = "Настройки";

@@ -23,6 +23,8 @@ class KeyboardViewController: UIInputViewController {
         heightConstraint = self.view.heightAnchor.constraint(equalToConstant: newHeight)
         checkCompact(newHeight)
         
+        keyboardViewContoller.inputLayout.spacing = 8
+        
         heightConstraint.isActive = true
         
         self.addChild(keyboardViewContoller)
@@ -37,23 +39,27 @@ class KeyboardViewController: UIInputViewController {
             inputView: self,
             documentProxy: textDocumentProxy
         )
-        
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        keyboardViewContoller.actionButton?.setTitle(returnName(), for: .normal)
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        
         self.keyboardViewContoller.inputLayout.invalidateLayout()
     }
     
     func handleRotation() {
         adjustSize()
         
-        if UIScreen.main.bounds.width > UIScreen.main.bounds.height {
-            keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .horizontal }
-        } else {
-            keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .vertical }
-        }
+//        if UIScreen.main.bounds.width > UIScreen.main.bounds.height {
+//            keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .horizontal }
+//        } else {
+//            keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .vertical }
+//        }
     }
     
     func adjustSize() {
@@ -95,13 +101,30 @@ class KeyboardViewController: UIInputViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-
+        
         coordinator.animate(
             alongsideTransition: nil,
             completion: { [weak self] _ in
                 self?.handleRotation()
                 self?.keyboardViewContoller.inputCollectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: false)
             })
+    }
+    
+    func returnName() -> String {
+        switch textDocumentProxy.returnKeyType {
+        case .go:
+            return PaperboardLocalizable.go.message()
+        case .yahoo:
+            return PaperboardLocalizable.search.message()
+        case .google:
+            return PaperboardLocalizable.search.message()
+        case .search:
+            return PaperboardLocalizable.search.message()
+        case .continue:
+            return PaperboardLocalizable.continue.message()
+        default:
+            return PaperboardLocalizable.return.message()
+        }
     }
     
 }

@@ -17,6 +17,13 @@
 "input.share" = "share";
 "input.space" = "space";
 
+//MARK: Keyboard
+
+"keyboard.go" = "Go";
+"keyboard.search" = "Search";
+"keyboard.continue" = "Continue";
+"keyboard.return" = "Return";
+
 //MARK: Settings
 "settings.title" = "Settings";
 "settings.dialog.columns" = "Choose a count of columns";

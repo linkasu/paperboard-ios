@@ -63,4 +63,8 @@ class InputKeyboardProcessor: InputProcessor {
     func done() {
         inputView?.dismissKeyboard()
     }
+    
+    func `return`() {
+        documentProxy.insertText("\n")
+    }
 }

@@ -10,158 +10,95 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainKeyboardViewController" customModule="PaperboardKeyboard" customModuleProvider="target">
             <connections>
+                <outlet property="actionButton" destination="Ink-Re-WlR" id="mKY-ud-fyK"/>
                 <outlet property="backspaceButton" destination="X8C-W1-afl" id="i10-d4-j2Q"/>
-                <outlet property="capsLockButton" destination="3fr-uj-gcm" id="nbs-b7-yIh"/>
-                <outlet property="clearButton" destination="XDC-fS-7vl" id="JfH-lG-zKq"/>
+                <outlet property="capsLockButton" destination="3fr-uj-gcm" id="7nX-4I-kap"/>
+                <outlet property="clearButton" destination="XDC-fS-7vl" id="hx9-Nc-1oW"/>
+                <outlet property="cursorLeft" destination="7Tc-7h-tWt" id="tQU-5v-nB9"/>
+                <outlet property="cursorRight" destination="sEL-O6-BvV" id="By2-JY-YAD"/>
                 <outlet property="inputCollectionView" destination="BSL-4D-eUF" id="vaS-4I-de4"/>
-                <outlet property="nextButton" destination="Oca-Gn-3x2" id="ePX-ng-gqz"/>
-                <outlet property="prevButton" destination="VgV-Pm-hww" id="RBf-eS-fAG"/>
-                <outlet property="talkButton" destination="Efp-G9-tUj" id="RFF-hi-OSJ"/>
+                <outlet property="nextButton" destination="Oca-Gn-3x2" id="3qv-ii-7KE"/>
+                <outlet property="prevButton" destination="VgV-Pm-hww" id="5Lk-F2-zPA"/>
+                <outlet property="spaceButton" destination="0jv-Bq-7cY" id="Ak9-jr-kEy"/>
                 <outlet property="view" destination="ioi-oi-lRi" id="b2a-q2-Yf5"/>
-                <outletCollection property="buttonsStackViews" destination="Toq-j6-Udn" collectionClass="NSMutableArray" id="VU4-Ox-WPX"/>
-                <outletCollection property="buttonsStackViews" destination="Sgv-wS-kBk" collectionClass="NSMutableArray" id="KWh-w9-qBw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="ioi-oi-lRi">
-            <rect key="frame" x="0.0" y="0.0" width="539" height="413"/>
+            <rect key="frame" x="0.0" y="0.0" width="539" height="665"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgV-Pm-hww" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="8" y="67.5" width="108" height="200.5"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgV-Pm-hww" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="8" y="71.5" width="108" height="167"/>
                     <color key="backgroundColor" white="0.9034264353" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                    <state key="normal">
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" image="arrow-left">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="onPrevButtonTouched:" destination="-1" eventType="touchUpInside" id="VJO-zU-63C"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-Gn-3x2" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="423" y="67.5" width="108" height="200.5"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-fS-7vl" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="8" y="334" width="108" height="39"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                    <state key="normal">
+                    <state key="normal" image="clear">
+                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onClearButtonTouched:" destination="-1" eventType="touchUpInside" id="m1P-Xu-ww6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-uj-gcm" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="8" y="246.5" width="108" height="79.5"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" image="shift">
+                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="lIQ-tD-855"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-Gn-3x2" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="423" y="72.5" width="108" height="167"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" image="arrow-right">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
                         <action selector="onNextButtonTouched:" destination="-1" eventType="touchUpInside" id="K1L-Ge-sVJ"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KzH-Sr-pX3">
-                    <rect key="frame" x="0.0" y="276" width="539" height="103"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Oez-G1-SMt">
-                            <rect key="frame" x="8" y="0.0" width="523" height="98"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Toq-j6-Udn">
-                                    <rect key="frame" x="0.0" y="0.0" width="257.5" height="98"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8C-W1-afl" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="257.5" height="45"/>
-                                            <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <state key="normal" title="backspace">
-                                                <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.backspace"/>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="onBackspaceButtonTouched:" destination="-1" eventType="touchUpInside" id="rFA-Ae-cPC"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-fS-7vl" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="53" width="257.5" height="45"/>
-                                            <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <state key="normal" title="clear">
-                                                <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.clear"/>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="onClearButtonTouched:" destination="-1" eventType="touchUpInside" id="m1P-Xu-ww6"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sgv-wS-kBk">
-                                    <rect key="frame" x="265.5" y="0.0" width="257.5" height="98"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-uj-gcm" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="257.5" height="45"/>
-                                            <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <state key="normal" title="capslock">
-                                                <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.capslock"/>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="lIQ-tD-855"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efp-G9-tUj" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="53" width="257.5" height="45"/>
-                                            <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <state key="normal" title="talk">
-                                                <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.talk"/>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="onSpeechButtonTouched:" destination="-1" eventType="touchUpInside" id="d8Q-F3-Oh7"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="Oez-G1-SMt" firstAttribute="top" secondItem="KzH-Sr-pX3" secondAttribute="top" id="Adb-So-n7f"/>
-                        <constraint firstItem="Oez-G1-SMt" firstAttribute="leading" secondItem="KzH-Sr-pX3" secondAttribute="leading" constant="8" id="Crx-g0-mNr"/>
-                        <constraint firstAttribute="bottom" secondItem="Oez-G1-SMt" secondAttribute="bottom" constant="5" id="TV1-73-LVY"/>
-                        <constraint firstAttribute="trailing" secondItem="Oez-G1-SMt" secondAttribute="trailing" constant="8" id="icD-M3-Q4Z"/>
-                    </constraints>
-                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BSL-4D-eUF">
-                    <rect key="frame" x="124" y="67.5" width="291" height="200.5"/>
+                    <rect key="frame" x="124" y="72.5" width="291" height="253.5"/>
                     <collectionViewLayout key="collectionViewLayout" id="Ktg-3n-OUX"/>
                     <cells/>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-7h-tWt" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="8" y="8" width="108" height="51.5"/>
+                    <rect key="frame" x="8" y="7" width="108" height="56.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" image="arrow.left.square">
+                    <state key="normal" image="left">
                         <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="6Lp-gp-Me8"/>
                         <action selector="onLeftButtonTouched:" destination="-1" eventType="touchUpInside" id="uME-ID-d5e"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEL-O6-BvV" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="423" y="8" width="108" height="51.5"/>
+                    <rect key="frame" x="423" y="8" width="108" height="56.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" image="arrow.right.square">
+                    <state key="normal" image="right">
                         <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="Lkj-Tc-9aY"/>
                         <action selector="onRightButtonTouched:" destination="-1" eventType="touchUpInside" id="oZV-jN-niD"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO7-4y-voE" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="124" y="8" width="291" height="51.5"/>
+                    <rect key="frame" x="124" y="8" width="291" height="56.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <state key="normal" title="done">
                         <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -169,48 +106,104 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.done"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="Xra-qF-wq6"/>
                         <action selector="onDoneButtonTouched:" destination="-1" eventType="touchUpInside" id="9aD-pg-60V"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8C-W1-afl" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="423" y="247.5" width="108" height="79.5"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" image="backspace">
+                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onBackspaceButtonTouched:" destination="-1" eventType="touchUpInside" id="rFA-Ae-cPC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ink-Re-WlR" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="423" y="335" width="108" height="38"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onActionTouched:" destination="-1" eventType="touchUpInside" id="MR5-tW-oH1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jv-Bq-7cY" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="124" y="334" width="291" height="39"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="space">
+                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.space"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onSpaceTouched:" destination="-1" eventType="touchUpInside" id="CF9-WT-8pK"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ArL-1z-1CW"/>
             <constraints>
+                <constraint firstItem="XDC-fS-7vl" firstAttribute="top" secondItem="3fr-uj-gcm" secondAttribute="bottom" constant="8" id="02K-07-2wS"/>
                 <constraint firstItem="sEL-O6-BvV" firstAttribute="height" secondItem="7Tc-7h-tWt" secondAttribute="height" id="03u-dF-Bsu"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="leading" secondItem="BSL-4D-eUF" secondAttribute="trailing" constant="8" id="1T3-3K-0Wv"/>
+                <constraint firstItem="X8C-W1-afl" firstAttribute="height" secondItem="3fr-uj-gcm" secondAttribute="height" id="2Hm-Ev-yd0"/>
+                <constraint firstItem="Oca-Gn-3x2" firstAttribute="height" secondItem="VgV-Pm-hww" secondAttribute="height" id="2ce-De-DdD"/>
                 <constraint firstItem="BSL-4D-eUF" firstAttribute="leading" secondItem="VgV-Pm-hww" secondAttribute="trailing" constant="8" id="4jT-IA-307"/>
                 <constraint firstItem="7Tc-7h-tWt" firstAttribute="width" secondItem="ioi-oi-lRi" secondAttribute="width" multiplier="0.2" id="57r-wr-3Nl"/>
+                <constraint firstItem="3fr-uj-gcm" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.192" id="6MA-Tv-eoH"/>
+                <constraint firstItem="0jv-Bq-7cY" firstAttribute="top" secondItem="BSL-4D-eUF" secondAttribute="bottom" constant="8" id="6ok-a3-X8r"/>
+                <constraint firstItem="7Tc-7h-tWt" firstAttribute="top" secondItem="ioi-oi-lRi" secondAttribute="top" constant="9" id="7Wz-R6-zbV"/>
+                <constraint firstItem="3fr-uj-gcm" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="8" id="80e-sW-cDd"/>
+                <constraint firstItem="XDC-fS-7vl" firstAttribute="width" secondItem="3fr-uj-gcm" secondAttribute="width" id="8Vs-vQ-qhi"/>
                 <constraint firstItem="sEL-O6-BvV" firstAttribute="leading" secondItem="rO7-4y-voE" secondAttribute="trailing" constant="8" id="8WC-Oj-yRC"/>
-                <constraint firstItem="7Tc-7h-tWt" firstAttribute="top" secondItem="ioi-oi-lRi" secondAttribute="top" constant="8" id="Acs-v4-IpF"/>
+                <constraint firstItem="XDC-fS-7vl" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="8" id="Atp-yJ-QDX"/>
                 <constraint firstItem="rO7-4y-voE" firstAttribute="height" secondItem="7Tc-7h-tWt" secondAttribute="height" id="EY6-TV-oFr"/>
-                <constraint firstItem="sEL-O6-BvV" firstAttribute="top" secondItem="ioi-oi-lRi" secondAttribute="top" constant="8" id="I6L-Tt-9nV"/>
-                <constraint firstItem="rO7-4y-voE" firstAttribute="top" secondItem="ioi-oi-lRi" secondAttribute="top" constant="8" id="Iaq-9H-DfT"/>
-                <constraint firstItem="KzH-Sr-pX3" firstAttribute="trailing" secondItem="ArL-1z-1CW" secondAttribute="trailing" id="P4h-Sq-BjP"/>
-                <constraint firstItem="KzH-Sr-pX3" firstAttribute="bottom" secondItem="ArL-1z-1CW" secondAttribute="bottom" id="QbR-Wq-jdD"/>
+                <constraint firstItem="ArL-1z-1CW" firstAttribute="trailing" secondItem="X8C-W1-afl" secondAttribute="trailing" constant="8" id="Gpa-92-47j"/>
+                <constraint firstItem="3fr-uj-gcm" firstAttribute="width" secondItem="VgV-Pm-hww" secondAttribute="width" id="H36-mO-t98"/>
+                <constraint firstItem="ArL-1z-1CW" firstAttribute="bottom" secondItem="0jv-Bq-7cY" secondAttribute="bottom" constant="8" id="HJz-gf-TTc"/>
+                <constraint firstItem="0jv-Bq-7cY" firstAttribute="leading" secondItem="XDC-fS-7vl" secondAttribute="trailing" constant="8" id="Nea-2G-xHJ"/>
+                <constraint firstItem="X8C-W1-afl" firstAttribute="top" secondItem="Oca-Gn-3x2" secondAttribute="bottom" constant="8" id="RR8-1f-Z6w"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="top" secondItem="sEL-O6-BvV" secondAttribute="bottom" constant="8" id="Rqb-xN-uOZ"/>
+                <constraint firstItem="VgV-Pm-hww" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.402" id="RvI-oz-zZW"/>
+                <constraint firstItem="rO7-4y-voE" firstAttribute="top" secondItem="ioi-oi-lRi" secondAttribute="top" constant="8" id="Tz5-iK-U0N"/>
+                <constraint firstItem="ArL-1z-1CW" firstAttribute="trailing" secondItem="Ink-Re-WlR" secondAttribute="trailing" constant="8" id="Ufq-v5-Lik"/>
+                <constraint firstItem="Ink-Re-WlR" firstAttribute="top" secondItem="X8C-W1-afl" secondAttribute="bottom" constant="8" id="WTa-pz-hZr"/>
+                <constraint firstItem="Ink-Re-WlR" firstAttribute="leading" secondItem="0jv-Bq-7cY" secondAttribute="trailing" constant="8" id="WWp-b0-WY9"/>
                 <constraint firstItem="sEL-O6-BvV" firstAttribute="width" secondItem="7Tc-7h-tWt" secondAttribute="width" id="Xvj-AN-l9I"/>
-                <constraint firstItem="KzH-Sr-pX3" firstAttribute="top" secondItem="VgV-Pm-hww" secondAttribute="bottom" constant="8" id="a9g-rC-Ujl"/>
+                <constraint firstItem="ArL-1z-1CW" firstAttribute="bottom" secondItem="XDC-fS-7vl" secondAttribute="bottom" constant="8" id="b12-Rz-QZA"/>
                 <constraint firstAttribute="trailing" secondItem="sEL-O6-BvV" secondAttribute="trailing" constant="8" id="bPb-bn-ixa"/>
                 <constraint firstItem="BSL-4D-eUF" firstAttribute="top" secondItem="rO7-4y-voE" secondAttribute="bottom" constant="8" id="c2P-VX-4i4"/>
-                <constraint firstItem="KzH-Sr-pX3" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.25" id="dLr-To-Qhj"/>
                 <constraint firstItem="rO7-4y-voE" firstAttribute="leading" secondItem="7Tc-7h-tWt" secondAttribute="trailing" constant="8" id="eIl-wE-Xh0"/>
+                <constraint firstItem="Ink-Re-WlR" firstAttribute="width" secondItem="X8C-W1-afl" secondAttribute="width" id="efH-mf-NJj"/>
+                <constraint firstItem="BSL-4D-eUF" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.611" id="eig-xg-8Kg"/>
+                <constraint firstItem="3fr-uj-gcm" firstAttribute="top" secondItem="VgV-Pm-hww" secondAttribute="bottom" constant="8" id="fOV-XZ-JS4"/>
+                <constraint firstItem="X8C-W1-afl" firstAttribute="width" secondItem="Oca-Gn-3x2" secondAttribute="width" id="fOh-fO-z8P"/>
                 <constraint firstItem="VgV-Pm-hww" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="8" id="fXn-hZ-ocd"/>
-                <constraint firstItem="KzH-Sr-pX3" firstAttribute="top" secondItem="BSL-4D-eUF" secondAttribute="bottom" constant="8" id="gre-uf-hho"/>
+                <constraint firstItem="ArL-1z-1CW" firstAttribute="bottom" secondItem="Ink-Re-WlR" secondAttribute="bottom" constant="8" id="ibA-Wx-wXZ"/>
                 <constraint firstItem="VgV-Pm-hww" firstAttribute="width" secondItem="ioi-oi-lRi" secondAttribute="width" multiplier="0.2" id="npU-9l-0yf"/>
                 <constraint firstItem="7Tc-7h-tWt" firstAttribute="leading" secondItem="ioi-oi-lRi" secondAttribute="leading" constant="8" id="o4L-QX-OqE"/>
                 <constraint firstItem="VgV-Pm-hww" firstAttribute="top" secondItem="7Tc-7h-tWt" secondAttribute="bottom" constant="8" id="oeB-NI-V9O"/>
-                <constraint firstItem="KzH-Sr-pX3" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" id="s0y-WK-lgW"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="width" secondItem="VgV-Pm-hww" secondAttribute="width" id="sr3-Gs-luY"/>
-                <constraint firstItem="KzH-Sr-pX3" firstAttribute="top" secondItem="Oca-Gn-3x2" secondAttribute="bottom" constant="8" id="tph-5D-m3b"/>
                 <constraint firstItem="ArL-1z-1CW" firstAttribute="trailing" secondItem="Oca-Gn-3x2" secondAttribute="trailing" constant="8" id="xDm-sG-8YN"/>
-                <constraint firstItem="7Tc-7h-tWt" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.125" id="ywG-U1-EqI"/>
+                <constraint firstItem="7Tc-7h-tWt" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.136" id="ywG-U1-EqI"/>
+                <constraint firstItem="0jv-Bq-7cY" firstAttribute="height" secondItem="XDC-fS-7vl" secondAttribute="height" id="z9c-yo-kus"/>
+                <constraint firstItem="sEL-O6-BvV" firstAttribute="top" secondItem="ioi-oi-lRi" secondAttribute="top" constant="8" id="zur-2X-ZiU"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-84.782608695652186" y="507.25446428571428"/>
+            <point key="canvasLocation" x="-93.478260869565219" y="420.20089285714283"/>
         </view>
     </objects>
     <resources>
-        <image name="arrow.left.square" width="15" height="15"/>
-        <image name="arrow.right.square" width="15" height="15"/>
+        <image name="arrow-left" width="40" height="40"/>
+        <image name="arrow-right" width="40" height="40"/>
+        <image name="backspace" width="51" height="40"/>
+        <image name="clear" width="39" height="39"/>
+        <image name="left" width="58" height="48"/>
+        <image name="right" width="58" height="48"/>
+        <image name="shift" width="38" height="40"/>
     </resources>
 </document>

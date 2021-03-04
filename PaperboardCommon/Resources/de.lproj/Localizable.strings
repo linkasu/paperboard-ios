@@ -17,6 +17,16 @@
 "input.space" = "space";
 "input.talk" = "aussprechen";
 "input.alphabet" = "a b c d e f g h i j k l m n o p q r s t u v w x y z ä ö ü ß";
+
+//MARK: Keyboard
+
+"keyboard.go" = "Go";
+"keyboard.search" = "Поиск";
+"keyboard.continue" = "Продолжить";
+"keyboard.return" = "Enter";
+
+//MARK: Settings
+
 "settings.title" = "Einstellungen";
 "settings.dialog.columns" = "Die Spaltenanzahl festlegen";
 "settings.dialog.cancel" = "Abbrechen";

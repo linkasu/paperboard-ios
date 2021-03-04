@@ -16,12 +16,13 @@ class MainKeyboardViewController: UIViewController {
     @IBOutlet weak var backspaceButton: KeyboardButton!
     @IBOutlet weak var clearButton: KeyboardButton!
     @IBOutlet weak var capsLockButton: KeyboardButton!
-    @IBOutlet weak var talkButton: KeyboardButton!
+    @IBOutlet weak var talkButton: KeyboardButton?
     @IBOutlet weak var cursorRight: KeyboardButton!
     @IBOutlet weak var cursorLeft: KeyboardButton!
-    @IBOutlet weak var settingsButton: KeyboardButton!
-    @IBOutlet weak var shareButton: KeyboardButton!
+    @IBOutlet weak var settingsButton: KeyboardButton?
+    @IBOutlet weak var shareButton: KeyboardButton?
     @IBOutlet weak var spaceButton: KeyboardButton!
+    @IBOutlet weak var actionButton: KeyboardButton?
     
     @IBOutlet var buttonsStackViews: [UIStackView]!
     
@@ -38,6 +39,10 @@ class MainKeyboardViewController: UIViewController {
     
     let settings = Settings()
     let defaultColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+    
+    @IBAction func onActionTouched(_ sender: Any) {
+        inputProcessor.return()
+    }
     
     @IBAction func onSpaceTouched(_ sender: Any) {
         inputProcessor.space()
@@ -226,8 +231,12 @@ class MainKeyboardViewController: UIViewController {
         configureMain(button: spaceButton, colorScheme: colorScheme)
         
         configureSystem(button: clearButton, colorScheme: colorScheme)
-        configureSystem(button: settingsButton, colorScheme: colorScheme)
-        configureSystem(button: shareButton, colorScheme: colorScheme)
+        if let settingsButton = settingsButton {
+            configureSystem(button: settingsButton, colorScheme: colorScheme)
+        }
+        if let shareButton = shareButton {
+            configureSystem(button: shareButton, colorScheme: colorScheme)
+        }
         
         configureControl(button: cursorLeft, colorScheme: colorScheme)
         configureControl(button: cursorRight, colorScheme: colorScheme)
@@ -236,7 +245,12 @@ class MainKeyboardViewController: UIViewController {
         configureControl(button: backspaceButton, colorScheme: colorScheme)
         configureControl(button: capsLockButton, colorScheme: colorScheme)
         
-        configureFocus(button: talkButton, colorScheme: colorScheme)
+        if let talkButton = talkButton {
+            configureFocus(button: talkButton, colorScheme: colorScheme)
+        }
+        if let actionButton = actionButton {
+            configureFocus(button: actionButton, colorScheme: colorScheme)
+        }
     }
     
     func configureMain(button: KeyboardButton, colorScheme: PaperboardColors) {
