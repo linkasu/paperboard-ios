@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Union.png",
+      "filename" : "next.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Union@2x.png",
+      "filename" : "next@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Union@3x.png",
+      "filename" : "next@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

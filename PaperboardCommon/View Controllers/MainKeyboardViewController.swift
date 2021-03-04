@@ -24,6 +24,8 @@ class MainKeyboardViewController: UIViewController {
     @IBOutlet weak var spaceButton: KeyboardButton!
     @IBOutlet weak var actionButton: KeyboardButton?
     
+    var isClearSystem: Bool = true
+    
     @IBOutlet var buttonsStackViews: [UIStackView]!
     
     let inputSource = InputCollectionDataSource()
@@ -230,7 +232,12 @@ class MainKeyboardViewController: UIViewController {
         
         configureMain(button: spaceButton, colorScheme: colorScheme)
         
-        configureSystem(button: clearButton, colorScheme: colorScheme)
+        if isClearSystem {
+            configureSystem(button: clearButton, colorScheme: colorScheme)
+        } else {
+            configureControl(button: clearButton, colorScheme: colorScheme)
+        }
+        
         if let settingsButton = settingsButton {
             configureSystem(button: settingsButton, colorScheme: colorScheme)
         }

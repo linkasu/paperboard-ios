@@ -39,6 +39,8 @@ class KeyboardViewController: UIInputViewController {
             inputView: self,
             documentProxy: textDocumentProxy
         )
+        
+        keyboardViewContoller.isClearSystem = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
