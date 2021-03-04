@@ -54,11 +54,12 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     func reload() {
         //update sections data
         let squareSize = numberOfColumns * numberOfColumns
-        var tempAlphabet = currentKeyboard?.alphabet.split(separator: " ").map{ String($0) } ?? alphabet
+        var tempAlphabet = ["."]
+        tempAlphabet += currentKeyboard?.alphabet.split(separator: " ").map{ String($0) } ?? alphabet
         let numbers = Array("1234567890").map{String($0)}
-        let marks = Array(".,!?/*+-=@$%()<>[]").map{String($0)}
-        tempAlphabet+=numbers
-        tempAlphabet+=marks
+        let marks = Array(",!?/*+-=@$%()<>[]").map{String($0)}
+        tempAlphabet += numbers
+        tempAlphabet += marks
         
         sections.removeAll()
         while tempAlphabet.count > squareSize {
@@ -106,7 +107,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
         collectionCell.onButtonPressed = { [weak self] in
             self?.onCellSelected?(indexPath)
         }
-
+        
         let toFill = letter(forIndexPath: indexPath) ?? ""
         collectionCell.fill(with: inputProcessor.isCaps() ? toFill.capitalized : toFill)
         collectionCell.characterButton.setTitleColor(colorScheme.buttonTextColor, for: [])
