@@ -208,6 +208,7 @@
                             <constraint firstItem="fAU-ej-Uyr" firstAttribute="top" secondItem="bM9-hj-G9L" secondAttribute="bottom" constant="12" id="0jX-l0-6tS"/>
                             <constraint firstItem="sD3-hK-vVp" firstAttribute="top" secondItem="pXm-1t-xtC" secondAttribute="bottom" constant="12" id="4c1-nN-i2r"/>
                             <constraint firstItem="xfS-ZG-Xyo" firstAttribute="width" secondItem="pXm-1t-xtC" secondAttribute="width" id="4wf-2p-8H1"/>
+                            <constraint firstItem="fAU-ej-Uyr" firstAttribute="height" secondItem="HaG-Z3-8TH" secondAttribute="height" id="79K-hZ-AeF"/>
                             <constraint firstItem="sYm-5H-3gi" firstAttribute="leading" secondItem="sD3-hK-vVp" secondAttribute="trailing" constant="14" id="8AX-4F-E5j"/>
                             <constraint firstItem="HaG-Z3-8TH" firstAttribute="top" secondItem="sD3-hK-vVp" secondAttribute="bottom" constant="12" id="8Ls-tf-t8X"/>
                             <constraint firstItem="bM9-hj-G9L" firstAttribute="height" secondItem="sD3-hK-vVp" secondAttribute="height" id="AAm-pB-iLW"/>
@@ -222,7 +223,6 @@
                             <constraint firstItem="bM9-hj-G9L" firstAttribute="leading" secondItem="sYm-5H-3gi" secondAttribute="trailing" constant="14" id="PpB-RB-Wj2"/>
                             <constraint firstItem="5zc-Iu-Fjd" firstAttribute="top" secondItem="5hj-ip-iPV" secondAttribute="top" constant="20" id="SiW-hC-kAc"/>
                             <constraint firstItem="pXm-1t-xtC" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.143" id="WSl-pN-6hP"/>
-                            <constraint firstItem="fAU-ej-Uyr" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.19" id="YEf-kf-jpT"/>
                             <constraint firstItem="fAU-ej-Uyr" firstAttribute="width" secondItem="bM9-hj-G9L" secondAttribute="width" id="ZiM-0q-vTs"/>
                             <constraint firstItem="pXm-1t-xtC" firstAttribute="top" secondItem="5hj-ip-iPV" secondAttribute="top" constant="20" id="ajK-xz-Ndy"/>
                             <constraint firstItem="00F-QI-dkF" firstAttribute="top" secondItem="HaG-Z3-8TH" secondAttribute="bottom" constant="12" id="be2-Bu-Dhi"/>
@@ -260,15 +260,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backspaceButton" destination="fAU-ej-Uyr" id="kvn-7j-SDv"/>
+                        <outlet property="capsHeightConstraint" destination="ze0-Nf-sw9" id="Ibn-hy-UaX"/>
                         <outlet property="capsLockButton" destination="HaG-Z3-8TH" id="iIm-aB-lIq"/>
                         <outlet property="clearButton" destination="379-q7-dGu" id="U2x-7m-fo3"/>
+                        <outlet property="clearButtonWidthConstraint" destination="FRq-ie-DhP" id="3tU-7x-sv8"/>
+                        <outlet property="cursorHeightConstraint" destination="WSl-pN-6hP" id="BiQ-zH-Id4"/>
                         <outlet property="cursorLeft" destination="pXm-1t-xtC" id="AT2-bJ-Twt"/>
                         <outlet property="cursorRight" destination="xfS-ZG-Xyo" id="cMQ-wG-eq1"/>
                         <outlet property="inputCollectionView" destination="sYm-5H-3gi" id="KEd-qx-2qZ"/>
                         <outlet property="inputField" destination="5zc-Iu-Fjd" id="t7m-IV-Lj0"/>
                         <outlet property="nextButton" destination="bM9-hj-G9L" id="21w-FD-AzG"/>
                         <outlet property="prevButton" destination="sD3-hK-vVp" id="HJc-Iv-RFT"/>
+                        <outlet property="prevButtonheightConstraint" destination="PS5-eJ-jps" id="5KA-zp-TFg"/>
                         <outlet property="settingsButton" destination="QVK-DB-j7u" id="JRL-zd-kjz"/>
+                        <outlet property="settingsButtonWidthConstraint" destination="df2-xt-9rJ" id="3kQ-OQ-EHV"/>
                         <outlet property="shareButton" destination="Vt2-uV-4Uu" id="MSk-es-v52"/>
                         <outlet property="spaceButton" destination="fk9-eM-H0l" id="GuU-Xm-xXq"/>
                         <outlet property="talkButton" destination="S6V-VI-fdM" id="1S3-dQ-s3Y"/>

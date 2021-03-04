@@ -21,7 +21,7 @@ class InputCollectionLayout: UICollectionViewLayout {
   
   override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
 
-    guard let bounds = collectionView?.bounds, let source = inputSource else {
+    guard let _ = collectionView?.bounds, let _ = inputSource else {
       return nil
     }
     let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)

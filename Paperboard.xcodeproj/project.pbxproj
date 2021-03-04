@@ -34,6 +34,12 @@
 		666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
 		66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */; };
 		66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
+		730B751D25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */; };
+		730B751E25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */; };
+		7319521225F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */; };
+		7319521325F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */; };
+		7319521725F0C80D00A46256 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521625F0C80D00A46256 /* Localizable.swift */; };
+		7319521825F0C80D00A46256 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521625F0C80D00A46256 /* Localizable.swift */; };
 		B051DDC62595FE060018947C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB2E2125B94200F6F62A /* Assets.xcassets */; };
 		B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07516B5257F64C200BC905F /* KeyboardViewController.swift */; };
 		B07516BA257F64C200BC905F /* PaperboardKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -131,6 +137,9 @@
 		666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainKeyboardViewController.xib; sourceTree = "<group>"; };
 		666CF28525837F83008D1872 /* MainKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainKeyboardViewController.swift; sourceTree = "<group>"; };
 		6EB97321D070173986C89CF1 /* Pods-PaperboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HEX.swift"; sourceTree = "<group>"; };
+		7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
+		7319521625F0C80D00A46256 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		AC306E1A1BEC1FA8AC1F4878 /* Pods-PaperboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE4CAEE8BB897A632AAF2C8F /* Pods-PaperboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardTests/Pods-PaperboardTests.release.xcconfig"; sourceTree = "<group>"; };
 		B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PaperboardKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +223,8 @@
 				0E20AB722127155F00F6F62A /* Collection+Safe.swift */,
 				B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */,
 				B0D3683C25864036007CBF35 /* UIView+Audio.swift */,
+				730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */,
+				7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -328,6 +339,7 @@
 				0E20AB2E2125B94200F6F62A /* Assets.xcassets */,
 				0E734BA82135A67B0000D02F /* Keyboards.plist */,
 				0E20AB7821271F5600F6F62A /* Localizable.strings */,
+				7319521625F0C80D00A46256 /* Localizable.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -522,10 +534,13 @@
 				0E20AB2A2125B93F00F6F62A /* MainInputViewController.swift in Sources */,
 				0E20AB6F21270F1900F6F62A /* InputCollectionProcessor.swift in Sources */,
 				0E20AB282125B93F00F6F62A /* AppDelegate.swift in Sources */,
+				7319521725F0C80D00A46256 /* Localizable.swift in Sources */,
+				7319521225F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */,
 				0E20AB622125DB3000F6F62A /* InputCollectionLayout.swift in Sources */,
 				B0D3683D25864036007CBF35 /* UIView+Audio.swift in Sources */,
 				0E20AB7A2127247100F6F62A /* TextToSpeechProcessor.swift in Sources */,
 				0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */,
+				730B751D25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */,
 				B0D36854258648FB007CBF35 /* Styles.swift in Sources */,
 				666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */,
 				B07516FA257F6B5100BC905F /* Settings.swift in Sources */,
@@ -545,8 +560,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07516EA257F6A0000BC905F /* InputCollectionLayout.swift in Sources */,
+				7319521825F0C80D00A46256 /* Localizable.swift in Sources */,
 				B07516F4257F6ADB00BC905F /* InputCollectionViewCell.swift in Sources */,
 				B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */,
+				730B751E25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */,
 				B07516D4257F67CB00BC905F /* Collection+Safe.swift in Sources */,
 				B0BCF95D2585D55E00ADCBB3 /* InputKeyboardProcessor.swift in Sources */,
 				B0751708257F6DDD00BC905F /* Settings.swift in Sources */,
@@ -562,6 +579,7 @@
 				B07516EF257F6A5000BC905F /* InputCollectionDataSource.swift in Sources */,
 				B0D3684C25864647007CBF35 /* KeyboardButton.swift in Sources */,
 				B0BCF9442584CA4B00ADCBB3 /* Constants.swift in Sources */,
+				7319521325F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

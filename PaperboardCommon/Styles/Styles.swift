@@ -32,17 +32,17 @@ struct PaperboardColors {
         case .light:
             buttonTextColor = .black
             
-            mainButtonBackgroundColor = UIColor(red: 252/255, green: 252/255, blue: 254/255, alpha: 1.0)
-            mainButtonHighlightColor = mainButtonBackgroundColor.withAlphaComponent(0.8)
+            mainButtonBackgroundColor = UIColor(hex: "#FCFCFE")
+            mainButtonHighlightColor = UIColor(hex: "#F5F5F5")
             
-            controlButtonBackgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
-            controlButtonHighlightColor = controlButtonBackgroundColor.withAlphaComponent(0.8)
+            controlButtonBackgroundColor = UIColor(hex: "#F0F0F0")
+            controlButtonHighlightColor = UIColor(hex: "#E2E4E4")
             
-            systemButtonBackgroundColor = UIColor(red: 174/255, green: 179/255, blue: 190/255, alpha: 1.0)
-            systemButtonHighlightColor = systemButtonBackgroundColor.withAlphaComponent(0.8)
+            systemButtonBackgroundColor = UIColor(hex: "#AEB3BE")
+            systemButtonHighlightColor = UIColor(hex: "#8E95A4")
             
-            focusButtonBackgroundColor = UIColor(red: 15/255, green: 119/255, blue: 240/255, alpha: 1.0)
-            focusButtonHighlightColor = focusButtonBackgroundColor.withAlphaComponent(0.8)
+            focusButtonBackgroundColor = UIColor(hex: "#0F77F0")
+            focusButtonHighlightColor = UIColor(hex: "#0E6DDD")
             
             backgroundColor = UIColor(red: 210/255, green: 213/255, blue: 219/255, alpha: 1.0)
             previewTextColor = .white
@@ -50,11 +50,11 @@ struct PaperboardColors {
         case .dark:
             buttonTextColor = .white
             
-            mainButtonBackgroundColor = UIColor(white: 138/255, alpha: 1.0)
-            mainButtonHighlightColor = UIColor(white: 104/255, alpha: 1.0)
+            mainButtonBackgroundColor = UIColor(hex: "#646464")
+            mainButtonHighlightColor = UIColor(hex: "#525252")
             
-            controlButtonBackgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)
-            controlButtonHighlightColor = controlButtonBackgroundColor.withAlphaComponent(0.8)
+            controlButtonBackgroundColor = UIColor(hex: "#3F3F3F")
+            controlButtonHighlightColor = UIColor(hex: "#242424")
             
             systemButtonBackgroundColor = UIColor(red: 174/255, green: 179/255, blue: 190/255, alpha: 1.0)
             systemButtonHighlightColor = systemButtonBackgroundColor.withAlphaComponent(0.8)
