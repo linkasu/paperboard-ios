@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "locked.png",
+      "filename" : "Shift ALL.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "locked@2x.png",
+      "filename" : "Shift ALL@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "locked@3x.png",
+      "filename" : "Shift ALL@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

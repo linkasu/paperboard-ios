@@ -63,7 +63,7 @@ class MainKeyboardViewController: UIViewController {
     @IBAction func onCapsLocktouched(_ sender: Any) {
         UIDevice.current.playInputClick()
         inputProcessor.capsLock()
-        capsLockButton.isPressed = inputProcessor.isCaps()
+        capsLockButton.setImage(UIImage(named: inputProcessor.isCaps() ? "shift-on" : "shift-off"), for: .normal)
         inputCollectionView.reloadData()
     }
     

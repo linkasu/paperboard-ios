@@ -91,7 +91,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaG-Z3-8TH" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="487.5" width="236" height="156"/>
                                 <color key="backgroundColor" white="0.9034264353" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="shift">
+                                <state key="normal" image="shift-off">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -294,7 +294,7 @@
         <image name="say" width="40" height="36.5"/>
         <image name="settings" width="44" height="44"/>
         <image name="share" width="40" height="40"/>
-        <image name="shift" width="38" height="40"/>
+        <image name="shift-off" width="40" height="40"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

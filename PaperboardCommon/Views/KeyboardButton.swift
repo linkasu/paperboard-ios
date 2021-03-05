@@ -14,7 +14,6 @@ class KeyboardButton: UIButton {
             updateFont()
         }
     }
-    var isPressed: Bool = false
     var defaultBackgroundColor: UIColor = .white
     var highlightBackgroundColor: UIColor = .lightGray
     var originalFontSize: CGFloat = -1
@@ -31,7 +30,7 @@ class KeyboardButton: UIButton {
     
     override func layoutSubviews() {
       super.layoutSubviews()
-      backgroundColor = isHighlighted || isPressed ? highlightBackgroundColor : defaultBackgroundColor
+      backgroundColor = isHighlighted ? highlightBackgroundColor : defaultBackgroundColor
     }
     
     func commonInit() {
