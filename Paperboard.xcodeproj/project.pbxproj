@@ -40,6 +40,10 @@
 		7319521325F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */; };
 		7319521725F0C80D00A46256 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521625F0C80D00A46256 /* Localizable.swift */; };
 		7319521825F0C80D00A46256 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521625F0C80D00A46256 /* Localizable.swift */; };
+		735C7B4925F63886006F23F8 /* SettingsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */; };
+		73F7971A25F6480200E8FA1B /* SettingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7971925F6480200E8FA1B /* SettingItemCell.swift */; };
+		73F7971E25F64B0000E8FA1B /* ColumnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */; };
+		73F7972225F64B1A00E8FA1B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */; };
 		B051DDC62595FE060018947C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB2E2125B94200F6F62A /* Assets.xcassets */; };
 		B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07516B5257F64C200BC905F /* KeyboardViewController.swift */; };
 		B07516BA257F64C200BC905F /* PaperboardKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -140,6 +144,10 @@
 		730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HEX.swift"; sourceTree = "<group>"; };
 		7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		7319521625F0C80D00A46256 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMasterViewController.swift; sourceTree = "<group>"; };
+		73F7971925F6480200E8FA1B /* SettingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemCell.swift; sourceTree = "<group>"; };
+		73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsViewController.swift; sourceTree = "<group>"; };
+		73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		AC306E1A1BEC1FA8AC1F4878 /* Pods-PaperboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE4CAEE8BB897A632AAF2C8F /* Pods-PaperboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardTests/Pods-PaperboardTests.release.xcconfig"; sourceTree = "<group>"; };
 		B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PaperboardKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +252,10 @@
 				0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */,
 				0E20AB802127386200F6F62A /* SetColumnsViewController.swift */,
 				0E20AB812127386200F6F62A /* SetColumnsViewController.xib */,
+				735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */,
+				73F7971925F6480200E8FA1B /* SettingItemCell.swift */,
+				73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */,
+				73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -528,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E20AB71212713AE00F6F62A /* InputFieldProcessor.swift in Sources */,
+				735C7B4925F63886006F23F8 /* SettingsMasterViewController.swift in Sources */,
 				B0BCF93F2584C9A600ADCBB3 /* Constants.swift in Sources */,
 				0E20AB822127386200F6F62A /* SetColumnsViewController.swift in Sources */,
 				0E20AB7F212729B400F6F62A /* SettingsStorage.swift in Sources */,
@@ -542,8 +555,11 @@
 				0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */,
 				730B751D25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */,
 				B0D36854258648FB007CBF35 /* Styles.swift in Sources */,
+				73F7971A25F6480200E8FA1B /* SettingItemCell.swift in Sources */,
 				666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */,
+				73F7971E25F64B0000E8FA1B /* ColumnsViewController.swift in Sources */,
 				B07516FA257F6B5100BC905F /* Settings.swift in Sources */,
+				73F7972225F64B1A00E8FA1B /* KeyboardViewController.swift in Sources */,
 				0E20AB7D2127289000F6F62A /* SettingsProcessor.swift in Sources */,
 				B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */,
 				B0D36847258645FD007CBF35 /* KeyboardButton.swift in Sources */,

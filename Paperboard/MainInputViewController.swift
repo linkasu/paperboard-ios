@@ -18,11 +18,6 @@ class MainInputViewController: MainKeyboardViewController {
     @IBOutlet weak var clearButtonWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var settingsButtonWidthConstraint: NSLayoutConstraint!
     
-    @IBAction private func showSettings(_ sender: UIBarButtonItem!) {
-        let settingsProcessor = SettingsProcessor(settings: settings)
-        settingsProcessor.showSettings(onController: self, byBarButton: sender)
-    }
-    
     @IBAction func showShare(_ sender: Any) {
         guard let shareText = inputField.text else {
             return
@@ -88,6 +83,10 @@ class MainInputViewController: MainKeyboardViewController {
         inputField.becomeFirstResponder()
     }
     
+    @IBAction func showSettings(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SettingsViewController")
+        present(vc, animated: true)
+    }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
