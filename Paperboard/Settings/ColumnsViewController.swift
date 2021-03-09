@@ -8,7 +8,20 @@
 import UIKit
 
 class ColumnItemCell: UICollectionViewCell {
+    static let id = "ColumnCell"
+    
     @IBOutlet weak var number: UILabel!
+    
+    let defColor = UIColor(hex: "#AEB3BE")
+    let selColor = UIColor(hex: "#0F77F0")
+    
+    override var isSelected: Bool {
+        didSet {
+            contentView.layer.borderColor = isSelected ? selColor.cgColor : defColor.cgColor
+            contentView.layer.opacity = isSelected ? 1.0 : 0.5
+            number.textColor = isSelected ? selColor : UIColor.black
+        }
+    }
 }
 
 class ColumnsViewController: UIViewController {
@@ -22,10 +35,14 @@ class ColumnsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-
+    
 }
 
 extension ColumnsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColumnItemCell.id, for: indexPath) as! ColumnItemCell
+        cell.isSelected = true
+    }
 }
 
 extension ColumnsViewController: UICollectionViewDataSource {
@@ -34,12 +51,11 @@ extension ColumnsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ColumnCell", for: indexPath) as! ColumnItemCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColumnItemCell.id, for: indexPath) as! ColumnItemCell
         cell.number.text = String(indexPath.row + 1)
         cell.contentView.layer.cornerRadius = 6.0
-        cell.contentView.layer.borderColor = UIColor(hex: "#AEB3BE").cgColor
         cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.opacity = 0.5
+        cell.isSelected = false
         return cell
     }
     
@@ -56,7 +72,7 @@ extension ColumnsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
