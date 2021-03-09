@@ -23,7 +23,6 @@
 		0E20AB7521271C7600F6F62A /* ClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7421271C7600F6F62A /* ClearTextField.swift */; };
 		0E20AB7621271F5600F6F62A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB7821271F5600F6F62A /* Localizable.strings */; };
 		0E20AB7A2127247100F6F62A /* TextToSpeechProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */; };
-		0E20AB7D2127289000F6F62A /* SettingsProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */; };
 		0E20AB7F212729B400F6F62A /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7E212729B400F6F62A /* SettingsStorage.swift */; };
 		0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5433392129CD0B00DBC3DD /* InfoPlist.strings */; };
 		0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E734BA82135A67B0000D02F /* Keyboards.plist */; };
@@ -117,7 +116,6 @@
 		0E20AB7421271C7600F6F62A /* ClearTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTextField.swift; sourceTree = "<group>"; };
 		0E20AB7721271F5600F6F62A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechProcessor.swift; sourceTree = "<group>"; };
-		0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProcessor.swift; sourceTree = "<group>"; };
 		0E20AB7E212729B400F6F62A /* SettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
 		0E5433382129CD0B00DBC3DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E54333B2129CD2600DBC3DD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 				735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */,
 				73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */,
 				73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */,
-				0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -551,7 +548,6 @@
 				73F7971E25F64B0000E8FA1B /* ColumnsViewController.swift in Sources */,
 				B07516FA257F6B5100BC905F /* Settings.swift in Sources */,
 				73F7972225F64B1A00E8FA1B /* KeyboardViewController.swift in Sources */,
-				0E20AB7D2127289000F6F62A /* SettingsProcessor.swift in Sources */,
 				B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */,
 				B0D36847258645FD007CBF35 /* KeyboardButton.swift in Sources */,
 				B0BCF9662585DA1500ADCBB3 /* Date+Second.swift in Sources */,
