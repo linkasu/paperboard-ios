@@ -140,13 +140,13 @@ class MainKeyboardViewController: UIViewController {
             self.updateCollection()
         })
         
-        settings.onKeyboardChanged = { [weak self] newKeyboard in
+        settings.onKeyboardChanged.append({ [weak self] newKeyboard in
             guard let `self` = self else {
                 return
             }
             self.inputSource.currentKeyboard = newKeyboard
             self.updateCollection()
-        }
+        })
         
         prevButton.titleLabel?.textAlignment = .center
         nextButton.titleLabel?.textAlignment = .center

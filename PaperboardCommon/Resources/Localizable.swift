@@ -16,9 +16,12 @@ enum PaperboardLocalizable: String {
     case search = "keyboard.search"
     case `continue` = "keyboard.continue"
     case `return` = "keyboard.return"
+    
     case settingsTitle = "settings.title"
     case settingsColumns = "settings.columns.title"
     case settingsKeyboard = "settings.dialog.keyboard"
+    case settingsKeyboardUnknownLanguage = "settings.keyboard.unknownLanguage"
+    case settingKeyboardDefault = "settings.keyboard.default"
     
     func message() -> String {
         return NSLocalizedString(rawValue, comment: "")

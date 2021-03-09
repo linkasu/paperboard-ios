@@ -41,6 +41,19 @@ class SettingsMasterViewController: UITableViewController {
                 cell.valueLabel.text = String(self.settings.currentColumns)
             }
         })
+        
+        settings.onKeyboardChanged.append({ [weak self] newKeyboard in
+            guard let `self` = self else {
+                return
+            }
+            if let cell = self.tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? SettingItemCell {
+                if let locale = self.settings.currentKeyboard?.locale {
+                    cell.valueLabel.text = locale
+                } else {
+                    cell.valueLabel.text = PaperboardLocalizable.settingKeyboardDefault.message()
+                }
+            }
+        })
     }
         
     @IBAction func onBack(_ sender: Any) {
@@ -65,7 +78,11 @@ class SettingsMasterViewController: UITableViewController {
         case .keyboard:
             cell.nameLabel.text = PaperboardLocalizable.settingsKeyboard.message()
             cell.iconView.image = UIImage(named: "keyboard")
-            cell.valueLabel.text = "En"
+            if let locale = settings.currentKeyboard?.locale {
+                cell.valueLabel.text = locale
+            } else {
+                cell.valueLabel.text = PaperboardLocalizable.settingKeyboardDefault.message()
+            }
         }
         return cell
     }
@@ -79,8 +96,10 @@ class SettingsMasterViewController: UITableViewController {
             columnsViewController?.settings = settings
             splitViewController?.showDetailViewController(columnsNavViewController, sender: nil)
         case .keyboard:
-            let keyboardViewController = storyBoard.instantiateViewController(withIdentifier: "KeyboardNavViewController")
-            splitViewController?.showDetailViewController(keyboardViewController, sender: nil)
+            let keyboardNavViewController = storyBoard.instantiateViewController(withIdentifier: "KeyboardNavViewController") as! UINavigationController
+            let keyboardViewController = keyboardNavViewController.viewControllers.first as? KeyboardViewController
+            keyboardViewController?.settings = settings
+            splitViewController?.showDetailViewController(keyboardNavViewController, sender: nil)
         }
     }
 }

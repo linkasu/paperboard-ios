@@ -20,7 +20,7 @@ class Settings {
     private let storage = SettingsStorage()
     
     var onColumnAmountChanged: [((Int) -> Void)] = []
-    var onKeyboardChanged: ((Keyboard) -> Void)?
+    var onKeyboardChanged: [((Keyboard?) -> Void)] = []
     
     var keyboards: [Keyboard] = {
       let decoder = PropertyListDecoder()
@@ -51,9 +51,7 @@ class Settings {
       }
       set {
         storage.update(.locale, withValue: newValue?.locale)
-        if let nKeyboard = newValue {
-          onKeyboardChanged?(nKeyboard)
-        }
+        onKeyboardChanged.forEach { $0(newValue) }
       }
     }
     

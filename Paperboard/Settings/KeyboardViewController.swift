@@ -9,9 +9,72 @@
 import Foundation
 import UIKit
 
+class KeyboardCell: UITableViewCell {
+    static let id = "KeyboardCell"
+    @IBOutlet weak var checkImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var trailingMargin: NSLayoutConstraint!
+    @IBOutlet weak var leadingMargin: NSLayoutConstraint!
+    
+    override var isSelected: Bool {
+        didSet {
+            checkImageView.isHidden = !isSelected
+        }
+    }
+}
+
 class KeyboardViewController: UIViewController {
+    var settings: Settings!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var keyboardTitles: [String] = []
+    var selectedIndex: Int = -1
     override func viewDidLoad() {
         navigationItem.title = PaperboardLocalizable.settingsKeyboard.message()
+        
+        tableView.tableFooterView = UIView()
+        tableView.separatorColor = UIColor.clear
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        keyboardTitles = settings.keyboards.map({ "\($0.voiceName) - \(NSLocale.current.localizedString(forLanguageCode: $0.locale) ?? PaperboardLocalizable.settingsKeyboardUnknownLanguage.message()) (\($0.locale))"})
+        keyboardTitles.insert(PaperboardLocalizable.settingKeyboardDefault.message(), at: 0)
+        
+        if let i = settings.keyboards.index(where: { $0.voiceId == settings.currentKeyboard?.voiceId }) {
+            selectedIndex = i + 1
+        } else {
+            selectedIndex = 0
+        }
         super.viewDidLoad()
+    }
+}
+
+extension KeyboardViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return keyboardTitles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: KeyboardCell.id, for: indexPath) as! KeyboardCell
+        cell.titleLabel.text = keyboardTitles[indexPath.row]
+        cell.isSelected = indexPath.row == selectedIndex
+        cell.selectionStyle = .none
+        return cell
+    }
+}
+
+extension KeyboardViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let prevSel = IndexPath(row: selectedIndex, section: 0)
+        if let prevCell = tableView.cellForRow(at: prevSel) as? KeyboardCell {
+            prevCell.isSelected = false
+        }
+        if let cell = tableView.cellForRow(at: indexPath) as? KeyboardCell {
+            cell.isSelected = true
+            selectedIndex = indexPath.row
+            
+            settings.currentKeyboard = indexPath.row == 0 ? nil : settings.keyboards[indexPath.row - 1]
+        }
     }
 }
