@@ -55,16 +55,6 @@ class KeyboardViewController: UIInputViewController {
     }
     
     func handleRotation() {
-        adjustSize()
-        
-//        if UIScreen.main.bounds.width > UIScreen.main.bounds.height {
-//            keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .horizontal }
-//        } else {
-//            keyboardViewContoller.buttonsStackViews.forEach { $0.axis = .vertical }
-//        }
-    }
-    
-    func adjustSize() {
         let newHeight = UIScreen.main.bounds.height * keyboardHeight
         heightConstraint.constant = newHeight
         checkCompact(newHeight)

@@ -11,7 +11,7 @@ import UIKit
 
 class KeyboardViewController: UIViewController {
     override func viewDidLoad() {
-        self.navigationItem.title = PaperboardLocalizable.settingsKeyboard.message()
+        navigationItem.title = PaperboardLocalizable.settingsKeyboard.message()
         super.viewDidLoad()
     }
 }

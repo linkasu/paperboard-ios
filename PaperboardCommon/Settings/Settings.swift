@@ -19,7 +19,7 @@ class Settings {
     
     private let storage = SettingsStorage()
     
-    var onColumnAmountChanged: ((Int) -> Void)?
+    var onColumnAmountChanged: [((Int) -> Void)] = []
     var onKeyboardChanged: ((Keyboard) -> Void)?
     
     var keyboards: [Keyboard] = {
@@ -38,7 +38,7 @@ class Settings {
       }
       set {
         storage.update(.columns, withValue: NSNumber(integerLiteral: newValue))
-        onColumnAmountChanged?(newValue)
+        onColumnAmountChanged.forEach { $0(newValue) }
       }
     }
     

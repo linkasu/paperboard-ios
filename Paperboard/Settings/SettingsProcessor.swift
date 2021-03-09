@@ -29,7 +29,6 @@ class SettingsProcessor: NSObject {
                 title: NSLocalizedString("settings.dialog.columns", comment: ""),
                 style: .default,
                 handler: { _ in
-                    self.showColumnsSetting(onController: controller)
                 })
         )
         settingsAlert.addAction(
@@ -71,14 +70,5 @@ class SettingsProcessor: NSObject {
             origin: barButton)
         picker?.popoverDisabled = true
         picker?.show()
-    }
-    
-    private func showColumnsSetting(onController controller: UIViewController) {
-        let setColumnsVC = SetColumnsViewController.create()
-        setColumnsVC.initialValue = settings.currentColumns
-        setColumnsVC.onAmountChanges = { newValue in
-            self.settings.currentColumns = newValue
-        }
-        controller.present(setColumnsVC, animated: false, completion: nil)
     }
 }

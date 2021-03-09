@@ -26,6 +26,7 @@ class ColumnItemCell: UICollectionViewCell {
 
 class ColumnsViewController: UIViewController {
     
+    var settings: Settings!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -40,8 +41,14 @@ class ColumnsViewController: UIViewController {
 
 extension ColumnsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColumnItemCell.id, for: indexPath) as! ColumnItemCell
-        cell.isSelected = true
+        let prevSel = IndexPath(row: settings.currentColumns - 1, section: 0)
+        if let prevCell = collectionView.cellForItem(at: prevSel) as? ColumnItemCell {
+            prevCell.isSelected = false
+        }
+        if let cell = collectionView.cellForItem(at: indexPath) as? ColumnItemCell {
+            cell.isSelected = true
+            settings.currentColumns = indexPath.row + 1
+        }
     }
 }
 
@@ -52,10 +59,11 @@ extension ColumnsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColumnItemCell.id, for: indexPath) as! ColumnItemCell
-        cell.number.text = String(indexPath.row + 1)
+        let column = indexPath.row + 1
+        cell.number.text = String(column)
         cell.contentView.layer.cornerRadius = 6.0
         cell.contentView.layer.borderWidth = 1.0
-        cell.isSelected = false
+        cell.isSelected = settings?.currentColumns == column
         return cell
     }
     
@@ -75,5 +83,12 @@ extension ColumnsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if UIDevice.current.orientation.isLandscape {
+            return UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 100)
+        }
+        return UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
     }
 }

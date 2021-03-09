@@ -84,7 +84,9 @@ class MainInputViewController: MainKeyboardViewController {
     }
     
     @IBAction func showSettings(_ sender: Any) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SettingsViewController")
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsSplitViewController
+        vc.settings = settings
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
     

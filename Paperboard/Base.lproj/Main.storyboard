@@ -274,13 +274,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Columns!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXh-f8-eT6">
-                                <rect key="frame" x="560" y="404" width="0.0" height="0.0"/>
+                                <rect key="frame" x="554" y="400" width="72" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cXO-bP-IQ5">
-                                <rect key="frame" x="167" y="187" width="872" height="613"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cXO-bP-IQ5">
+                                <rect key="frame" x="0.0" y="130" width="1180" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qHX-Xj-4eg">
                                     <size key="itemSize" width="105" height="80"/>
@@ -290,10 +290,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColumnCell" id="gWM-Fo-wfC" customClass="ColumnItemCell" customModule="Paperboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VYv-8V-qAZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTe-lQ-bx1">
@@ -318,11 +318,11 @@
                         <viewLayoutGuide key="safeArea" id="vxb-q0-bFX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cXO-bP-IQ5" firstAttribute="leading" secondItem="JMS-rc-3a0" secondAttribute="leadingMargin" constant="100" id="J5F-cG-YfO"/>
                             <constraint firstItem="cXO-bP-IQ5" firstAttribute="top" secondItem="JMS-rc-3a0" secondAttribute="topMargin" constant="80" id="S5d-u2-G9k"/>
                             <constraint firstAttribute="bottomMargin" secondItem="cXO-bP-IQ5" secondAttribute="bottom" id="XDm-k8-jEw"/>
                             <constraint firstItem="jXh-f8-eT6" firstAttribute="centerX" secondItem="JMS-rc-3a0" secondAttribute="centerX" id="Zx2-HB-v4o"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cXO-bP-IQ5" secondAttribute="trailing" constant="100" id="j7o-ia-WD2"/>
+                            <constraint firstItem="vxb-q0-bFX" firstAttribute="trailing" secondItem="cXO-bP-IQ5" secondAttribute="trailing" id="mtX-yC-hsC"/>
+                            <constraint firstItem="cXO-bP-IQ5" firstAttribute="leading" secondItem="vxb-q0-bFX" secondAttribute="leading" id="mvl-jQ-u1H"/>
                             <constraint firstItem="jXh-f8-eT6" firstAttribute="centerY" secondItem="JMS-rc-3a0" secondAttribute="centerY" id="oD4-oj-lf6"/>
                         </constraints>
                     </view>
@@ -340,6 +340,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ColumnsViewNavController" id="KVT-6h-fWI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oJP-2k-1yH">
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -355,26 +356,26 @@
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="Clt-m8-6kD" customClass="SettingsMasterViewController" customModule="Paperboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XNH-zL-bLt">
-                        <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="820"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingItem" id="KgS-Y7-skr" customClass="SettingItemCell" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="420" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="420" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KgS-Y7-skr" id="qCV-bi-LPz">
-                                    <rect key="frame" x="100" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="100" y="0.0" width="320" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="B4A-Hg-g5c">
-                                            <rect key="frame" x="0.0" y="11" width="20" height="20"/>
+                                            <rect key="frame" x="20" y="30" width="20" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="AMb-6d-xxG"/>
                                                 <constraint firstAttribute="width" constant="20" id="C3N-pw-MXl"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S64-li-nu6">
-                                            <rect key="frame" x="58" y="11" width="20" height="20"/>
+                                            <rect key="frame" x="60" y="30" width="41.5" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -407,7 +408,13 @@
                             <outlet property="delegate" destination="Clt-m8-6kD" id="BJZ-4z-kZu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="eg8-Pi-cB1"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="eg8-Pi-cB1">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="SKy-Hw-wvh">
+                            <connections>
+                                <action selector="onBack:" destination="Clt-m8-6kD" id="UqW-5W-Xan"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHf-zj-akk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -417,7 +424,8 @@
         <scene sceneID="VNu-pK-2z6">
             <objects>
                 <navigationController id="kOZ-aO-FHf" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xLW-rY-wYm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xLW-rY-wYm">
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -431,7 +439,7 @@
         <!--Settings-->
         <scene sceneID="Nps-rR-U0g">
             <objects>
-                <splitViewController storyboardIdentifier="SettingsViewController" title="Settings" allowDoubleColumnStyle="YES" id="eoB-Dn-yXc" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="SettingsViewController" title="Settings" allowDoubleColumnStyle="YES" id="eoB-Dn-yXc" customClass="SettingsSplitViewController" customModule="Paperboard" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="kOZ-aO-FHf" kind="relationship" relationship="masterViewController" id="ZzG-mA-tb2"/>
                     </connections>
@@ -445,6 +453,7 @@
             <objects>
                 <navigationController storyboardIdentifier="KeyboardNavViewController" id="vHG-H1-f7r" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d5e-HK-P24">
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -464,7 +473,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpm-KO-aL9">
-                                <rect key="frame" x="560" y="404" width="0.0" height="0.0"/>
+                                <rect key="frame" x="554" y="400" width="72.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

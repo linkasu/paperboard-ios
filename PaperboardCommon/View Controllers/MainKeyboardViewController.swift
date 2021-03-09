@@ -132,13 +132,13 @@ class MainKeyboardViewController: UIViewController {
             self?.inputProcessor.append(text: toAppend)
         }
         
-        settings.onColumnAmountChanged = { [weak self] newColumns in
+        settings.onColumnAmountChanged.append({ [weak self] newColumns in
             guard let `self` = self else {
                 return
             }
             self.inputSource.numberOfColumns = newColumns
             self.updateCollection()
-        }
+        })
         
         settings.onKeyboardChanged = { [weak self] newKeyboard in
             guard let `self` = self else {
