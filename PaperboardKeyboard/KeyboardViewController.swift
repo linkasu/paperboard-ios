@@ -14,7 +14,7 @@ class KeyboardViewController: UIInputViewController {
     
     private var heightConstraint: NSLayoutConstraint!
     
-    private let keyboardHeight: CGFloat = 0.6
+    private let keyboardHeight: CGFloat = 0.7
     
     override func viewDidLoad() {
         super.viewDidLoad()

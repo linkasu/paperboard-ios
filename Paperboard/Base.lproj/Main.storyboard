@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sD3-hK-vVp" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="20" y="149.5" width="236" height="326"/>
+                                <rect key="frame" x="20" y="149.5" width="236" height="352"/>
                                 <color key="backgroundColor" white="0.9034264352586534" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" image="arrow-left">
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM9-hj-G9L" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="924" y="149.5" width="236" height="326"/>
+                                <rect key="frame" x="924" y="149.5" width="236" height="352"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" image="arrow-right">
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAU-ej-Uyr" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="924" y="487.5" width="236" height="156"/>
+                                <rect key="frame" x="924" y="513.5" width="236" height="155.5"/>
                                 <color key="backgroundColor" white="0.9034264353" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="backspace">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaG-Z3-8TH" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="20" y="487.5" width="236" height="156"/>
+                                <rect key="frame" x="20" y="513.5" width="236" height="155.5"/>
                                 <color key="backgroundColor" white="0.9034264353" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="shift-off">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,16 +81,16 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sYm-5H-3gi">
-                                <rect key="frame" x="270" y="149.5" width="640" height="494"/>
+                                <rect key="frame" x="270" y="149.5" width="640" height="519.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="JH6-el-Nyi"/>
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00F-QI-dkF">
-                                <rect key="frame" x="20" y="655.5" width="1140" height="144.5"/>
+                                <rect key="frame" x="20" y="681" width="1140" height="119"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="379-q7-dGu" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="200.5" height="144.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="204" height="119"/>
                                         <color key="backgroundColor" red="0.90186256170000001" green="0.90201735500000002" blue="0.9018527865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="clear" image="clear">
@@ -104,7 +104,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVK-DB-j7u" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                        <rect key="frame" x="214.5" y="0.0" width="106.5" height="144.5"/>
+                                        <rect key="frame" x="218" y="0.0" width="106.5" height="119"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" image="settings">
                                             <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,7 +114,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vt2-uV-4Uu" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                        <rect key="frame" x="819" y="0.0" width="106.5" height="144.5"/>
+                                        <rect key="frame" x="815.5" y="0.0" width="106.5" height="119"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" image="share">
                                             <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,7 +125,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6V-VI-fdM" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                        <rect key="frame" x="939.5" y="0.0" width="200.5" height="144.5"/>
+                                        <rect key="frame" x="936" y="0.0" width="204" height="119"/>
                                         <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="talk" image="say">
@@ -139,7 +139,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk9-eM-H0l" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                        <rect key="frame" x="335" y="0.0" width="470" height="144.5"/>
+                                        <rect key="frame" x="338.5" y="0.0" width="463" height="119"/>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Space">
@@ -198,10 +198,10 @@
                             <constraint firstItem="bM9-hj-G9L" firstAttribute="width" secondItem="sD3-hK-vVp" secondAttribute="width" id="BR8-BX-FAx"/>
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="bottom" secondItem="00F-QI-dkF" secondAttribute="bottom" id="CrE-VQ-2iZ"/>
                             <constraint firstItem="sD3-hK-vVp" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" constant="20" id="F3W-Rt-SUJ"/>
-                            <constraint firstItem="379-q7-dGu" firstAttribute="width" secondItem="v1J-9B-lrP" secondAttribute="width" multiplier="0.17" id="FRq-ie-DhP"/>
+                            <constraint firstItem="379-q7-dGu" firstAttribute="width" secondItem="v1J-9B-lrP" secondAttribute="width" multiplier="0.173" id="FRq-ie-DhP"/>
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="00F-QI-dkF" secondAttribute="trailing" constant="20" id="I5S-wm-W3j"/>
+                            <constraint firstItem="379-q7-dGu" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.145" id="JBF-9U-T8j"/>
                             <constraint firstItem="HaG-Z3-8TH" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" constant="20" id="Mrj-Tb-fCW"/>
-                            <constraint firstItem="sD3-hK-vVp" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.398" id="PS5-eJ-jps"/>
                             <constraint firstItem="bM9-hj-G9L" firstAttribute="leading" secondItem="sYm-5H-3gi" secondAttribute="trailing" constant="14" id="PpB-RB-Wj2"/>
                             <constraint firstItem="5zc-Iu-Fjd" firstAttribute="top" secondItem="5hj-ip-iPV" secondAttribute="top" constant="20" id="SiW-hC-kAc"/>
                             <constraint firstItem="pXm-1t-xtC" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.143" id="WSl-pN-6hP"/>
@@ -253,7 +253,6 @@
                         <outlet property="inputField" destination="5zc-Iu-Fjd" id="t7m-IV-Lj0"/>
                         <outlet property="nextButton" destination="bM9-hj-G9L" id="21w-FD-AzG"/>
                         <outlet property="prevButton" destination="sD3-hK-vVp" id="HJc-Iv-RFT"/>
-                        <outlet property="prevButtonheightConstraint" destination="PS5-eJ-jps" id="5KA-zp-TFg"/>
                         <outlet property="settingsButton" destination="QVK-DB-j7u" id="JRL-zd-kjz"/>
                         <outlet property="settingsButtonWidthConstraint" destination="df2-xt-9rJ" id="3kQ-OQ-EHV"/>
                         <outlet property="shareButton" destination="Vt2-uV-4Uu" id="MSk-es-v52"/>

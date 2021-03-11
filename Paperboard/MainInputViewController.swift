@@ -12,7 +12,6 @@ class MainInputViewController: MainKeyboardViewController {
     
     @IBOutlet private weak var inputField: UITextView!
     @IBOutlet weak var cursorHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var prevButtonheightConstraint: NSLayoutConstraint!
     @IBOutlet weak var capsHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var clearButtonWidthConstraint: NSLayoutConstraint!
@@ -33,7 +32,6 @@ class MainInputViewController: MainKeyboardViewController {
     }
     
     override func viewDidLoad() {
-        adjustSize()
         setupStatusBar()
         
         clearButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 8)
@@ -48,6 +46,11 @@ class MainInputViewController: MainKeyboardViewController {
         super.viewDidLoad()
         
         setColorScheme(.light)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        adjustSize()
     }
     
     func setupStatusBar() {
@@ -110,16 +113,14 @@ class MainInputViewController: MainKeyboardViewController {
     func adjustSize() {
         if UIDevice.current.orientation.isLandscape {
             cursorHeightConstraint = cursorHeightConstraint.changeMultiplier(multiplier: 0.143)
-            prevButtonheightConstraint = prevButtonheightConstraint.changeMultiplier(multiplier: 0.398)
             capsHeightConstraint = capsHeightConstraint.changeMultiplier(multiplier: 0.19)
-            clearButtonWidthConstraint = clearButtonWidthConstraint.changeMultiplier(multiplier: 0.177)
-            settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.095)
+            clearButtonWidthConstraint = clearButtonWidthConstraint.changeMultiplier(multiplier: 0.173)
+            settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.096)
             
             clearButton.setTitle(PaperboardLocalizable.clear.message(), for: .normal)
             talkButton?.setTitle(PaperboardLocalizable.talk.message(), for: .normal)
         } else {
             cursorHeightConstraint = cursorHeightConstraint.changeMultiplier(multiplier: 0.146)
-            prevButtonheightConstraint = prevButtonheightConstraint.changeMultiplier(multiplier: 0.418)
             capsHeightConstraint = capsHeightConstraint.changeMultiplier(multiplier: 0.20)
             clearButtonWidthConstraint = clearButtonWidthConstraint.changeMultiplier(multiplier: 0.143)
             settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.143)
