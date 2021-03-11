@@ -129,4 +129,9 @@ class MainInputViewController: MainKeyboardViewController {
             talkButton?.setTitle("", for: .normal)
         }
     }
+    
+    override func configureSpacing(spacing: Int) {
+        super.configureSpacing(spacing: spacing)
+        configureSpacing(view: inputField, spacing: spacing)
+    }
 }

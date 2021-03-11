@@ -1,19 +1,29 @@
 {
   "images" : [
     {
-      "filename" : "Shift ALL.png",
-      "idiom" : "universal",
+      "filename" : "Shift ALL-1.png",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "Shift ALL@2x.png",
-      "idiom" : "universal",
+      "filename" : "Shift ALL@2x-1.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
       "filename" : "Shift ALL@3x.png",
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "scale" : "3x"
+    },
+    {
+      "filename" : "Shift ALL.png",
+      "idiom" : "ipad",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Shift ALL@2x.png",
+      "idiom" : "ipad",
+      "scale" : "2x"
     }
   ],
   "info" : {

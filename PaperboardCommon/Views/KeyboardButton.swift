@@ -9,11 +9,6 @@
 import UIKit
 
 class KeyboardButton: UIButton {
-    var isCompact: Bool = false {
-        didSet {
-            updateFont()
-        }
-    }
     var defaultBackgroundColor: UIColor = .white
     var highlightBackgroundColor: UIColor = .lightGray
     var originalFontSize: CGFloat = -1
@@ -47,8 +42,9 @@ class KeyboardButton: UIButton {
     }
     
     func updateFont() {
+        let isCompact = UIDevice.current.userInterfaceIdiom == .phone
         if let titleLabel = titleLabel {
-            titleLabel.font = titleLabel.font.withSize(isCompact ? 20 : originalFontSize)
+            titleLabel.font = titleLabel.font.withSize(isCompact ? originalFontSize/2 : originalFontSize)
         }
     }
 }

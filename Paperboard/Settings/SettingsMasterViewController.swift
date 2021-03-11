@@ -77,7 +77,7 @@ class SettingsMasterViewController: UITableViewController {
             cell.valueLabel.text = String(settings.currentColumns)
         case .keyboard:
             cell.nameLabel.text = PaperboardLocalizable.settingsKeyboard.message()
-            cell.iconView.image = UIImage(named: "keyboard")
+            cell.iconView.image = UIImage(named: "globe")
             if let locale = settings.currentKeyboard?.locale {
                 cell.valueLabel.text = locale
             } else {

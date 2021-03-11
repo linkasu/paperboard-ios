@@ -1,19 +1,29 @@
 {
   "images" : [
     {
-      "filename" : "Vector.png",
-      "idiom" : "universal",
+      "filename" : "ion_backspace.png",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "Vector@2x.png",
-      "idiom" : "universal",
+      "filename" : "ion_backspace@2x.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "Vector@3x.png",
-      "idiom" : "universal",
+      "filename" : "ion_backspace@3x.png",
+      "idiom" : "iphone",
       "scale" : "3x"
+    },
+    {
+      "filename" : "ion_backspace-1.png",
+      "idiom" : "ipad",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "ion_backspace@2x-1.png",
+      "idiom" : "ipad",
+      "scale" : "2x"
     }
   ],
   "info" : {

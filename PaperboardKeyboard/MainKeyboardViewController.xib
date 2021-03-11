@@ -80,7 +80,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-7h-tWt" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="20" y="20" width="266.5" height="142.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" image="left-small">
+                    <state key="normal" image="left-cursor">
                         <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -90,7 +90,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEL-O6-BvV" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="1079.5" y="20" width="266.5" height="142.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" image="right-small">
+                    <state key="normal" image="right-cursor">
                         <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -215,11 +215,11 @@
     <resources>
         <image name="arrow-left" width="40" height="40"/>
         <image name="arrow-right" width="40" height="40"/>
-        <image name="backspace" width="51" height="40"/>
-        <image name="clear" width="39" height="39"/>
-        <image name="keyboard-change" width="40" height="24"/>
-        <image name="left-small" width="60" height="60"/>
-        <image name="right-small" width="60" height="60"/>
+        <image name="backspace" width="60" height="60"/>
+        <image name="clear" width="40" height="40"/>
+        <image name="keyboard-change" width="40" height="40"/>
+        <image name="left-cursor" width="80" height="80"/>
+        <image name="right-cursor" width="80" height="80"/>
         <image name="shift-off" width="40" height="40"/>
     </resources>
 </document>

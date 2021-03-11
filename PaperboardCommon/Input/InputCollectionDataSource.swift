@@ -16,7 +16,6 @@ private let inputCellReuse = "InputCellReuseID"
  */
 class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     
-    var isCompact: Bool = false
     var onCellSelected: ((IndexPath) -> Void)?
     var colorScheme = PaperboardColors(colorScheme: .light)
     var inputProcessor: InputProcessor!
@@ -114,7 +113,6 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
         collectionCell.characterButton.tintColor = colorScheme.buttonTextColor
         collectionCell.characterButton.defaultBackgroundColor = colorScheme.mainButtonBackgroundColor
         collectionCell.characterButton.highlightBackgroundColor = colorScheme.mainButtonHighlightColor
-        collectionCell.characterButton.isCompact = isCompact
         
         return cell
     }

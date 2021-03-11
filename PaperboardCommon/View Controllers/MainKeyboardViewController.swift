@@ -25,6 +25,7 @@ class MainKeyboardViewController: UIViewController {
     @IBOutlet weak var actionButton: KeyboardButton?
     @IBOutlet weak var changeKeyboard: KeyboardButton!
     @IBOutlet weak var doneButton: KeyboardButton!
+    @IBOutlet weak var bottomBarView: UIView!
     
     var isClearSystem: Bool = true
     
@@ -43,6 +44,9 @@ class MainKeyboardViewController: UIViewController {
     
     let settings = Settings()
     let defaultColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+    
+    let spacingTablet = 12
+    let spacingPhone = 6
     
     @IBAction func onActionTouched(_ sender: Any) {
         inputProcessor.return()
@@ -160,7 +164,52 @@ class MainKeyboardViewController: UIViewController {
         nextButton.titleLabel?.numberOfLines = 2
         
         updateButtonsTitles()
+        
+
+        let spacing = UIDevice.current.userInterfaceIdiom == .phone ? spacingPhone : spacingTablet
+        inputLayout.spacing = NSNumber(value: 6/2)
+        configureSpacing(spacing: spacing)
     }
+    
+    func configureSpacing(spacing: Int) {
+        configureSpacing(view: cursorLeft, spacing: spacing)
+        configureSpacing(view: cursorRight, spacing: spacing)
+        configureSpacing(view: prevButton, spacing: spacing)
+        configureSpacing(view: nextButton, spacing: spacing)
+        configureSpacing(view: capsLockButton, spacing: spacing)
+        configureSpacing(view: backspaceButton, spacing: spacing)
+        configureSpacing(view: inputCollectionView, spacing: spacing)
+        configureSpacing(view: bottomBarView, spacing: spacing)
+        configureSpacing(view: settingsButton, spacing: spacing)
+        configureSpacing(view: spaceButton, spacing: spacing)
+        configureSpacing(view: shareButton, spacing: spacing)
+        configureSpacing(view: talkButton, spacing: spacing)
+        configureSpacing(view: actionButton, spacing: spacing)
+        configureSpacing(view: clearButton, spacing: spacing)
+        configureSpacing(view: doneButton, spacing: spacing)
+        configureSpacing(view: nextButton, spacing: spacing)
+    }
+    
+    func configureSpacing(view: UIView?, spacing: Int) {
+        guard let view = view else {
+            return
+        }
+        view.superview?.constraints.forEach { constaint in
+            configureSpacing(constaint: constaint, anchor: view.bottomAnchor, spacing: spacing)
+            configureSpacing(constaint: constaint, anchor: view.topAnchor, spacing: spacing)
+            configureSpacing(constaint: constaint, anchor: view.leadingAnchor, spacing: spacing)
+            configureSpacing(constaint: constaint, anchor: view.trailingAnchor, spacing: spacing)
+        }
+    }
+    
+    func configureSpacing<T>(constaint: NSLayoutConstraint, anchor: NSLayoutAnchor<T>, spacing: Int) {
+        if constaint.secondAnchor == anchor || constaint.firstAnchor == anchor {
+            if constaint.constant != 0 {
+                constaint.constant = CGFloat(spacing)
+            }
+        }
+    }
+    
     
     func updateButtonsTitles() {
         let currentSection = Int(roundf(Float(inputCollectionView.contentOffset.x / inputCollectionView.frame.width)))

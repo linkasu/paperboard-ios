@@ -21,7 +21,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-1t-xtC" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="236" height="117.5"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="left">
+                                <state key="normal" image="left-cursor">
                                     <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -42,7 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfS-ZG-Xyo" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
                                 <rect key="frame" x="924" y="20" width="236" height="117.5"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="right">
+                                <state key="normal" image="right-cursor">
                                     <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -199,8 +199,8 @@
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="bottom" secondItem="00F-QI-dkF" secondAttribute="bottom" id="CrE-VQ-2iZ"/>
                             <constraint firstItem="sD3-hK-vVp" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" constant="20" id="F3W-Rt-SUJ"/>
                             <constraint firstItem="379-q7-dGu" firstAttribute="width" secondItem="v1J-9B-lrP" secondAttribute="width" multiplier="0.173" id="FRq-ie-DhP"/>
+                            <constraint firstItem="00F-QI-dkF" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.145" id="Gqv-iV-FHo"/>
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="00F-QI-dkF" secondAttribute="trailing" constant="20" id="I5S-wm-W3j"/>
-                            <constraint firstItem="379-q7-dGu" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.145" id="JBF-9U-T8j"/>
                             <constraint firstItem="HaG-Z3-8TH" firstAttribute="leading" secondItem="5hj-ip-iPV" secondAttribute="leading" constant="20" id="Mrj-Tb-fCW"/>
                             <constraint firstItem="bM9-hj-G9L" firstAttribute="leading" secondItem="sYm-5H-3gi" secondAttribute="trailing" constant="14" id="PpB-RB-Wj2"/>
                             <constraint firstItem="5zc-Iu-Fjd" firstAttribute="top" secondItem="5hj-ip-iPV" secondAttribute="top" constant="20" id="SiW-hC-kAc"/>
@@ -242,6 +242,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backspaceButton" destination="fAU-ej-Uyr" id="kvn-7j-SDv"/>
+                        <outlet property="bottomBarView" destination="00F-QI-dkF" id="hgD-p4-AnO"/>
                         <outlet property="capsHeightConstraint" destination="ze0-Nf-sw9" id="Ibn-hy-UaX"/>
                         <outlet property="capsLockButton" destination="HaG-Z3-8TH" id="iIm-aB-lIq"/>
                         <outlet property="clearButton" destination="379-q7-dGu" id="U2x-7m-fo3"/>
@@ -557,12 +558,13 @@
     <resources>
         <image name="arrow-left" width="40" height="40"/>
         <image name="arrow-right" width="40" height="40"/>
-        <image name="backspace" width="51" height="40"/>
-        <image name="check" width="23" height="23"/>
-        <image name="clear" width="39" height="39"/>
-        <image name="left" width="58" height="48"/>
-        <image name="right" width="58" height="48"/>
-        <image name="say" width="40" height="36.5"/>
+        <image name="backspace" width="60" height="60"/>
+        <image name="check" width="28" height="28"/>
+        <image name="clear" width="40" height="40"/>
+        <image name="left-cursor" width="80" height="80"/>
+        <image name="right" width="80" height="80"/>
+        <image name="right-cursor" width="80" height="80"/>
+        <image name="say" width="40" height="40"/>
         <image name="settings" width="44" height="44"/>
         <image name="share" width="40" height="40"/>
         <image name="shift-off" width="40" height="40"/>

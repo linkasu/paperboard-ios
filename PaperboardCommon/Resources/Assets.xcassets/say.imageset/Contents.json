@@ -1,19 +1,29 @@
 {
   "images" : [
     {
-      "filename" : "Group.png",
-      "idiom" : "universal",
+      "filename" : "fluent_speaker-2-24-regular.png",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "Group@2x.png",
-      "idiom" : "universal",
+      "filename" : "fluent_speaker-2-24-regular@2x.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "Group@3x.png",
-      "idiom" : "universal",
+      "filename" : "fluent_speaker-2-24-regular@3x.png",
+      "idiom" : "iphone",
       "scale" : "3x"
+    },
+    {
+      "filename" : "fluent_speaker-2-24-regular-1.png",
+      "idiom" : "ipad",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "fluent_speaker-2-24-regular@2x-1.png",
+      "idiom" : "ipad",
+      "scale" : "2x"
     }
   ],
   "info" : {

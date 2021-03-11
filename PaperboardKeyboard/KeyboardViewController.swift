@@ -14,14 +14,13 @@ class KeyboardViewController: UIInputViewController {
     
     private var heightConstraint: NSLayoutConstraint!
     
-    private let keyboardHeight: CGFloat = 0.7
+    private let keyboardHeight: CGFloat = 0.6
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let newHeight = UIScreen.main.bounds.height * keyboardHeight
         heightConstraint = self.view.heightAnchor.constraint(equalToConstant: newHeight)
-        checkCompact(newHeight)
         
         keyboardViewContoller.inputLayout.spacing = 8
         
@@ -57,13 +56,8 @@ class KeyboardViewController: UIInputViewController {
     func handleRotation() {
         let newHeight = UIScreen.main.bounds.height * keyboardHeight
         heightConstraint.constant = newHeight
-        checkCompact(newHeight)
         
         keyboardViewContoller.inputCollectionView.reloadData()
-    }
-    
-    func checkCompact(_ newHeight: CGFloat) {
-        keyboardViewContoller.inputSource.isCompact = newHeight < 300
     }
     
     override func textDidChange(_ textInput: UITextInput?) {
