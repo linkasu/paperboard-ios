@@ -165,29 +165,18 @@ class MainKeyboardViewController: UIViewController {
         
         updateButtonsTitles()
         
-
+        
         let spacing = UIDevice.current.userInterfaceIdiom == .phone ? spacingPhone : spacingTablet
         inputLayout.spacing = NSNumber(value: 6/2)
         configureSpacing(spacing: spacing)
     }
     
     func configureSpacing(spacing: Int) {
-        configureSpacing(view: cursorLeft, spacing: spacing)
-        configureSpacing(view: cursorRight, spacing: spacing)
-        configureSpacing(view: prevButton, spacing: spacing)
-        configureSpacing(view: nextButton, spacing: spacing)
-        configureSpacing(view: capsLockButton, spacing: spacing)
-        configureSpacing(view: backspaceButton, spacing: spacing)
-        configureSpacing(view: inputCollectionView, spacing: spacing)
-        configureSpacing(view: bottomBarView, spacing: spacing)
-        configureSpacing(view: settingsButton, spacing: spacing)
-        configureSpacing(view: spaceButton, spacing: spacing)
-        configureSpacing(view: shareButton, spacing: spacing)
-        configureSpacing(view: talkButton, spacing: spacing)
-        configureSpacing(view: actionButton, spacing: spacing)
-        configureSpacing(view: clearButton, spacing: spacing)
-        configureSpacing(view: doneButton, spacing: spacing)
-        configureSpacing(view: nextButton, spacing: spacing)
+        [cursorLeft, cursorRight, prevButton, nextButton, capsLockButton,
+         backspaceButton, inputCollectionView, bottomBarView, inputCollectionView,
+         settingsButton, spaceButton, shareButton, talkButton, actionButton,
+         clearButton, doneButton, nextButton
+        ].forEach { configureSpacing(view: $0, spacing: spacing) }
     }
     
     func configureSpacing(view: UIView?, spacing: Int) {
