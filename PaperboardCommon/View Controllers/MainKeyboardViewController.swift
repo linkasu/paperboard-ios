@@ -23,6 +23,8 @@ class MainKeyboardViewController: UIViewController {
     @IBOutlet weak var shareButton: KeyboardButton?
     @IBOutlet weak var spaceButton: KeyboardButton!
     @IBOutlet weak var actionButton: KeyboardButton?
+    @IBOutlet weak var changeKeyboard: KeyboardButton!
+    @IBOutlet weak var doneButton: KeyboardButton!
     
     var isClearSystem: Bool = true
     
@@ -48,6 +50,10 @@ class MainKeyboardViewController: UIViewController {
     
     @IBAction func onSpaceTouched(_ sender: Any) {
         inputProcessor.space()
+    }
+    
+    @IBAction func onKeyboardTouched(_ sender: Any) {
+        inputProcessor.changeKeyboard()
     }
     
     @IBAction private func onSpeechButtonTouched(_ sender: UIButton!) {
@@ -243,6 +249,12 @@ class MainKeyboardViewController: UIViewController {
         }
         if let shareButton = shareButton {
             configureSystem(button: shareButton, colorScheme: colorScheme)
+        }
+        if let changeKeyboard = changeKeyboard {
+            configureControl(button: changeKeyboard, colorScheme: colorScheme)
+        }
+        if let doneButton = doneButton {
+            configureControl(button: doneButton, colorScheme: colorScheme)
         }
         
         configureControl(button: cursorLeft, colorScheme: colorScheme)

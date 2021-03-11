@@ -44,6 +44,10 @@ class InputKeyboardProcessor: InputProcessor {
         documentProxy.deleteBackward()
     }
     
+    func changeKeyboard() {
+        inputView?.advanceToNextInputMode()
+    }
+    
     func left() {
         documentProxy.adjustTextPosition(byCharacterOffset: -1)
     }

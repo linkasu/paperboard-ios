@@ -54,6 +54,9 @@ class InputFieldProcessor: NSObject, UITextViewDelegate, InputProcessor {
     func `return`() {
     }
     
+    func changeKeyboard() {
+    }
+    
     func left() {
         if let selectedRange = textField.selectedTextRange {
             if let newPosition = textField.position(from: selectedRange.start, offset: -1) {
