@@ -31,7 +31,7 @@
             <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgV-Pm-hww" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgV-Pm-hww" userLabel="prevButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="20" y="170.5" width="266.5" height="477"/>
                     <color key="backgroundColor" white="0.9034264353" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -42,7 +42,7 @@
                         <action selector="onPrevButtonTouched:" destination="-1" eventType="touchUpInside" id="VJO-zU-63C"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-fS-7vl" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-fS-7vl" userLabel="clearButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="20" y="873.5" width="154.5" height="142.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" image="clear">
@@ -52,7 +52,7 @@
                         <action selector="onClearButtonTouched:" destination="-1" eventType="touchUpInside" id="m1P-Xu-ww6"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-uj-gcm" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-uj-gcm" userLabel="capsButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="20" y="655.5" width="266.5" height="210"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
@@ -65,7 +65,7 @@
                         <action selector="onCapsLocktouched:" destination="-1" eventType="touchUpInside" id="lIQ-tD-855"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-Gn-3x2" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-Gn-3x2" userLabel="nextButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="1079.5" y="170.5" width="266.5" height="477"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -81,7 +81,7 @@
                     <collectionViewLayout key="collectionViewLayout" id="Ktg-3n-OUX"/>
                     <cells/>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-7h-tWt" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tc-7h-tWt" userLabel="leftCursorButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="20" y="20" width="266.5" height="142.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" image="left-cursor">
@@ -91,7 +91,7 @@
                         <action selector="onLeftButtonTouched:" destination="-1" eventType="touchUpInside" id="uME-ID-d5e"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEL-O6-BvV" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEL-O6-BvV" userLabel="rightCursorButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="1079.5" y="20" width="266.5" height="142.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" image="right-cursor">
@@ -115,7 +115,7 @@
                         <action selector="onDoneButtonTouched:" destination="-1" eventType="touchUpInside" id="9aD-pg-60V"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8C-W1-afl" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8C-W1-afl" userLabel="backspaceButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="1079.5" y="655.5" width="266.5" height="210"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" image="backspace">
@@ -125,7 +125,7 @@
                         <action selector="onBackspaceButtonTouched:" destination="-1" eventType="touchUpInside" id="rFA-Ae-cPC"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ink-Re-WlR" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ink-Re-WlR" userLabel="focusButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="1032" y="873.5" width="314" height="142.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -150,7 +150,7 @@
                         <action selector="onSpaceTouched:" destination="-1" eventType="touchUpInside" id="CF9-WT-8pK"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70O-dC-5sK" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70O-dC-5sK" userLabel="keyboardButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="182.5" y="873.5" width="154" height="142.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" image="keyboard-change">

@@ -56,10 +56,11 @@ class SettingsMasterViewController: UITableViewController {
         })
         
         if UIDevice.current.userInterfaceIdiom == .pad {
-            openColumns()
+            tableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: UITableViewScrollPosition.middle)
+            tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
         }
     }
-        
+    
     @IBAction func onBack(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -94,25 +95,17 @@ class SettingsMasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch items[indexPath.row] {
         case .columns:
-            openColumns()
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let columnsNavViewController = storyBoard.instantiateViewController(withIdentifier: "ColumnsViewNavController") as! UINavigationController
+            let columnsViewController = columnsNavViewController.viewControllers.first as? ColumnsViewController
+            columnsViewController?.settings = settings
+            splitViewController?.showDetailViewController(columnsNavViewController, sender: nil)
         case .keyboard:
-            openKeyboard()
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let keyboardNavViewController = storyBoard.instantiateViewController(withIdentifier: "KeyboardNavViewController") as! UINavigationController
+            let keyboardViewController = keyboardNavViewController.viewControllers.first as? KeyboardViewController
+            keyboardViewController?.settings = settings
+            splitViewController?.showDetailViewController(keyboardNavViewController, sender: nil)
         }
-    }
-    
-    func openColumns() {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let columnsNavViewController = storyBoard.instantiateViewController(withIdentifier: "ColumnsViewNavController") as! UINavigationController
-        let columnsViewController = columnsNavViewController.viewControllers.first as? ColumnsViewController
-        columnsViewController?.settings = settings
-        splitViewController?.showDetailViewController(columnsNavViewController, sender: nil)
-    }
-    
-    func openKeyboard() {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let keyboardNavViewController = storyBoard.instantiateViewController(withIdentifier: "KeyboardNavViewController") as! UINavigationController
-        let keyboardViewController = keyboardNavViewController.viewControllers.first as? KeyboardViewController
-        keyboardViewController?.settings = settings
-        splitViewController?.showDetailViewController(keyboardNavViewController, sender: nil)
     }
 }
