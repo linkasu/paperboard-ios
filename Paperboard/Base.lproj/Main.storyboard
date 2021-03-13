@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sD3-hK-vVp" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="20" y="149.5" width="236" height="352"/>
+                                <rect key="frame" x="20" y="149.5" width="236" height="352.5"/>
                                 <color key="backgroundColor" white="0.9034264352586534" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" image="arrow-left">
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM9-hj-G9L" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="924" y="149.5" width="236" height="352"/>
+                                <rect key="frame" x="924" y="149.5" width="236" height="352.5"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" image="arrow-right">
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAU-ej-Uyr" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="924" y="513.5" width="236" height="155.5"/>
+                                <rect key="frame" x="924" y="514" width="236" height="155"/>
                                 <color key="backgroundColor" white="0.9034264353" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="backspace">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,8 +71,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaG-Z3-8TH" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                                <rect key="frame" x="20" y="513.5" width="236" height="155.5"/>
+                                <rect key="frame" x="20" y="514" width="236" height="155"/>
                                 <color key="backgroundColor" white="0.9034264353" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="Cd4-an-hX4"/>
+                                </constraints>
                                 <state key="normal" image="shift-off">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -222,7 +225,6 @@
                             <constraint firstItem="sD3-hK-vVp" firstAttribute="width" secondItem="pXm-1t-xtC" secondAttribute="width" id="rXJ-3L-yhV"/>
                             <constraint firstItem="xfS-ZG-Xyo" firstAttribute="leading" secondItem="5zc-Iu-Fjd" secondAttribute="trailing" constant="14" id="raC-Wg-OiE"/>
                             <constraint firstItem="xfS-ZG-Xyo" firstAttribute="height" secondItem="pXm-1t-xtC" secondAttribute="height" id="z2V-sz-I6b"/>
-                            <constraint firstItem="HaG-Z3-8TH" firstAttribute="height" secondItem="v1J-9B-lrP" secondAttribute="height" multiplier="0.19" id="ze0-Nf-sw9"/>
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="fAU-ej-Uyr" secondAttribute="trailing" constant="20" id="zuh-5O-gCF"/>
                         </constraints>
                     </view>
@@ -243,7 +245,7 @@
                     <connections>
                         <outlet property="backspaceButton" destination="fAU-ej-Uyr" id="kvn-7j-SDv"/>
                         <outlet property="bottomBarView" destination="00F-QI-dkF" id="hgD-p4-AnO"/>
-                        <outlet property="capsHeightConstraint" destination="ze0-Nf-sw9" id="Ibn-hy-UaX"/>
+                        <outlet property="capsHeightConstraint" destination="Cd4-an-hX4" id="THa-bn-JpY"/>
                         <outlet property="capsLockButton" destination="HaG-Z3-8TH" id="iIm-aB-lIq"/>
                         <outlet property="clearButton" destination="379-q7-dGu" id="U2x-7m-fo3"/>
                         <outlet property="clearButtonWidthConstraint" destination="FRq-ie-DhP" id="3tU-7x-sv8"/>

@@ -167,7 +167,7 @@ class MainKeyboardViewController: UIViewController {
         
         
         let spacing = UIDevice.current.userInterfaceIdiom == .phone ? spacingPhone : spacingTablet
-        inputLayout.spacing = NSNumber(value: 6/2)
+        inputLayout.spacing = NSNumber(value: spacing)
         configureSpacing(spacing: spacing)
     }
     

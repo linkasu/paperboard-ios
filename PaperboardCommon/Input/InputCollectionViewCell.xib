@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmx-nL-ITq" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                        <rect key="frame" x="2" y="2" width="217" height="125"/>
+                        <rect key="frame" x="0.0" y="0.0" width="221" height="129"/>
                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                         <state key="normal" title="Button">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,10 +31,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="pmx-nL-ITq" secondAttribute="trailing" constant="2" id="9cO-ZV-gWM"/>
-                <constraint firstAttribute="bottom" secondItem="pmx-nL-ITq" secondAttribute="bottom" constant="2" id="eGA-0j-xJo"/>
-                <constraint firstItem="pmx-nL-ITq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="mz3-3v-X6k"/>
-                <constraint firstItem="pmx-nL-ITq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="wp6-Ih-Gbd"/>
+                <constraint firstAttribute="trailing" secondItem="pmx-nL-ITq" secondAttribute="trailing" id="9cO-ZV-gWM"/>
+                <constraint firstAttribute="bottom" secondItem="pmx-nL-ITq" secondAttribute="bottom" id="eGA-0j-xJo"/>
+                <constraint firstItem="pmx-nL-ITq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mz3-3v-X6k"/>
+                <constraint firstItem="pmx-nL-ITq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wp6-Ih-Gbd"/>
             </constraints>
             <size key="customSize" width="221" height="129"/>
             <userDefinedRuntimeAttributes>

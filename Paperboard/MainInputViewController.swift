@@ -48,11 +48,6 @@ class MainInputViewController: MainKeyboardViewController {
         setColorScheme(.light)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        adjustSize()
-    }
-    
     func setupStatusBar() {
         if #available(iOS 13.0, *) {
             let app = UIApplication.shared
@@ -80,6 +75,8 @@ class MainInputViewController: MainKeyboardViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        adjustSize()
+        
         inputSource.reload()
         inputCollectionView.reloadData()
         inputCollectionProcessor.scrollsToMiddleSection(inputCollectionView)
@@ -110,10 +107,17 @@ class MainInputViewController: MainKeyboardViewController {
             })
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let bounds = inputCollectionView?.bounds {
+            capsHeightConstraint.constant = (bounds.height - (2 * CGFloat(truncating: inputLayout.spacing))) / 3
+        }
+    }
+    
     func adjustSize() {
         if UIDevice.current.orientation.isLandscape {
             cursorHeightConstraint = cursorHeightConstraint.changeMultiplier(multiplier: 0.143)
-            capsHeightConstraint = capsHeightConstraint.changeMultiplier(multiplier: 0.19)
             clearButtonWidthConstraint = clearButtonWidthConstraint.changeMultiplier(multiplier: 0.173)
             settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.096)
             
@@ -121,7 +125,6 @@ class MainInputViewController: MainKeyboardViewController {
             talkButton?.setTitle(PaperboardLocalizable.talk.message(), for: .normal)
         } else {
             cursorHeightConstraint = cursorHeightConstraint.changeMultiplier(multiplier: 0.146)
-            capsHeightConstraint = capsHeightConstraint.changeMultiplier(multiplier: 0.20)
             clearButtonWidthConstraint = clearButtonWidthConstraint.changeMultiplier(multiplier: 0.143)
             settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.143)
             
