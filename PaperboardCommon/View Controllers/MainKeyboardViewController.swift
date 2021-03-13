@@ -167,7 +167,6 @@ class MainKeyboardViewController: UIViewController {
         
         updateButtonsTitles()
         
-        
         let spacing = UIDevice.current.userInterfaceIdiom == .phone ? spacingPhone : spacingTablet
         inputLayout.spacing = NSNumber(value: spacing)
         configureSpacing(spacing: spacing)
@@ -208,7 +207,6 @@ class MainKeyboardViewController: UIViewController {
             }
         }
     }
-    
     
     func updateButtonsTitles() {
         let currentSection = Int(roundf(Float(inputCollectionView.contentOffset.x / inputCollectionView.frame.width)))

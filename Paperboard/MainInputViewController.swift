@@ -108,14 +108,12 @@ class MainInputViewController: MainKeyboardViewController {
     
     func adjustSize() {
         if UIDevice.current.orientation.isLandscape {
-            cursorHeightConstraint = cursorHeightConstraint.changeMultiplier(multiplier: 0.143)
             clearButtonWidthConstraint = clearButtonWidthConstraint.changeMultiplier(multiplier: 0.173)
             settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.096)
             
             clearButton.setTitle(PaperboardLocalizable.clear.message(), for: .normal)
             talkButton?.setTitle(PaperboardLocalizable.talk.message(), for: .normal)
         } else {
-            cursorHeightConstraint = cursorHeightConstraint.changeMultiplier(multiplier: 0.146)
             clearButtonWidthConstraint = clearButtonWidthConstraint.changeMultiplier(multiplier: 0.143)
             settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.143)
             
