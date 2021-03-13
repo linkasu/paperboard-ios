@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "Change keyboard-1.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
+      "filename" : "Change keyboard@2x-1.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
+      "filename" : "Change keyboard@3x.png",
       "idiom" : "iphone",
       "scale" : "3x"
     },

@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "Checked-1.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
+      "filename" : "Checked@2x-1.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
+      "filename" : "Checked@3x.png",
       "idiom" : "iphone",
       "scale" : "3x"
     },

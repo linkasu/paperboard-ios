@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "column-1.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
+      "filename" : "column@2x-1.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
+      "filename" : "column@3x.png",
       "idiom" : "iphone",
       "scale" : "3x"
     },

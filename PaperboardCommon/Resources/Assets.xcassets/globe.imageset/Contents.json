@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "globe-1.png",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
+      "filename" : "globe@2x-1.png",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
+      "filename" : "globe@3x.png",
       "idiom" : "iphone",
       "scale" : "3x"
     },
