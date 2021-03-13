@@ -12,7 +12,6 @@ class MainInputViewController: MainKeyboardViewController {
     
     @IBOutlet private weak var inputField: UITextView!
     @IBOutlet weak var cursorHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var capsHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var clearButtonWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var settingsButtonWidthConstraint: NSLayoutConstraint!
@@ -105,14 +104,6 @@ class MainInputViewController: MainKeyboardViewController {
                 self?.inputCollectionView.reloadData()
                 self?.inputCollectionView.scrollToItem(at: nIndexPath, at: .left, animated: false)
             })
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        if let bounds = inputCollectionView?.bounds {
-            capsHeightConstraint.constant = (bounds.height - (2 * CGFloat(truncating: inputLayout.spacing))) / 3
-        }
     }
     
     func adjustSize() {

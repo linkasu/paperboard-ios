@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="actionButton" destination="Ink-Re-WlR" id="mKY-ud-fyK"/>
                 <outlet property="backspaceButton" destination="X8C-W1-afl" id="i10-d4-j2Q"/>
+                <outlet property="capsHeightConstraint" destination="a2t-nK-CpS" id="Zi2-Uf-anL"/>
                 <outlet property="capsLockButton" destination="3fr-uj-gcm" id="7nX-4I-kap"/>
                 <outlet property="changeKeyboard" destination="70O-dC-5sK" id="rnu-i0-zas"/>
                 <outlet property="clearButton" destination="XDC-fS-7vl" id="hx9-Nc-1oW"/>
@@ -54,6 +55,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-uj-gcm" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
                     <rect key="frame" x="20" y="655.5" width="266.5" height="210"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="210" id="a2t-nK-CpS"/>
+                    </constraints>
                     <state key="normal" image="shift-off">
                         <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -181,7 +185,6 @@
                 <constraint firstItem="7Tc-7h-tWt" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.139" id="V5d-6k-Tdp"/>
                 <constraint firstItem="0jv-Bq-7cY" firstAttribute="top" secondItem="BSL-4D-eUF" secondAttribute="bottom" constant="8" id="VRa-VF-b5i"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="height" secondItem="VgV-Pm-hww" secondAttribute="height" id="WbB-ux-ag3"/>
-                <constraint firstItem="3fr-uj-gcm" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.205" id="XLE-vA-JUH"/>
                 <constraint firstItem="VgV-Pm-hww" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="20" id="XyL-a5-sMl"/>
                 <constraint firstItem="X8C-W1-afl" firstAttribute="top" secondItem="Oca-Gn-3x2" secondAttribute="bottom" constant="8" id="Z8Z-AE-JBj"/>
                 <constraint firstItem="BSL-4D-eUF" firstAttribute="leading" secondItem="VgV-Pm-hww" secondAttribute="trailing" constant="8" id="bVY-l0-Tl0"/>

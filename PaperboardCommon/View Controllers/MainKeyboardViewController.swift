@@ -48,6 +48,8 @@ class MainKeyboardViewController: UIViewController {
     let spacingTablet = 12
     let spacingPhone = 6
     
+    @IBOutlet weak var capsHeightConstraint: NSLayoutConstraint!
+    
     @IBAction func onActionTouched(_ sender: Any) {
         inputProcessor.return()
     }
@@ -169,6 +171,14 @@ class MainKeyboardViewController: UIViewController {
         let spacing = UIDevice.current.userInterfaceIdiom == .phone ? spacingPhone : spacingTablet
         inputLayout.spacing = NSNumber(value: spacing)
         configureSpacing(spacing: spacing)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let bounds = inputCollectionView?.bounds {
+            capsHeightConstraint.constant = (bounds.height - (2 * CGFloat(truncating: inputLayout.spacing))) / 3
+        }
     }
     
     func configureSpacing(spacing: Int) {
@@ -356,4 +366,5 @@ class MainKeyboardViewController: UIViewController {
         button.defaultBackgroundColor = background
         button.highlightBackgroundColor = highlight
     }
+    
 }
