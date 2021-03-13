@@ -60,6 +60,14 @@ extension KeyboardViewController: UITableViewDataSource {
         cell.titleLabel.text = keyboardTitles[indexPath.row]
         cell.isSelected = indexPath.row == selectedIndex
         cell.selectionStyle = .none
+        
+        if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isLandscape {
+            cell.trailingMargin.constant = 100
+            cell.leadingMargin.constant = 100
+        } else {
+            cell.trailingMargin.constant = 20
+            cell.leadingMargin.constant = 20
+        }
         return cell
     }
 }
