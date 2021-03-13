@@ -15,7 +15,6 @@ class SettingsSplitViewController: UISplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
         preferredDisplayMode = .oneBesideSecondary
         
         let masterViewNavController = viewControllers.first as? UINavigationController
