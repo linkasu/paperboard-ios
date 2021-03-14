@@ -278,38 +278,34 @@ class MainKeyboardViewController: UIViewController {
         
         for cell in inputCollectionView.visibleCells {
             if let inputCell = cell as? InputCollectionViewCell {
-                configureMain(button: inputCell.characterButton, colorScheme: colorScheme)
+                configure(button: inputCell.characterButton, colorScheme: colorScheme, buttonColors: colorScheme.main)
             }
         }
         
-        configureMain(button: spaceButton, colorScheme: colorScheme)
+        configure(button: spaceButton, colorScheme: colorScheme, buttonColors: colorScheme.main)
         
         if isClearSystem {
-            configureSystem(button: clearButton, colorScheme: colorScheme)
+            configure(button: clearButton, colorScheme: colorScheme, buttonColors: colorScheme.system)
         } else {
-            configureControl(button: clearButton, colorScheme: colorScheme)
+            configure(button: clearButton, colorScheme: colorScheme, buttonColors: colorScheme.control)
         }
         
         if let settingsButton = settingsButton {
-            configureSystem(button: settingsButton, colorScheme: colorScheme)
+            configure(button: settingsButton, colorScheme: colorScheme, buttonColors: colorScheme.system)
         }
         if let shareButton = shareButton {
-            configureSystem(button: shareButton, colorScheme: colorScheme)
+            configure(button: shareButton, colorScheme: colorScheme, buttonColors: colorScheme.system)
         }
         if let changeKeyboard = changeKeyboard {
-            configureControl(button: changeKeyboard, colorScheme: colorScheme)
+            configure(button: changeKeyboard, colorScheme: colorScheme, buttonColors: colorScheme.control)
         }
         if let doneButton = doneButton {
-            configureControl(button: doneButton, colorScheme: colorScheme)
+            configure(button: doneButton, colorScheme: colorScheme, buttonColors: colorScheme.control)
         }
         
-        configureControl(button: cursorLeft, colorScheme: colorScheme)
-        configureControl(button: cursorRight, colorScheme: colorScheme)
-        configureControl(button: prevButton, colorScheme: colorScheme)
-        configureControl(button: nextButton, colorScheme: colorScheme)
-        configureControl(button: backspaceButton, colorScheme: colorScheme)
-        configureControl(button: capsLockButton, colorScheme: colorScheme)
-        
+        [cursorLeft, cursorRight, prevButton, nextButton, backspaceButton, capsLockButton].forEach {
+            configure(button: $0, colorScheme: colorScheme, buttonColors: colorScheme.control)
+        }
         if let talkButton = talkButton {
             configureFocus(button: talkButton, colorScheme: colorScheme)
         }
@@ -318,51 +314,23 @@ class MainKeyboardViewController: UIViewController {
         }
     }
     
-    func configureMain(button: KeyboardButton, colorScheme: PaperboardColors) {
-        configure(
-            button: button,
-            colorScheme: colorScheme,
-            background: colorScheme.mainButtonBackgroundColor,
-            highlight: colorScheme.mainButtonHighlightColor
-        )
-    }
-    
-    func configureSystem(button: KeyboardButton, colorScheme: PaperboardColors) {
-        configure(
-            button: button,
-            colorScheme: colorScheme,
-            background: colorScheme.systemButtonBackgroundColor,
-            highlight: colorScheme.systemButtonHighlightColor
-        )
-    }
-    
-    func configureControl(button: KeyboardButton, colorScheme: PaperboardColors) {
-        configure(
-            button: button,
-            colorScheme: colorScheme,
-            background: colorScheme.controlButtonBackgroundColor,
-            highlight: colorScheme.controlButtonHighlightColor
-        )
-    }
-    
     func configureFocus(button: KeyboardButton, colorScheme: PaperboardColors) {
         configure(
             button: button,
             colorScheme: colorScheme,
-            background: colorScheme.focusButtonBackgroundColor,
-            highlight: colorScheme.focusButtonHighlightColor
+            buttonColors: colorScheme.focus
         )
         
         button.setTitleColor(UIColor.white, for: [])
         button.tintColor = UIColor.white
     }
     
-    func configure(button: KeyboardButton, colorScheme: PaperboardColors, background: UIColor, highlight: UIColor) {
-        button.setTitleColor(colorScheme.buttonTextColor, for: [])
-        button.tintColor = colorScheme.buttonTextColor
+    func configure(button: KeyboardButton, colorScheme: PaperboardColors, buttonColors: ButtonColors) {
+        button.setTitleColor(colorScheme.textColor, for: [])
+        button.tintColor = colorScheme.textColor
         
-        button.defaultBackgroundColor = background
-        button.highlightBackgroundColor = highlight
+        button.defaultBackgroundColor = buttonColors.backgroundColor
+        button.highlightBackgroundColor = buttonColors.highlightColor
     }
     
 }

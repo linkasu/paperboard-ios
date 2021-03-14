@@ -93,15 +93,14 @@ class SettingsMasterViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         switch items[indexPath.row] {
         case .columns:
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let columnsNavViewController = storyBoard.instantiateViewController(withIdentifier: "ColumnsViewNavController") as! UINavigationController
             let columnsViewController = columnsNavViewController.viewControllers.first as? ColumnsViewController
             columnsViewController?.settings = settings
             splitViewController?.showDetailViewController(columnsNavViewController, sender: nil)
         case .keyboard:
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let keyboardNavViewController = storyBoard.instantiateViewController(withIdentifier: "KeyboardNavViewController") as! UINavigationController
             let keyboardViewController = keyboardNavViewController.viewControllers.first as? KeyboardViewController
             keyboardViewController?.settings = settings

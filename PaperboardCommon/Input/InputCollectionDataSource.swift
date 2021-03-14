@@ -109,10 +109,10 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
         
         let toFill = letter(forIndexPath: indexPath) ?? ""
         collectionCell.fill(with: inputProcessor.isCaps() ? toFill.capitalized : toFill)
-        collectionCell.characterButton.setTitleColor(colorScheme.buttonTextColor, for: [])
-        collectionCell.characterButton.tintColor = colorScheme.buttonTextColor
-        collectionCell.characterButton.defaultBackgroundColor = colorScheme.mainButtonBackgroundColor
-        collectionCell.characterButton.highlightBackgroundColor = colorScheme.mainButtonHighlightColor
+        collectionCell.characterButton.setTitleColor(colorScheme.textColor, for: [])
+        collectionCell.characterButton.tintColor = colorScheme.textColor
+        collectionCell.characterButton.defaultBackgroundColor = colorScheme.main.backgroundColor
+        collectionCell.characterButton.highlightBackgroundColor = colorScheme.main.highlightColor
         
         return cell
     }
