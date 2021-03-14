@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="actionButton" destination="Ink-Re-WlR" id="mKY-ud-fyK"/>
                 <outlet property="backspaceButton" destination="X8C-W1-afl" id="i10-d4-j2Q"/>
+                <outlet property="bottomBarView" destination="rbt-m5-3fK" id="T3r-od-RZk"/>
                 <outlet property="capsHeightConstraint" destination="a2t-nK-CpS" id="Zi2-Uf-anL"/>
                 <outlet property="capsLockButton" destination="3fr-uj-gcm" id="7nX-4I-kap"/>
                 <outlet property="changeKeyboard" destination="70O-dC-5sK" id="rnu-i0-zas"/>
@@ -32,7 +33,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgV-Pm-hww" userLabel="prevButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="20" y="170.5" width="266.5" height="477"/>
+                    <rect key="frame" x="20" y="170.5" width="266.5" height="484.5"/>
                     <color key="backgroundColor" white="0.9034264353" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" image="arrow-left">
@@ -42,18 +43,8 @@
                         <action selector="onPrevButtonTouched:" destination="-1" eventType="touchUpInside" id="VJO-zU-63C"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-fS-7vl" userLabel="clearButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="20" y="873.5" width="154.5" height="142.5"/>
-                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" image="clear">
-                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="onClearButtonTouched:" destination="-1" eventType="touchUpInside" id="m1P-Xu-ww6"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-uj-gcm" userLabel="capsButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="20" y="655.5" width="266.5" height="210"/>
+                    <rect key="frame" x="20" y="663" width="266.5" height="210"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="210" id="a2t-nK-CpS"/>
@@ -66,7 +57,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-Gn-3x2" userLabel="nextButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="1079.5" y="170.5" width="266.5" height="477"/>
+                    <rect key="frame" x="1079.5" y="170.5" width="266.5" height="484.5"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <state key="normal" image="arrow-right">
@@ -77,7 +68,7 @@
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BSL-4D-eUF">
-                    <rect key="frame" x="294.5" y="170.5" width="777" height="695"/>
+                    <rect key="frame" x="294.5" y="170.5" width="777" height="702.5"/>
                     <collectionViewLayout key="collectionViewLayout" id="Ktg-3n-OUX"/>
                     <cells/>
                 </collectionView>
@@ -116,7 +107,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8C-W1-afl" userLabel="backspaceButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="1079.5" y="655.5" width="266.5" height="210"/>
+                    <rect key="frame" x="1079.5" y="663" width="266.5" height="210"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" image="backspace">
                         <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,94 +116,115 @@
                         <action selector="onBackspaceButtonTouched:" destination="-1" eventType="touchUpInside" id="rFA-Ae-cPC"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ink-Re-WlR" userLabel="focusButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="1032" y="873.5" width="314" height="142.5"/>
-                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                    <state key="normal">
-                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="onActionTouched:" destination="-1" eventType="touchUpInside" id="MR5-tW-oH1"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jv-Bq-7cY" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="344.5" y="873.5" width="679.5" height="142.5"/>
-                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                    <state key="normal" title="space">
-                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.space"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="onSpaceTouched:" destination="-1" eventType="touchUpInside" id="CF9-WT-8pK"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70O-dC-5sK" userLabel="keyboardButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
-                    <rect key="frame" x="182.5" y="873.5" width="154" height="142.5"/>
-                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" image="keyboard-change">
-                        <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="onClearButtonTouched:" destination="-1" eventType="touchUpInside" id="GmY-Df-uHh"/>
-                        <action selector="onKeyboardTouched:" destination="-1" eventType="touchUpInside" id="8jI-BX-q98"/>
-                    </connections>
-                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbt-m5-3fK">
+                    <rect key="frame" x="20" y="881" width="1326" height="143"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-fS-7vl" userLabel="clearButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="154.5" height="143"/>
+                            <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="clear">
+                                <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onClearButtonTouched:" destination="-1" eventType="touchUpInside" id="m1P-Xu-ww6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70O-dC-5sK" userLabel="keyboardButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="162.5" y="0.0" width="154" height="143"/>
+                            <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" image="keyboard-change">
+                                <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onClearButtonTouched:" destination="-1" eventType="touchUpInside" id="GmY-Df-uHh"/>
+                                <action selector="onKeyboardTouched:" destination="-1" eventType="touchUpInside" id="8jI-BX-q98"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jv-Bq-7cY" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="324.5" y="0.0" width="679.5" height="143"/>
+                            <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <state key="normal" title="space">
+                                <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.space"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onSpaceTouched:" destination="-1" eventType="touchUpInside" id="CF9-WT-8pK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ink-Re-WlR" userLabel="focusButton" customClass="KeyboardButton" customModule="PaperboardKeyboard" customModuleProvider="target">
+                            <rect key="frame" x="1012" y="0.0" width="314" height="143"/>
+                            <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onActionTouched:" destination="-1" eventType="touchUpInside" id="MR5-tW-oH1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Ink-Re-WlR" firstAttribute="leading" secondItem="0jv-Bq-7cY" secondAttribute="trailing" constant="8" id="2oF-aH-jSM"/>
+                        <constraint firstAttribute="bottom" secondItem="XDC-fS-7vl" secondAttribute="bottom" id="8st-OE-dho"/>
+                        <constraint firstItem="XDC-fS-7vl" firstAttribute="top" secondItem="rbt-m5-3fK" secondAttribute="top" id="Ep9-pl-Tox"/>
+                        <constraint firstAttribute="bottom" secondItem="Ink-Re-WlR" secondAttribute="bottom" id="IBf-BG-48b"/>
+                        <constraint firstItem="70O-dC-5sK" firstAttribute="width" secondItem="XDC-fS-7vl" secondAttribute="width" id="Io1-aa-OMl"/>
+                        <constraint firstAttribute="bottom" secondItem="70O-dC-5sK" secondAttribute="bottom" id="NvK-ds-ypk"/>
+                        <constraint firstAttribute="bottom" secondItem="0jv-Bq-7cY" secondAttribute="bottom" id="PPd-eB-5To"/>
+                        <constraint firstItem="Ink-Re-WlR" firstAttribute="top" secondItem="rbt-m5-3fK" secondAttribute="top" id="Wm4-qn-zKV"/>
+                        <constraint firstItem="0jv-Bq-7cY" firstAttribute="leading" secondItem="70O-dC-5sK" secondAttribute="trailing" constant="8" id="eeS-QR-ri5"/>
+                        <constraint firstItem="0jv-Bq-7cY" firstAttribute="top" secondItem="rbt-m5-3fK" secondAttribute="top" id="fWF-H0-SI4"/>
+                        <constraint firstItem="XDC-fS-7vl" firstAttribute="leading" secondItem="rbt-m5-3fK" secondAttribute="leading" id="lzV-hk-Yhu"/>
+                        <constraint firstItem="70O-dC-5sK" firstAttribute="leading" secondItem="XDC-fS-7vl" secondAttribute="trailing" constant="8" id="mN0-KR-bv0"/>
+                        <constraint firstItem="70O-dC-5sK" firstAttribute="top" secondItem="rbt-m5-3fK" secondAttribute="top" id="pvN-wn-FQK"/>
+                        <constraint firstAttribute="trailing" secondItem="Ink-Re-WlR" secondAttribute="trailing" id="v06-Oc-SyD"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ArL-1z-1CW"/>
             <constraints>
                 <constraint firstItem="ArL-1z-1CW" firstAttribute="trailing" secondItem="sEL-O6-BvV" secondAttribute="trailing" constant="20" id="24A-Qg-fiM"/>
                 <constraint firstItem="7Tc-7h-tWt" firstAttribute="top" secondItem="ArL-1z-1CW" secondAttribute="top" constant="20" id="2Mo-Yp-eqC"/>
+                <constraint firstItem="XDC-fS-7vl" firstAttribute="width" secondItem="ioi-oi-lRi" secondAttribute="width" multiplier="0.113" id="3KQ-Ll-kfo"/>
+                <constraint firstItem="ArL-1z-1CW" firstAttribute="bottom" secondItem="rbt-m5-3fK" secondAttribute="bottom" id="3M5-2U-6Re"/>
+                <constraint firstItem="rbt-m5-3fK" firstAttribute="height" secondItem="7Tc-7h-tWt" secondAttribute="height" multiplier="1.00351" id="3S8-EY-QpF"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="top" secondItem="sEL-O6-BvV" secondAttribute="bottom" constant="8" id="4hm-cw-GmT"/>
                 <constraint firstItem="sEL-O6-BvV" firstAttribute="leading" secondItem="rO7-4y-voE" secondAttribute="trailing" constant="8" id="4kV-l6-w5p"/>
                 <constraint firstItem="7Tc-7h-tWt" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="20" id="55u-Yn-FOz"/>
                 <constraint firstItem="rO7-4y-voE" firstAttribute="leading" secondItem="7Tc-7h-tWt" secondAttribute="trailing" constant="8" id="A2x-6t-kst"/>
                 <constraint firstItem="X8C-W1-afl" firstAttribute="height" secondItem="3fr-uj-gcm" secondAttribute="height" id="Dkb-3C-o8X"/>
-                <constraint firstItem="Ink-Re-WlR" firstAttribute="leading" secondItem="0jv-Bq-7cY" secondAttribute="trailing" constant="8" id="IJd-0D-Cko"/>
-                <constraint firstItem="0jv-Bq-7cY" firstAttribute="height" secondItem="XDC-fS-7vl" secondAttribute="height" id="Io5-HX-e6Q"/>
                 <constraint firstItem="rO7-4y-voE" firstAttribute="height" secondItem="7Tc-7h-tWt" secondAttribute="height" id="KrG-hz-zC1"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="leading" secondItem="BSL-4D-eUF" secondAttribute="trailing" constant="8" id="LJJ-vr-B3U"/>
-                <constraint firstItem="ArL-1z-1CW" firstAttribute="trailing" secondItem="Ink-Re-WlR" secondAttribute="trailing" constant="20" id="OYc-pA-q4X"/>
-                <constraint firstItem="Ink-Re-WlR" firstAttribute="height" secondItem="XDC-fS-7vl" secondAttribute="height" id="Ooa-1n-yMv"/>
-                <constraint firstItem="ArL-1z-1CW" firstAttribute="bottom" secondItem="70O-dC-5sK" secondAttribute="bottom" constant="8" id="OwV-1U-3oY"/>
+                <constraint firstItem="rbt-m5-3fK" firstAttribute="top" secondItem="3fr-uj-gcm" secondAttribute="bottom" constant="8" id="Nrd-7l-1SF"/>
                 <constraint firstItem="sEL-O6-BvV" firstAttribute="width" secondItem="7Tc-7h-tWt" secondAttribute="width" id="Qgk-sZ-Aq4"/>
                 <constraint firstItem="sEL-O6-BvV" firstAttribute="height" secondItem="7Tc-7h-tWt" secondAttribute="height" id="RF4-HS-VhV"/>
                 <constraint firstItem="X8C-W1-afl" firstAttribute="width" secondItem="3fr-uj-gcm" secondAttribute="width" id="SGr-ip-UXz"/>
-                <constraint firstItem="ArL-1z-1CW" firstAttribute="bottom" secondItem="XDC-fS-7vl" secondAttribute="bottom" constant="8" id="U2N-1h-6J2"/>
                 <constraint firstItem="7Tc-7h-tWt" firstAttribute="height" secondItem="ioi-oi-lRi" secondAttribute="height" multiplier="0.139" id="V5d-6k-Tdp"/>
-                <constraint firstItem="0jv-Bq-7cY" firstAttribute="top" secondItem="BSL-4D-eUF" secondAttribute="bottom" constant="8" id="VRa-VF-b5i"/>
+                <constraint firstItem="Ink-Re-WlR" firstAttribute="width" secondItem="ioi-oi-lRi" secondAttribute="width" multiplier="0.23" id="V5k-YI-r3j"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="height" secondItem="VgV-Pm-hww" secondAttribute="height" id="WbB-ux-ag3"/>
+                <constraint firstItem="ArL-1z-1CW" firstAttribute="trailing" secondItem="rbt-m5-3fK" secondAttribute="trailing" constant="20" id="Woz-Zv-qci"/>
                 <constraint firstItem="VgV-Pm-hww" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="20" id="XyL-a5-sMl"/>
                 <constraint firstItem="X8C-W1-afl" firstAttribute="top" secondItem="Oca-Gn-3x2" secondAttribute="bottom" constant="8" id="Z8Z-AE-JBj"/>
                 <constraint firstItem="BSL-4D-eUF" firstAttribute="leading" secondItem="VgV-Pm-hww" secondAttribute="trailing" constant="8" id="bVY-l0-Tl0"/>
-                <constraint firstItem="XDC-fS-7vl" firstAttribute="width" secondItem="ioi-oi-lRi" secondAttribute="width" multiplier="0.113" id="bsU-G5-Lgn"/>
                 <constraint firstItem="BSL-4D-eUF" firstAttribute="top" secondItem="rO7-4y-voE" secondAttribute="bottom" constant="8" id="byq-7T-1xS"/>
-                <constraint firstItem="XDC-fS-7vl" firstAttribute="top" secondItem="3fr-uj-gcm" secondAttribute="bottom" constant="8" id="cLR-nR-Kdy"/>
-                <constraint firstItem="ArL-1z-1CW" firstAttribute="bottom" secondItem="Ink-Re-WlR" secondAttribute="bottom" constant="8" id="caR-bk-VoJ"/>
                 <constraint firstItem="ArL-1z-1CW" firstAttribute="trailing" secondItem="X8C-W1-afl" secondAttribute="trailing" constant="20" id="eSQ-lJ-CSM"/>
                 <constraint firstItem="3fr-uj-gcm" firstAttribute="top" secondItem="VgV-Pm-hww" secondAttribute="bottom" constant="8" id="fWq-BL-jS7"/>
                 <constraint firstItem="3fr-uj-gcm" firstAttribute="width" secondItem="VgV-Pm-hww" secondAttribute="width" id="gAr-qc-vGW"/>
-                <constraint firstItem="0jv-Bq-7cY" firstAttribute="leading" secondItem="70O-dC-5sK" secondAttribute="trailing" constant="8" id="hGh-vB-DPT"/>
                 <constraint firstItem="7Tc-7h-tWt" firstAttribute="width" secondItem="ioi-oi-lRi" secondAttribute="width" multiplier="0.195" id="hm9-G7-Je7"/>
                 <constraint firstItem="VgV-Pm-hww" firstAttribute="width" secondItem="7Tc-7h-tWt" secondAttribute="width" id="hwe-sW-8zM"/>
-                <constraint firstItem="XDC-fS-7vl" firstAttribute="height" secondItem="7Tc-7h-tWt" secondAttribute="height" id="hz8-Xy-LHO"/>
                 <constraint firstItem="3fr-uj-gcm" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="20" id="j2L-jb-0nz"/>
-                <constraint firstItem="70O-dC-5sK" firstAttribute="width" secondItem="XDC-fS-7vl" secondAttribute="width" id="la0-T0-GYA"/>
-                <constraint firstItem="Ink-Re-WlR" firstAttribute="width" secondItem="ioi-oi-lRi" secondAttribute="width" multiplier="0.23" id="lv0-aI-lRQ"/>
                 <constraint firstItem="Oca-Gn-3x2" firstAttribute="width" secondItem="VgV-Pm-hww" secondAttribute="width" id="lwI-5L-BqC"/>
-                <constraint firstItem="ArL-1z-1CW" firstAttribute="bottom" secondItem="0jv-Bq-7cY" secondAttribute="bottom" constant="8" id="lyP-jq-VVE"/>
                 <constraint firstItem="VgV-Pm-hww" firstAttribute="top" secondItem="7Tc-7h-tWt" secondAttribute="bottom" constant="8" id="maT-Ek-k3b"/>
+                <constraint firstItem="rbt-m5-3fK" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="20" id="pgX-iN-0dz"/>
                 <constraint firstItem="sEL-O6-BvV" firstAttribute="top" secondItem="ArL-1z-1CW" secondAttribute="top" constant="20" id="r4g-Hm-ETr"/>
+                <constraint firstItem="rbt-m5-3fK" firstAttribute="top" secondItem="BSL-4D-eUF" secondAttribute="bottom" constant="8" id="rhX-6T-By3"/>
                 <constraint firstItem="rO7-4y-voE" firstAttribute="top" secondItem="ArL-1z-1CW" secondAttribute="top" constant="20" id="s0G-4d-ix9"/>
                 <constraint firstItem="ArL-1z-1CW" firstAttribute="trailing" secondItem="Oca-Gn-3x2" secondAttribute="trailing" constant="20" id="t1f-En-YYM"/>
-                <constraint firstItem="70O-dC-5sK" firstAttribute="leading" secondItem="XDC-fS-7vl" secondAttribute="trailing" constant="8" id="xf5-23-GV9"/>
-                <constraint firstItem="XDC-fS-7vl" firstAttribute="leading" secondItem="ArL-1z-1CW" secondAttribute="leading" constant="20" id="z2N-uh-yXH"/>
-                <constraint firstItem="70O-dC-5sK" firstAttribute="top" secondItem="3fr-uj-gcm" secondAttribute="bottom" constant="8" id="zYe-zj-I1g"/>
             </constraints>
-            <point key="canvasLocation" x="-169.10688140556368" y="471.67968749999994"/>
+            <point key="canvasLocation" x="-168.22840409956075" y="475.78124999999994"/>
         </view>
     </objects>
     <resources>

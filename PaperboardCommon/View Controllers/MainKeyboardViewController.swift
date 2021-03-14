@@ -25,7 +25,6 @@ class MainKeyboardViewController: UIViewController {
     @IBOutlet weak var changeKeyboard: KeyboardButton!
     @IBOutlet weak var doneButton: KeyboardButton!
     @IBOutlet weak var bottomBarView: UIView!
-    @IBOutlet var buttonsStackViews: [UIStackView]!
     @IBOutlet weak var capsHeightConstraint: NSLayoutConstraint!
     
     let inputSource = InputCollectionDataSource()
