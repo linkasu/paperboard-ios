@@ -161,7 +161,9 @@ class MainKeyboardViewController: UIViewController {
         
         updateButtonsTitles()
         
-        let spacing = UIDevice.current.userInterfaceIdiom == .phone ? spacingPhone : spacingTablet
+        let isCompact = UIDevice.current.userInterfaceIdiom == .phone
+        
+        let spacing = isCompact ? spacingPhone : spacingTablet
         inputLayout.spacing = NSNumber(value: spacing)
         configureSpacing(spacing: spacing)
     }

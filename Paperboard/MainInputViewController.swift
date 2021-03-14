@@ -26,8 +26,13 @@ class MainInputViewController: MainKeyboardViewController {
         inputField.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
         
         inputProcessor = InputFieldProcessor(inputField: inputField)
-        super.viewDidLoad()
         
+        let isCompact = UIDevice.current.userInterfaceIdiom == .phone
+        if let originalFontSize = inputField.font?.pointSize {
+            inputField.font = inputField.font?.withSize(isCompact ? originalFontSize/2 : originalFontSize)
+        }
+        
+        super.viewDidLoad()
         setColorScheme(.light)
     }
     
