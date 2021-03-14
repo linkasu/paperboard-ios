@@ -10,11 +10,11 @@ import Foundation
 
 class Settings {
     struct Keyboard: Decodable {
-      let voiceId: String
-      let voiceName: String
-      let alphabet: String
-      let rightToLeft: Bool
-      let locale: String
+        let voiceId: String
+        let voiceName: String
+        let alphabet: String
+        let rightToLeft: Bool
+        let locale: String
     }
     
     private let storage = SettingsStorage()
@@ -23,36 +23,36 @@ class Settings {
     var onKeyboardChanged: [((Keyboard?) -> Void)] = []
     
     var keyboards: [Keyboard] = {
-      let decoder = PropertyListDecoder()
-      guard let plist = Bundle.main.url(forResource: "Keyboards", withExtension: "plist"),
-        let data = try? Data(contentsOf: plist),
-        let keyboards = try? decoder.decode([Keyboard].self, from: data) else {
-          return []
-      }
-      return keyboards
+        let decoder = PropertyListDecoder()
+        guard let plist = Bundle.main.url(forResource: "Keyboards", withExtension: "plist"),
+              let data = try? Data(contentsOf: plist),
+              let keyboards = try? decoder.decode([Keyboard].self, from: data) else {
+            return []
+        }
+        return keyboards
     }()
     
     var currentColumns: Int {
-      get {
-        return (storage.getSettingValue(.columns) as? NSNumber)?.intValue ?? 3
-      }
-      set {
-        storage.update(.columns, withValue: NSNumber(integerLiteral: newValue))
-        onColumnAmountChanged.forEach { $0(newValue) }
-      }
+        get {
+            return (storage.getSettingValue(.columns) as? NSNumber)?.intValue ?? 3
+        }
+        set {
+            storage.update(.columns, withValue: NSNumber(integerLiteral: newValue))
+            onColumnAmountChanged.forEach { $0(newValue) }
+        }
     }
     
     var currentKeyboard: Keyboard? {
-      get {
-        guard let locale = storage.getSettingValue(.locale) as? String else {
-          return nil
+        get {
+            guard let locale = storage.getSettingValue(.locale) as? String else {
+                return nil
+            }
+            return keyboards.first(where: { $0.locale == locale })
         }
-        return keyboards.first(where: { $0.locale == locale })
-      }
-      set {
-        storage.update(.locale, withValue: newValue?.locale)
-        onKeyboardChanged.forEach { $0(newValue) }
-      }
+        set {
+            storage.update(.locale, withValue: newValue?.locale)
+            onKeyboardChanged.forEach { $0(newValue) }
+        }
     }
     
 }

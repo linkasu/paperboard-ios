@@ -47,4 +47,12 @@ class KeyboardButton: UIButton {
             titleLabel.font = titleLabel.font.withSize(isCompact ? originalFontSize/2 : originalFontSize)
         }
     }
+    
+    func configure(colorScheme: PaperboardColors, buttonColors: ButtonColors) {
+        setTitleColor(colorScheme.textColor, for: [])
+        tintColor = colorScheme.textColor
+        
+        defaultBackgroundColor = buttonColors.backgroundColor
+        highlightBackgroundColor = buttonColors.highlightColor
+    }
 }

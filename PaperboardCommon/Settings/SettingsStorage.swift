@@ -10,7 +10,7 @@ import Foundation
 
 class SettingsStorage: NSObject {
     private let defaults: UserDefaults
-        
+    
     enum Settings: String {
         case columns
         case locale
@@ -30,7 +30,6 @@ class SettingsStorage: NSObject {
         }
         super.init()
     }
-
     
     func update(_ setting: Settings, withValue value: Any?) {
         defaults.set(value, forKey: setting.defaultsKey)

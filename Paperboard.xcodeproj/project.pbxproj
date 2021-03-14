@@ -37,6 +37,10 @@
 		7319521325F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */; };
 		7319521725F0C80D00A46256 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521625F0C80D00A46256 /* Localizable.swift */; };
 		7319521825F0C80D00A46256 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521625F0C80D00A46256 /* Localizable.swift */; };
+		73418C8A25FDD4BC00F536D8 /* UIView+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73418C8925FDD4BC00F536D8 /* UIView+Spacing.swift */; };
+		73418C8B25FDD4BC00F536D8 /* UIView+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73418C8925FDD4BC00F536D8 /* UIView+Spacing.swift */; };
+		73418C8F25FDD52100F536D8 /* UIButton+Centering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */; };
+		73418C9025FDD52100F536D8 /* UIButton+Centering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */; };
 		735C7B4925F63886006F23F8 /* SettingsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */; };
 		738F2A9D25F733D2009016FC /* SettingsSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F2A9C25F733D2009016FC /* SettingsSplitViewController.swift */; };
 		73F7971E25F64B0000E8FA1B /* ColumnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */; };
@@ -138,6 +142,8 @@
 		730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HEX.swift"; sourceTree = "<group>"; };
 		7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		7319521625F0C80D00A46256 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		73418C8925FDD4BC00F536D8 /* UIView+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Spacing.swift"; sourceTree = "<group>"; };
+		73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Centering.swift"; sourceTree = "<group>"; };
 		735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMasterViewController.swift; sourceTree = "<group>"; };
 		738F2A9C25F733D2009016FC /* SettingsSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSplitViewController.swift; sourceTree = "<group>"; };
 		73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +233,8 @@
 				B0D3683C25864036007CBF35 /* UIView+Audio.swift */,
 				730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */,
 				7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */,
+				73418C8925FDD4BC00F536D8 /* UIView+Spacing.swift */,
+				73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -543,12 +551,14 @@
 				0E20AB7A2127247100F6F62A /* TextToSpeechProcessor.swift in Sources */,
 				0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */,
 				730B751D25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */,
+				73418C8F25FDD52100F536D8 /* UIButton+Centering.swift in Sources */,
 				B0D36854258648FB007CBF35 /* Styles.swift in Sources */,
 				666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */,
 				73F7971E25F64B0000E8FA1B /* ColumnsViewController.swift in Sources */,
 				B07516FA257F6B5100BC905F /* Settings.swift in Sources */,
 				73F7972225F64B1A00E8FA1B /* KeyboardViewController.swift in Sources */,
 				B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */,
+				73418C8A25FDD4BC00F536D8 /* UIView+Spacing.swift in Sources */,
 				B0D36847258645FD007CBF35 /* KeyboardButton.swift in Sources */,
 				B0BCF9662585DA1500ADCBB3 /* Date+Second.swift in Sources */,
 				0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */,
@@ -577,12 +587,14 @@
 				B0D3685B258649CF007CBF35 /* Styles.swift in Sources */,
 				66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */,
 				B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */,
+				73418C9025FDD52100F536D8 /* UIButton+Centering.swift in Sources */,
 				B0BCF9632585DA0E00ADCBB3 /* Date+Second.swift in Sources */,
 				B0D3683E25864036007CBF35 /* UIView+Audio.swift in Sources */,
 				66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */,
 				B07516EF257F6A5000BC905F /* InputCollectionDataSource.swift in Sources */,
 				B0D3684C25864647007CBF35 /* KeyboardButton.swift in Sources */,
 				B0BCF9442584CA4B00ADCBB3 /* Constants.swift in Sources */,
+				73418C8B25FDD4BC00F536D8 /* UIView+Spacing.swift in Sources */,
 				7319521325F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
