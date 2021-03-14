@@ -11,24 +11,8 @@ import UIKit
 class MainInputViewController: MainKeyboardViewController {
     
     @IBOutlet private weak var inputField: UITextView!
-    @IBOutlet weak var cursorHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var clearButtonWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var settingsButtonWidthConstraint: NSLayoutConstraint!
-    
-    @IBAction func showShare(_ sender: Any) {
-        guard let shareText = inputField.text else {
-            return
-        }
-        let textToShare = [ shareText ]
-        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
-        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop ]
-        if let popOver = activityViewController.popoverPresentationController, let shareButton = shareButton {
-            popOver.sourceView = self.view
-            activityViewController.popoverPresentationController?.sourceRect = shareButton.frame
-        }
-        present(activityViewController, animated: false, completion: nil)
-    }
     
     override func viewDidLoad() {
         setupStatusBar()
@@ -87,6 +71,20 @@ class MainInputViewController: MainKeyboardViewController {
         vc.settings = settings
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
+    }
+    
+    @IBAction func showShare(_ sender: Any) {
+        guard let shareText = inputField.text else {
+            return
+        }
+        let textToShare = [ shareText ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop ]
+        if let popOver = activityViewController.popoverPresentationController, let shareButton = shareButton {
+            popOver.sourceView = self.view
+            activityViewController.popoverPresentationController?.sourceRect = shareButton.frame
+        }
+        present(activityViewController, animated: false, completion: nil)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

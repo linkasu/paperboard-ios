@@ -15,6 +15,7 @@ enum Setting {
 }
 
 class SettingItemCell: UITableViewCell {
+    static let id = "SettingItem"
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
@@ -70,7 +71,7 @@ class SettingsMasterViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingItem", for: indexPath) as! SettingItemCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: SettingItemCell.id, for: indexPath) as! SettingItemCell
         let bgColorView = UIView()
         bgColorView.backgroundColor = UIColor(hex: "#F0F0F0")
         cell.selectedBackgroundView = bgColorView

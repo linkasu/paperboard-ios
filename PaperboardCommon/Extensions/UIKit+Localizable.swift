@@ -10,61 +10,61 @@ import Foundation
 import UIKit
 
 extension UINavigationItem {
-  @IBInspectable var localizableTitle: String? {
-    get {
-      return title
+    @IBInspectable var localizableTitle: String? {
+        get {
+            return title
+        }
+        set {
+            if let nValue = newValue {
+                title = NSLocalizedString(nValue, comment: "")
+            } else {
+                title = nil
+            }
+        }
     }
-    set {
-      if let nValue = newValue {
-        title = NSLocalizedString(nValue, comment: "")
-      } else {
-        title = nil
-      }
-    }
-  }
 }
 
 extension UIButton {
-  @IBInspectable var localizableTitle: String? {
-    get {
-      return nil
+    @IBInspectable var localizableTitle: String? {
+        get {
+            return nil
+        }
+        set {
+            if let nValue = newValue {
+                setTitle(NSLocalizedString(nValue, comment: ""), for: .normal)
+            } else {
+                setTitle(nil, for: .normal)
+            }
+        }
     }
-    set {
-      if let nValue = newValue {
-        setTitle(NSLocalizedString(nValue, comment: ""), for: .normal)
-      } else {
-        setTitle(nil, for: .normal)
-      }
-    }
-  }
 }
 
 extension UIBarButtonItem {
-  @IBInspectable var localizableTitle: String? {
-    get {
-      return title
+    @IBInspectable var localizableTitle: String? {
+        get {
+            return title
+        }
+        set {
+            if let nValue = newValue {
+                title = NSLocalizedString(nValue, comment: "")
+            } else {
+                title = nil
+            }
+        }
     }
-    set {
-      if let nValue = newValue {
-        title = NSLocalizedString(nValue, comment: "")
-      } else {
-        title = nil
-      }
-    }
-  }
 }
 
 extension UILabel {
-  @IBInspectable var localizableText: String? {
-    get {
-      return text
+    @IBInspectable var localizableText: String? {
+        get {
+            return text
+        }
+        set {
+            if let nValue = newValue {
+                text = NSLocalizedString(nValue, comment: "")
+            } else {
+                text = nil
+            }
+        }
     }
-    set {
-      if let nValue = newValue {
-        text = NSLocalizedString(nValue, comment: "")
-      } else {
-        text = nil
-      }
-    }
-  }
 }

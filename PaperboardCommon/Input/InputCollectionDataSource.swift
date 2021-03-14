@@ -78,7 +78,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func setup(forCollection collectionView: UICollectionView) {
-        collectionView.register(UINib.init(nibName: "InputCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "InputCellReuseID")
+        collectionView.register(UINib.init(nibName: inputCellXib, bundle: nil), forCellWithReuseIdentifier: inputCellReuse)
         collectionView.dataSource = self
     }
     

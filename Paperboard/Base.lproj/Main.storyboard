@@ -235,7 +235,6 @@
                         <outlet property="capsLockButton" destination="HaG-Z3-8TH" id="iIm-aB-lIq"/>
                         <outlet property="clearButton" destination="379-q7-dGu" id="U2x-7m-fo3"/>
                         <outlet property="clearButtonWidthConstraint" destination="FRq-ie-DhP" id="3tU-7x-sv8"/>
-                        <outlet property="cursorHeightConstraint" destination="WSl-pN-6hP" id="BiQ-zH-Id4"/>
                         <outlet property="cursorLeft" destination="pXm-1t-xtC" id="AT2-bJ-Twt"/>
                         <outlet property="cursorRight" destination="xfS-ZG-Xyo" id="cMQ-wG-eq1"/>
                         <outlet property="inputCollectionView" destination="sYm-5H-3gi" id="KEd-qx-2qZ"/>

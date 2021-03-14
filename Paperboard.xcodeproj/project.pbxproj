@@ -65,8 +65,6 @@
 		B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */; };
 		B0BCF9592585D4F700ADCBB3 /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */; };
 		B0BCF95D2585D55E00ADCBB3 /* InputKeyboardProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF95C2585D55E00ADCBB3 /* InputKeyboardProcessor.swift */; };
-		B0BCF9632585DA0E00ADCBB3 /* Date+Second.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */; };
-		B0BCF9662585DA1500ADCBB3 /* Date+Second.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */; };
 		B0BCF96B2585E1EF00ADCBB3 /* MainKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */; };
 		B0D3683D25864036007CBF35 /* UIView+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3683C25864036007CBF35 /* UIView+Audio.swift */; };
 		B0D3683E25864036007CBF35 /* UIView+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3683C25864036007CBF35 /* UIView+Audio.swift */; };
@@ -159,7 +157,6 @@
 		B0BCF93E2584C9A600ADCBB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProcessor.swift; sourceTree = "<group>"; };
 		B0BCF95C2585D55E00ADCBB3 /* InputKeyboardProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputKeyboardProcessor.swift; sourceTree = "<group>"; };
-		B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Second.swift"; sourceTree = "<group>"; };
 		B0D3683C25864036007CBF35 /* UIView+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Audio.swift"; sourceTree = "<group>"; };
 		B0D36846258645FD007CBF35 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		B0D36853258648FB007CBF35 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
@@ -229,7 +226,6 @@
 			children = (
 				0E20AB582125C43E00F6F62A /* UIKit+Localizable.swift */,
 				0E20AB722127155F00F6F62A /* Collection+Safe.swift */,
-				B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */,
 				B0D3683C25864036007CBF35 /* UIView+Audio.swift */,
 				730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */,
 				7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */,
@@ -560,7 +556,6 @@
 				B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */,
 				73418C8A25FDD4BC00F536D8 /* UIView+Spacing.swift in Sources */,
 				B0D36847258645FD007CBF35 /* KeyboardButton.swift in Sources */,
-				B0BCF9662585DA1500ADCBB3 /* Date+Second.swift in Sources */,
 				0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */,
 				738F2A9D25F733D2009016FC /* SettingsSplitViewController.swift in Sources */,
 				0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */,
@@ -588,7 +583,6 @@
 				66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */,
 				B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */,
 				73418C9025FDD52100F536D8 /* UIButton+Centering.swift in Sources */,
-				B0BCF9632585DA0E00ADCBB3 /* Date+Second.swift in Sources */,
 				B0D3683E25864036007CBF35 /* UIView+Audio.swift in Sources */,
 				66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */,
 				B07516EF257F6A5000BC905F /* InputCollectionDataSource.swift in Sources */,
