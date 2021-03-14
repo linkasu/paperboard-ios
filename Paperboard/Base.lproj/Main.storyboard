@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LINKa. Paperboard-->
+        <!--Main Input View Controller-->
         <scene sceneID="0N5-ao-JvK">
             <objects>
                 <viewController id="3hb-Gl-INB" customClass="MainInputViewController" customModule="Paperboard" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,20 +228,6 @@
                             <constraint firstItem="5hj-ip-iPV" firstAttribute="trailing" secondItem="fAU-ej-Uyr" secondAttribute="trailing" constant="20" id="zuh-5O-gCF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="LINKa. Paperboard" id="q7n-LF-aKO">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="X1U-4z-9DN">
-                            <color key="tintColor" red="0.98431372549999996" green="0.80000000000000004" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="settings.title"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="showSettings:" destination="3hb-Gl-INB" id="YXZ-GB-wEs"/>
-                            </connections>
-                        </barButtonItem>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="input.title"/>
-                        </userDefinedRuntimeAttributes>
-                    </navigationItem>
                     <connections>
                         <outlet property="backspaceButton" destination="fAU-ej-Uyr" id="kvn-7j-SDv"/>
                         <outlet property="bottomBarView" destination="00F-QI-dkF" id="hgD-p4-AnO"/>

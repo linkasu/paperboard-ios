@@ -30,15 +30,15 @@ class KeyboardViewController: UIViewController {
     var keyboardTitles: [String] = []
     var selectedIndex: Int = -1
     override func viewDidLoad() {
-        navigationItem.title = PaperboardLocalizable.settingsKeyboard.message()
+        navigationItem.title = PaperboardMessages.settingsKeyboard.text
         
         tableView.tableFooterView = UIView()
         tableView.separatorColor = UIColor.clear
         tableView.dataSource = self
         tableView.delegate = self
         
-        keyboardTitles = settings.keyboards.map({ "\($0.voiceName) - \(NSLocale.current.localizedString(forLanguageCode: $0.locale) ?? PaperboardLocalizable.settingsKeyboardUnknownLanguage.message()) (\($0.locale))"})
-        keyboardTitles.insert(PaperboardLocalizable.settingKeyboardDefault.message(), at: 0)
+        keyboardTitles = settings.keyboards.map({ "\($0.voiceName) - \(NSLocale.current.localizedString(forLanguageCode: $0.locale) ?? PaperboardMessages.settingsKeyboardUnknownLanguage.text) (\($0.locale))"})
+        keyboardTitles.insert(PaperboardMessages.settingKeyboardDefault.text, at: 0)
         
         if let i = settings.keyboards.index(where: { $0.voiceId == settings.currentKeyboard?.voiceId }) {
             selectedIndex = i + 1

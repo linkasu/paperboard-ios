@@ -26,7 +26,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     }
     
     private var alphabet: [String] = {
-        return NSLocalizedString("input.alphabet", comment: "").split(separator: " ").map{ String($0) }
+        return PaperboardMessages.alphabet.text.split(separator: " ").map{ String($0) }
     }()
     
     private weak var collection: UICollectionView?

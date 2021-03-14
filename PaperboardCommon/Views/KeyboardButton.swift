@@ -24,8 +24,8 @@ class KeyboardButton: UIButton {
     }
     
     override func layoutSubviews() {
-      super.layoutSubviews()
-      backgroundColor = isHighlighted ? highlightBackgroundColor : defaultBackgroundColor
+        super.layoutSubviews()
+        backgroundColor = isHighlighted ? highlightBackgroundColor : defaultBackgroundColor
     }
     
     func commonInit() {

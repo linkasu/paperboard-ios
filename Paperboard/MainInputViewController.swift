@@ -111,8 +111,8 @@ class MainInputViewController: MainKeyboardViewController {
             clearButtonWidthConstraint = clearButtonWidthConstraint.changeMultiplier(multiplier: 0.173)
             settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.096)
             
-            clearButton.setTitle(PaperboardLocalizable.clear.message(), for: .normal)
-            talkButton?.setTitle(PaperboardLocalizable.talk.message(), for: .normal)
+            clearButton.setTitle(PaperboardMessages.clear.text, for: .normal)
+            talkButton?.setTitle(PaperboardMessages.talk.text, for: .normal)
         } else {
             clearButtonWidthConstraint = clearButtonWidthConstraint.changeMultiplier(multiplier: 0.143)
             settingsButtonWidthConstraint = settingsButtonWidthConstraint.changeMultiplier(multiplier: 0.143)

@@ -28,7 +28,7 @@ class SettingsMasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = PaperboardLocalizable.settingsTitle.message()
+        navigationItem.title = PaperboardMessages.settingsTitle.text
         
         tableView.tableFooterView = UIView()
         tableView.separatorColor = UIColor.clear
@@ -50,7 +50,7 @@ class SettingsMasterViewController: UITableViewController {
                 if let locale = self.settings.currentKeyboard?.locale {
                     cell.valueLabel.text = locale
                 } else {
-                    cell.valueLabel.text = PaperboardLocalizable.settingKeyboardDefault.message()
+                    cell.valueLabel.text = PaperboardMessages.settingKeyboardDefault.text
                 }
             }
         })
@@ -77,16 +77,16 @@ class SettingsMasterViewController: UITableViewController {
         
         switch items[indexPath.row] {
         case .columns:
-            cell.nameLabel.text = PaperboardLocalizable.settingsColumns.message()
+            cell.nameLabel.text = PaperboardMessages.settingsColumns.text
             cell.iconView.image = UIImage(named: "columns")
             cell.valueLabel.text = String(settings.currentColumns)
         case .keyboard:
-            cell.nameLabel.text = PaperboardLocalizable.settingsKeyboard.message()
+            cell.nameLabel.text = PaperboardMessages.settingsKeyboard.text
             cell.iconView.image = UIImage(named: "globe")
             if let locale = settings.currentKeyboard?.locale {
                 cell.valueLabel.text = locale
             } else {
-                cell.valueLabel.text = PaperboardLocalizable.settingKeyboardDefault.message()
+                cell.valueLabel.text = PaperboardMessages.settingKeyboardDefault.text
             }
         }
         return cell

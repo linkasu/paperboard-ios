@@ -43,7 +43,7 @@ class KeyboardViewController: UIInputViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        keyboardViewContoller.actionButton?.setTitle(returnName(), for: .normal)
+        keyboardViewContoller.actionButton?.setTitle(returnName().text, for: .normal)
         super.viewWillAppear(animated)
     }
     
@@ -96,20 +96,20 @@ class KeyboardViewController: UIInputViewController {
             })
     }
     
-    func returnName() -> String {
+    func returnName() -> PaperboardMessages {
         switch textDocumentProxy.returnKeyType {
         case .go:
-            return PaperboardLocalizable.go.message()
+            return PaperboardMessages.go
         case .yahoo:
-            return PaperboardLocalizable.search.message()
+            return PaperboardMessages.search
         case .google:
-            return PaperboardLocalizable.search.message()
+            return PaperboardMessages.search
         case .search:
-            return PaperboardLocalizable.search.message()
+            return PaperboardMessages.search
         case .continue:
-            return PaperboardLocalizable.continue.message()
+            return PaperboardMessages.continue
         default:
-            return PaperboardLocalizable.return.message()
+            return PaperboardMessages.return
         }
     }
     

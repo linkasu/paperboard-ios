@@ -30,7 +30,7 @@ class ColumnsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
-        self.navigationItem.title = PaperboardLocalizable.settingsColumns.message()
+        self.navigationItem.title = PaperboardMessages.settingsColumns.text
         super.viewDidLoad()
         
         collectionView.delegate = self
