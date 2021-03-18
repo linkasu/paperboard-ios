@@ -32,7 +32,7 @@ class KeyboardButton: UIButton {
         layer.masksToBounds = false
         layer.shadowOffset = CGSize(width: 0, height: 1.0)
         layer.shadowRadius = 0.0
-        layer.shadowOpacity = 0.15
+        layer.shadowOpacity = 0.3
         
         updateFont()
     }

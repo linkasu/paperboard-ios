@@ -345,7 +345,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XNH-zL-bLt">
                         <rect key="frame" x="0.0" y="0.0" width="420" height="820"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingItem" id="KgS-Y7-skr" customClass="SettingItemCell" customModule="Paperboard" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="420" height="80"/>
@@ -355,14 +354,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="B4A-Hg-g5c">
-                                            <rect key="frame" x="20" y="30" width="20" height="20"/>
+                                            <rect key="frame" x="20" y="26" width="28" height="28"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="AMb-6d-xxG"/>
-                                                <constraint firstAttribute="width" constant="20" id="C3N-pw-MXl"/>
+                                                <constraint firstAttribute="height" constant="28" id="AMb-6d-xxG"/>
+                                                <constraint firstAttribute="width" constant="28" id="C3N-pw-MXl"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S64-li-nu6">
-                                            <rect key="frame" x="60" y="30" width="41.5" height="20"/>
+                                            <rect key="frame" x="68" y="30" width="41.5" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
