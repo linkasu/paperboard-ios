@@ -63,12 +63,16 @@ class MainInputViewController: MainKeyboardViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        adjustSize()
         
         inputSource.reload()
         inputCollectionView.reloadData()
         inputCollectionProcessor.scrollsToMiddleSection(inputCollectionView)
         inputField.becomeFirstResponder()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        adjustSize()
     }
     
     @IBAction func showSettings(_ sender: Any) {

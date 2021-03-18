@@ -63,18 +63,18 @@ struct PaperboardColors {
             )
             
             control = ButtonColors(
-                backgroundColor: UIColor(hex: "#F0F0F0"),
+                backgroundColor: UIColor(hex: "#3F3F3F"),
                 highlightColor: UIColor(hex: "#242424")
             )
             
             system = ButtonColors(
-                backgroundColor: UIColor(red: 174/255, green: 179/255, blue: 190/255, alpha: 1.0),
-                highlightColor: UIColor(red: 174/255, green: 179/255, blue: 190/255, alpha: 1.0).withAlphaComponent(0.8)
+                backgroundColor: UIColor(hex: "#3F3F3F"),
+                highlightColor: UIColor(hex: "#242424")
             )
             
             focus = ButtonColors(
-                backgroundColor: UIColor(red: 15/255, green: 119/255, blue: 240/255, alpha: 1.0),
-                highlightColor: UIColor(red: 15/255, green: 119/255, blue: 240/255, alpha: 1.0).withAlphaComponent(0.8)
+                backgroundColor: UIColor(hex: "#0A84FF"),
+                highlightColor: UIColor(hex: "#0075EB")
             )
         }
     }
