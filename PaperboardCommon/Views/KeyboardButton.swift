@@ -35,6 +35,8 @@ class KeyboardButton: UIButton {
         layer.shadowRadius = 0.0
         layer.shadowOpacity = 0.3
         
+        imageView?.contentMode = .scaleAspectFit
+        
         updateFont()
     }
     
