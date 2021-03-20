@@ -478,23 +478,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-lm-6rH">
-                                                    <rect key="frame" x="116" y="11" width="948" height="58"/>
+                                                    <rect key="frame" x="116" y="0.0" width="948" height="80"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-vW-i9H">
-                                                            <rect key="frame" x="0.0" y="18.5" width="42" height="21"/>
+                                                            <rect key="frame" x="0.0" y="29.5" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="dmv-NR-cg7">
-                                                            <rect key="frame" x="906" y="18" width="22" height="22"/>
+                                                            <rect key="frame" x="906" y="29" width="22" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="22" id="Gc5-sy-X4A"/>
                                                                 <constraint firstAttribute="height" constant="22" id="V9Q-6C-HPz"/>
                                                             </constraints>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8n-ox-RTX">
-                                                            <rect key="frame" x="0.0" y="57" width="948" height="1"/>
+                                                            <rect key="frame" x="0.0" y="79" width="948" height="1"/>
                                                             <color key="backgroundColor" red="0.68235294117647061" green="0.70196078431372544" blue="0.74509803921568629" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="daF-fI-pwR"/>
@@ -513,10 +513,10 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="MSh-lm-6rH" firstAttribute="bottom" secondItem="JTW-KP-Rxi" secondAttribute="bottomMargin" id="XkB-PY-TSW"/>
+                                                <constraint firstItem="MSh-lm-6rH" firstAttribute="top" secondItem="JTW-KP-Rxi" secondAttribute="top" id="1EY-rY-3g2"/>
                                                 <constraint firstItem="MSh-lm-6rH" firstAttribute="leading" secondItem="JTW-KP-Rxi" secondAttribute="leadingMargin" constant="100" id="bSW-nT-9ez"/>
+                                                <constraint firstAttribute="bottom" secondItem="MSh-lm-6rH" secondAttribute="bottom" id="eS3-S6-DHc"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="MSh-lm-6rH" secondAttribute="trailing" constant="100" id="m0K-Wo-YDA"/>
-                                                <constraint firstItem="MSh-lm-6rH" firstAttribute="top" secondItem="JTW-KP-Rxi" secondAttribute="topMargin" id="vqC-cD-TQx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
