@@ -773,7 +773,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 29HEQ626X2;
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Paperboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -783,7 +783,7 @@
 				);
 				MARKETING_VERSION = 1.4;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.su.linka.paperboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -800,7 +800,7 @@
 				CODE_SIGN_ENTITLEMENTS = Paperboard/PaperboardRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29HEQ626X2;
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
 				INFOPLIST_FILE = Paperboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -809,7 +809,7 @@
 				);
 				MARKETING_VERSION = 1.4;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.su.linka.paperboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -824,8 +824,8 @@
 				CODE_SIGN_ENTITLEMENTS = PaperboardKeyboard/PaperboardKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29HEQ626X2;
-				EXCLUDED_ARCHS = "";				
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = PaperboardKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -836,7 +836,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.su.linka.paperboard.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -851,7 +851,7 @@
 				CODE_SIGN_ENTITLEMENTS = PaperboardKeyboard/PaperboardKeyboardRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29HEQ626X2;
+				DEVELOPMENT_TEAM = FZXCM5CJ7P;
 				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = PaperboardKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -862,7 +862,7 @@
 				);
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = exyte.su.linka.paperboard.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
