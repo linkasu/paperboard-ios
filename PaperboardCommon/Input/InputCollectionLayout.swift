@@ -42,12 +42,13 @@ class InputCollectionLayout: UICollectionViewLayout {
         }
         
         let cgSpacing = CGFloat(spacing.floatValue)
+        let height = bounds.height - 1 // 1px for shadow
         
         items.removeAll()
         for section in source.sections.enumerated() {
             let sectionSize = section.element.size
             let cellWidth = (bounds.width - CGFloat(sectionSize - 1) * cgSpacing) / CGFloat(sectionSize)
-            let cellHeight = (bounds.height - CGFloat(sectionSize - 1) * cgSpacing) / CGFloat(sectionSize)
+            let cellHeight = (height - CGFloat(sectionSize - 1) * cgSpacing) / CGFloat(sectionSize)
             let sectionPad = bounds.width * CGFloat(section.offset)
             for item in section.element.values.indices {
                 let row: Int = item / sectionSize
