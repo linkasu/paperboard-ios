@@ -24,6 +24,7 @@
 //MARK: Settings
 
 "settings.title" = "Настройки";
+"settings.back" = "Назад";
 "settings.columns.title" = "Количество столбцов";
 "settings.dialog.keyboard" = "Голос и язык ввода";
 "settings.keyboard.default" = "По умолчанию";

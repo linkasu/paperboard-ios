@@ -24,6 +24,7 @@
 //MARK: Settings
 
 "settings.title" = "Einstellungen";
+"settings.back" = "Back";
 "settings.columns.title" = "Spaltenanzahl";
 "settings.dialog.keyboard" = "Sprache und Eingabesprache";
 "settings.keyboard.default" = "Default";

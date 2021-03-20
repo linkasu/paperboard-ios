@@ -24,6 +24,7 @@
 //MARK: Settings
 
 "settings.title" = "Settings";
+"settings.back" = "Back";
 "settings.columns.title" = "Count of columns";
 "settings.dialog.keyboard" = "Keyboard and voice";
 "settings.keyboard.default" = "Default";

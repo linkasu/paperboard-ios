@@ -404,6 +404,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="eg8-Pi-cB1">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="SKy-Hw-wvh">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizableTitle" value="settings.back"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="onBack:" destination="Clt-m8-6kD" id="UqW-5W-Xan"/>
                             </connections>
