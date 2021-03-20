@@ -108,4 +108,11 @@ class SettingsMasterViewController: UITableViewController {
             splitViewController?.showDetailViewController(keyboardNavViewController, sender: nil)
         }
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return 80
+        }
+        return 68
+    }
 }
