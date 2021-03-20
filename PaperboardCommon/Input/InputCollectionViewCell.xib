@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmx-nL-ITq" customClass="KeyboardButton" customModule="Paperboard" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="221" height="129"/>
+                        <rect key="frame" x="0.0" y="0.0" width="221" height="128"/>
                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                         <color key="tintColor" red="0.058823529409999999" green="0.46666666670000001" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" title="Button">
@@ -33,7 +33,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="pmx-nL-ITq" secondAttribute="trailing" id="9cO-ZV-gWM"/>
-                <constraint firstAttribute="bottom" secondItem="pmx-nL-ITq" secondAttribute="bottom" id="eGA-0j-xJo"/>
+                <constraint firstAttribute="bottom" secondItem="pmx-nL-ITq" secondAttribute="bottom" constant="1" id="eGA-0j-xJo"/>
                 <constraint firstItem="pmx-nL-ITq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mz3-3v-X6k"/>
                 <constraint firstItem="pmx-nL-ITq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wp6-Ih-Gbd"/>
             </constraints>
