@@ -59,22 +59,22 @@ struct PaperboardColors {
             
             main = ButtonColors(
                 backgroundColor: UIColor(hex: "#525252"),
-                highlightColor: UIColor(hex: "#525252")
+                highlightColor: UIColor(hex: "#424242")
             )
             
             control = ButtonColors(
                 backgroundColor: UIColor(hex: "#3F3F3F"),
-                highlightColor: UIColor(hex: "#3F3F3F")
+                highlightColor: UIColor(hex: "#303030")
             )
             
             system = ButtonColors(
                 backgroundColor: UIColor(hex: "#3F3F3F"),
-                highlightColor: UIColor(hex: "#3F3F3F")
+                highlightColor: UIColor(hex: "#303030")
             )
             
             focus = ButtonColors(
                 backgroundColor: UIColor(hex: "#0F77F0"),
-                highlightColor: UIColor(hex: "#0075EB")
+                highlightColor: UIColor(hex: "#0E6DDD")
             )
         }
     }
