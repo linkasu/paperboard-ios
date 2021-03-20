@@ -62,7 +62,7 @@ class KeyboardViewController: UIInputViewController {
     override func textDidChange(_ textInput: UITextInput?) {
         keyboardViewContoller.setColorScheme(getColorScheme())
     }
-    
+        
     func getColorScheme() -> PaperboardColorScheme {
         switch textDocumentProxy.keyboardAppearance {
         case .dark:

@@ -234,6 +234,10 @@ class MainKeyboardViewController: UIViewController {
             }
         }
         
+        setColors(colorScheme: colorScheme)
+    }
+    
+    func setColors(colorScheme: PaperboardColors) {
         spaceButton.configure(colorScheme: colorScheme, buttonColors: colorScheme.main)
         
         if isClearSystem {

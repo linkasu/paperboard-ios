@@ -20,7 +20,7 @@ struct ButtonColors {
 
 struct PaperboardColors {
     let textColor: UIColor
-    let backgroundColor: UIColor
+    let backgroundColor: UIColor?
     
     let main: ButtonColors
     let control: ButtonColors
@@ -55,25 +55,25 @@ struct PaperboardColors {
             
         case .dark:
             textColor = .white
-            backgroundColor = UIColor(white:89/255, alpha: 1.0)
+            backgroundColor = UIColor(hex: "#686868")
             
             main = ButtonColors(
-                backgroundColor: UIColor(hex: "#646464"),
+                backgroundColor: UIColor(hex: "#525252"),
                 highlightColor: UIColor(hex: "#525252")
             )
             
             control = ButtonColors(
                 backgroundColor: UIColor(hex: "#3F3F3F"),
-                highlightColor: UIColor(hex: "#242424")
+                highlightColor: UIColor(hex: "#3F3F3F")
             )
             
             system = ButtonColors(
                 backgroundColor: UIColor(hex: "#3F3F3F"),
-                highlightColor: UIColor(hex: "#242424")
+                highlightColor: UIColor(hex: "#3F3F3F")
             )
             
             focus = ButtonColors(
-                backgroundColor: UIColor(hex: "#0A84FF"),
+                backgroundColor: UIColor(hex: "#0F77F0"),
                 highlightColor: UIColor(hex: "#0075EB")
             )
         }

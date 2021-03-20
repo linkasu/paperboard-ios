@@ -32,8 +32,16 @@ class MainInputViewController: MainKeyboardViewController {
             inputField.font = inputField.font?.withSize(isCompact ? originalFontSize/2 : originalFontSize)
         }
         
+        inputField.layer.cornerRadius = isCompact ? 5.0 : 8.0
+        inputField.layer.borderWidth = 2.0
+        
         super.viewDidLoad()
         setColorScheme(.light)
+    }
+    
+    override func setColors(colorScheme: PaperboardColors) {
+        super.setColors(colorScheme: colorScheme)
+        inputField.layer.borderColor = inputSource.colorScheme.main.backgroundColor.cgColor
     }
     
     func setupStatusBar() {
