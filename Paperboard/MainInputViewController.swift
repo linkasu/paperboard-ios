@@ -81,6 +81,10 @@ class MainInputViewController: MainKeyboardViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         adjustSize()
+        
+        if let visibleIndex = inputCollectionView.indexPathsForVisibleItems.min() {
+            inputCollectionView.scrollToItem(at: visibleIndex, at: .left, animated: false)
+        }
     }
     
     @IBAction func showSettings(_ sender: Any) {

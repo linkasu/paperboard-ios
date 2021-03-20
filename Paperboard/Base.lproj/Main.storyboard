@@ -132,7 +132,6 @@
                                             <color key="titleColor" white="0.0" alpha="0.79921324819999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="onSpeechButtonTouched:" destination="3hb-Gl-INB" eventType="touchUpInside" id="5tN-Ht-iRR"/>
                                             <action selector="showShare:" destination="3hb-Gl-INB" eventType="touchUpInside" id="SPG-p6-OMW"/>
                                         </connections>
                                     </button>
@@ -163,7 +162,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onSpaceTouched:" destination="3hb-Gl-INB" eventType="touchUpInside" id="zW2-Az-1ip"/>
-                                            <action selector="onSpeechButtonTouched:" destination="3hb-Gl-INB" eventType="touchUpInside" id="lJV-Kn-nca"/>
                                         </connections>
                                     </button>
                                 </subviews>
