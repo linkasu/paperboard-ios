@@ -12,6 +12,7 @@ import UIKit
 enum Setting {
     case columns
     case keyboard
+    case symbols
 }
 
 class SettingItemCell: UITableViewCell {
@@ -24,7 +25,7 @@ class SettingItemCell: UITableViewCell {
 class SettingsMasterViewController: UITableViewController {
     
     var settings: Settings!
-    let items: [Setting] = [Setting.columns, Setting.keyboard]
+    let items: [Setting] = [Setting.columns, Setting.keyboard, Setting.symbols]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,16 @@ class SettingsMasterViewController: UITableViewController {
                 } else {
                     cell.valueLabel.text = PaperboardMessages.settingKeyboardDefault.text
                 }
+            }
+        })
+        
+        settings.onSymbolsChanged.append({ [weak self] newSymbols in
+            guard let `self` = self else {
+                return
+            }
+            if let cell = self.tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? SettingItemCell {
+                let symbols = self.settings.currentSymbols
+                cell.valueLabel.text = symbols.map { self.symbolShortcut(setting: $0) }.joined(separator: " ")
             }
         })
         
@@ -89,6 +100,10 @@ class SettingsMasterViewController: UITableViewController {
             } else {
                 cell.valueLabel.text = PaperboardMessages.settingKeyboardDefault.text
             }
+        case .symbols:
+            cell.nameLabel.text = PaperboardMessages.settingsSymbols.text
+            let symbols = self.settings.currentSymbols
+            cell.valueLabel.text = symbols.map { self.symbolShortcut(setting: $0) }.joined(separator: " ")
         }
         return cell
     }
@@ -106,6 +121,11 @@ class SettingsMasterViewController: UITableViewController {
             let keyboardViewController = keyboardNavViewController.viewControllers.first as? KeyboardViewController
             keyboardViewController?.settings = settings
             splitViewController?.showDetailViewController(keyboardNavViewController, sender: nil)
+        case .symbols:
+            let symbolsNavViewController = storyBoard.instantiateViewController(withIdentifier: "SymbolsNavViewController") as! UINavigationController
+            let symbolsViewController = symbolsNavViewController.viewControllers.first as? SymbolsViewController
+            symbolsViewController?.settings = settings
+            splitViewController?.showDetailViewController(symbolsNavViewController, sender: nil)
         }
     }
     
@@ -114,5 +134,20 @@ class SettingsMasterViewController: UITableViewController {
             return 80
         }
         return 68
+    }
+    
+    func symbolShortcut(setting: Settings.Symbols) -> String {
+        switch setting {
+        case .currency:
+            return "$"
+        case .numbers:
+            return "1-9"
+        case .math:
+            return "+-"
+        case .punctuation:
+            return "!"
+        case .extra:
+            return "#"
+        }
     }
 }

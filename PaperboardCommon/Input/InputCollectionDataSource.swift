@@ -46,6 +46,12 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
         }
     }
     
+    var currentSumbols: [Settings.Symbols] = [] {
+        didSet {
+            reload()
+        }
+    }
+    
     func printableVariant(ofLetter letter: String) -> String {
         return letter == "␣" ? " " : letter
     }
@@ -55,11 +61,12 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
         let squareSize = numberOfColumns * numberOfColumns
         var tempAlphabet = ["."]
         tempAlphabet += currentKeyboard?.alphabet.split(separator: " ").map{ String($0) } ?? alphabet
-        let numbers = Array("1234567890").map{String($0)}
-        let marks = Array(",!?/*+-=@$%()<>[]").map{String($0)}
-        tempAlphabet += numbers
-        tempAlphabet += marks
         
+        Settings.allSymbols.forEach { s in
+            if let _ = currentSumbols.firstIndex(of: s) {
+                tempAlphabet += Settings.getSymbols(symbol: s)
+            }
+        }
         sections.removeAll()
         while tempAlphabet.count > squareSize {
             let sectionValues = tempAlphabet.prefix(squareSize)

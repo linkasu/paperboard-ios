@@ -14,6 +14,7 @@ class SettingsStorage: NSObject {
     enum Settings: String {
         case columns
         case locale
+        case symbols
         
         fileprivate var defaultsKey: String {
             get {

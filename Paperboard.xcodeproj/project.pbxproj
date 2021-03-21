@@ -43,6 +43,7 @@
 		73418C9025FDD52100F536D8 /* UIButton+Centering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */; };
 		735C7B4925F63886006F23F8 /* SettingsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */; };
 		738F2A9D25F733D2009016FC /* SettingsSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F2A9C25F733D2009016FC /* SettingsSplitViewController.swift */; };
+		73C029D326060B5D00DFF83D /* SymbolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C029D226060B5D00DFF83D /* SymbolsViewController.swift */; };
 		73F7971E25F64B0000E8FA1B /* ColumnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */; };
 		73F7972225F64B1A00E8FA1B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */; };
 		B051DDC62595FE060018947C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB2E2125B94200F6F62A /* Assets.xcassets */; };
@@ -144,6 +145,7 @@
 		73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Centering.swift"; sourceTree = "<group>"; };
 		735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMasterViewController.swift; sourceTree = "<group>"; };
 		738F2A9C25F733D2009016FC /* SettingsSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSplitViewController.swift; sourceTree = "<group>"; };
+		73C029D226060B5D00DFF83D /* SymbolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsViewController.swift; sourceTree = "<group>"; };
 		73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsViewController.swift; sourceTree = "<group>"; };
 		73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		AC306E1A1BEC1FA8AC1F4878 /* Pods-PaperboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */,
 				73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */,
 				73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */,
+				73C029D226060B5D00DFF83D /* SymbolsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				B0D36847258645FD007CBF35 /* KeyboardButton.swift in Sources */,
 				0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */,
 				738F2A9D25F733D2009016FC /* SettingsSplitViewController.swift in Sources */,
+				73C029D326060B5D00DFF83D /* SymbolsViewController.swift in Sources */,
 				0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */,
 				0E20AB602125CB7100F6F62A /* InputCollectionDataSource.swift in Sources */,
 				0E20AB7521271C7600F6F62A /* ClearTextField.swift in Sources */,

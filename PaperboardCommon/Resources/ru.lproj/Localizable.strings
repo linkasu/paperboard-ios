@@ -29,3 +29,10 @@
 "settings.dialog.keyboard" = "Голос и язык ввода";
 "settings.keyboard.default" = "По умолчанию";
 "settings.keyboard.unknownLanguage" = "Не определен";
+"settings.symbols" = "Символы";
+"settings.symbols.all" = "Все";
+"settings.symbols.numbers" = "Цифры";
+"settings.symbols.punctuation" = "Знаки препинания";
+"settings.symbols.math" = "Математические знаки";
+"settings.symbols.currency" = "Валюты";
+"settings.symbols.extra" = "Дополнительные знаки";

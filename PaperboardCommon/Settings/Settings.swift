@@ -17,10 +17,21 @@ class Settings {
         let locale: String
     }
     
+    static let allSymbols: [Settings.Symbols] = [.numbers, .punctuation, .math, .currency, .extra]
+    
+    enum Symbols: String {
+        case numbers = "numbers"
+        case punctuation = "punctuation"
+        case math = "math"
+        case currency = "currency"
+        case extra = "extra"
+    }
+    
     private let storage = SettingsStorage()
     
     var onColumnAmountChanged: [((Int) -> Void)] = []
     var onKeyboardChanged: [((Keyboard?) -> Void)] = []
+    var onSymbolsChanged: [(([Symbols]) -> Void)] = []
     
     var keyboards: [Keyboard] = {
         let decoder = PropertyListDecoder()
@@ -55,4 +66,36 @@ class Settings {
         }
     }
     
+    var currentSymbols: [Symbols] {
+        get {
+            if let symbolsStr = storage.getSettingValue(.symbols) as? String {
+                return symbolsStr.components(separatedBy: ",").map {
+                    Symbols(rawValue: $0)
+                }.compactMap { $0 }
+            }
+            return [Symbols.numbers, Symbols.punctuation]
+        }
+        set {
+            let newValueStr = newValue.map { $0.rawValue }.joined(separator: ",")
+            storage.update(.symbols, withValue: newValueStr)
+            onSymbolsChanged.forEach { $0(newValue) }
+        }
+    }
+    
+    static func getSymbols(symbol: Symbols) -> [String] {
+        switch symbol {
+        case .numbers:
+            return Array("1234567890").map{ String($0) }
+        case .punctuation:
+            return Array(",?;:”!()-").map{ String($0) }
+        case .math:
+            return Array("/*%^<>[]{}=+").map{ String($0) }
+        case .currency:
+            return Array("£$₽¥€฿₩₴").map{ String($0) }
+        case .extra:
+            return Array("§&#@|\\’~").map{ String($0) }
+        default:
+            return []
+        }
+    }
 }

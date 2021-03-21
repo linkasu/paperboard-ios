@@ -29,6 +29,13 @@ enum PaperboardMessages: String {
     case settingsKeyboard = "settings.dialog.keyboard"
     case settingsKeyboardUnknownLanguage = "settings.keyboard.unknownLanguage"
     case settingKeyboardDefault = "settings.keyboard.default"
+    case settingsSymbols = "settings.symbols"
+    case symbolsAll = "settings.symbols.all"
+    case symbolsNumbers = "settings.symbols.numbers"
+    case symbolsPunctuation = "settings.symbols.punctuation"
+    case symbolsMath = "settings.symbols.math"
+    case symbolsCurrency = "settings.symbols.currency"
+    case symbolsExtra = "settings.symbols.extra"
     
     var text: String {
         return NSLocalizedString(rawValue, comment: "")

@@ -29,3 +29,10 @@
 "settings.dialog.keyboard" = "Keyboard and voice";
 "settings.keyboard.default" = "Default";
 "settings.keyboard.unknownLanguage" = "Unknown";
+"settings.symbols" = "Symbols";
+"settings.symbols.all" = "All";
+"settings.symbols.numbers" = "Numbers";
+"settings.symbols.punctuation" = "Punctuations";
+"settings.symbols.math" = "Math";
+"settings.symbols.currency" = "Currencies";
+"settings.symbols.extra" = "Extra";

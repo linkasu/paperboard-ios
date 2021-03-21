@@ -16,9 +16,9 @@ class KeyboardCell: UITableViewCell {
     @IBOutlet weak var trailingMargin: NSLayoutConstraint!
     @IBOutlet weak var leadingMargin: NSLayoutConstraint!
     
-    override var isSelected: Bool {
+    var isChecked: Bool = false {
         didSet {
-            checkImageView.isHidden = !isSelected
+            checkImageView.isHidden = !isChecked
         }
     }
 }
@@ -58,7 +58,7 @@ extension KeyboardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: KeyboardCell.id, for: indexPath) as! KeyboardCell
         cell.titleLabel.text = keyboardTitles[indexPath.row]
-        cell.isSelected = indexPath.row == selectedIndex
+        cell.isChecked = indexPath.row == selectedIndex
         cell.selectionStyle = .none
         
         if UIDevice.current.userInterfaceIdiom == .pad && UIDevice.current.orientation.isLandscape {
@@ -76,10 +76,10 @@ extension KeyboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let prevSel = IndexPath(row: selectedIndex, section: 0)
         if let prevCell = tableView.cellForRow(at: prevSel) as? KeyboardCell {
-            prevCell.isSelected = false
+            prevCell.isChecked = false
         }
         if let cell = tableView.cellForRow(at: indexPath) as? KeyboardCell {
-            cell.isSelected = true
+            cell.isChecked = true
             selectedIndex = indexPath.row
             
             settings.currentKeyboard = indexPath.row == 0 ? nil : settings.keyboards[indexPath.row - 1]

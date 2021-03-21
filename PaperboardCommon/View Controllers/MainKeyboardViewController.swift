@@ -110,6 +110,7 @@ class MainKeyboardViewController: UIViewController {
         
         inputSource.numberOfColumns = settings.currentColumns
         inputSource.currentKeyboard = settings.currentKeyboard
+        inputSource.currentSumbols = settings.currentSymbols
         inputSource.setup(forCollection: inputCollectionView)
         inputLayout.inputSource = inputSource
         
@@ -151,6 +152,14 @@ class MainKeyboardViewController: UIViewController {
                 return
             }
             self.inputSource.currentKeyboard = newKeyboard
+            self.updateCollection()
+        })
+        
+        settings.onSymbolsChanged.append({ [weak self] newSymbols in
+            guard let `self` = self else {
+                return
+            }
+            self.inputSource.currentSumbols = newSymbols
             self.updateCollection()
         })
         

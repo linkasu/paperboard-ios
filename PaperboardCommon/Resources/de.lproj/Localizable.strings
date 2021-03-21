@@ -29,3 +29,10 @@
 "settings.dialog.keyboard" = "Sprache und Eingabesprache";
 "settings.keyboard.default" = "Default";
 "settings.keyboard.unknownLanguage" = "Unbestimmtes";
+"settings.symbols" = "Symbole";
+"settings.symbols.all" = "Alle";
+"settings.symbols.numbers" = "Zahlen";
+"settings.symbols.punctuation" = "Interpunktion";
+"settings.symbols.math" = "Math";
+"settings.symbols.currency" = "Währungen";
+"settings.symbols.extra" = "Extra";
