@@ -9,6 +9,6 @@
 import Foundation
 
 struct Constants {
-    static let bundleId = "exyte.su.linka.paperboard"
-    static let appGroup = "group.exyte.su.linka"
+    static let bundleId = "su.linka.paperboard"
+    static let appGroup = "group.su.linka"
 }
