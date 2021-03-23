@@ -102,6 +102,7 @@ class SettingsMasterViewController: UITableViewController {
             }
         case .symbols:
             cell.nameLabel.text = PaperboardMessages.settingsSymbols.text
+            cell.iconView.image = UIImage(named: "symbol")
             let symbols = self.settings.currentSymbols
             cell.valueLabel.text = symbols.map { self.symbolShortcut(setting: $0) }.joined(separator: " ")
         }

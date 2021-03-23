@@ -18,7 +18,7 @@ class SymbolCell: UITableViewCell {
     
     var isChecked: Bool = false {
         didSet {
-            checkImageView.isHidden = !isChecked
+            checkImageView.image = UIImage(named: isChecked ? "check" : "uncheck")
         }
     }
 }
