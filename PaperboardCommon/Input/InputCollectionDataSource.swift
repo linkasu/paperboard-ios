@@ -16,7 +16,6 @@ private let inputCellReuse = "InputCellReuseID"
  */
 class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     
-    var isCompact: Bool = false
     var onCellSelected: ((IndexPath) -> Void)?
     var colorScheme = PaperboardColors(colorScheme: .light)
     var inputProcessor: InputProcessor!
@@ -27,7 +26,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     }
     
     private var alphabet: [String] = {
-        return NSLocalizedString("input.alphabet", comment: "").split(separator: " ").map{ String($0) }
+        return PaperboardMessages.alphabet.text.split(separator: " ").map{ String($0) }
     }()
     
     private weak var collection: UICollectionView?
@@ -47,6 +46,12 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
         }
     }
     
+    var currentSumbols: [Settings.Symbols] = [] {
+        didSet {
+            reload()
+        }
+    }
+    
     func printableVariant(ofLetter letter: String) -> String {
         return letter == "␣" ? " " : letter
     }
@@ -54,13 +59,14 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     func reload() {
         //update sections data
         let squareSize = numberOfColumns * numberOfColumns
-        var tempAlphabet = currentKeyboard?.alphabet.split(separator: " ").map{ String($0) } ?? alphabet
-        tempAlphabet.insert("␣", at: 0)
-        let numbers = Array("1234567890").map{String($0)}
-        let marks = Array(".,!?/*+-=@#$%()<>[]").map{String($0)}
-        tempAlphabet+=numbers
-        tempAlphabet+=marks
+        var tempAlphabet = ["."]
+        tempAlphabet += currentKeyboard?.alphabet.split(separator: " ").map{ String($0) } ?? alphabet
         
+        Settings.allSymbols.forEach { s in
+            if let _ = currentSumbols.firstIndex(of: s) {
+                tempAlphabet += Settings.getSymbols(symbol: s)
+            }
+        }
         sections.removeAll()
         while tempAlphabet.count > squareSize {
             let sectionValues = tempAlphabet.prefix(squareSize)
@@ -79,7 +85,7 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func setup(forCollection collectionView: UICollectionView) {
-        collectionView.register(UINib.init(nibName: "InputCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "InputCellReuseID")
+        collectionView.register(UINib.init(nibName: inputCellXib, bundle: nil), forCellWithReuseIdentifier: inputCellReuse)
         collectionView.dataSource = self
     }
     
@@ -107,14 +113,13 @@ class InputCollectionDataSource: NSObject, UICollectionViewDataSource {
         collectionCell.onButtonPressed = { [weak self] in
             self?.onCellSelected?(indexPath)
         }
-
+        
         let toFill = letter(forIndexPath: indexPath) ?? ""
         collectionCell.fill(with: inputProcessor.isCaps() ? toFill.capitalized : toFill)
-        collectionCell.characterButton.setTitleColor(colorScheme.buttonTextColor, for: [])
-        collectionCell.characterButton.tintColor = colorScheme.buttonTextColor
-        collectionCell.characterButton.defaultBackgroundColor = colorScheme.buttonBackgroundColor
-        collectionCell.characterButton.highlightBackgroundColor = colorScheme.buttonHighlightColor
-        collectionCell.characterButton.isCompact = isCompact
+        collectionCell.characterButton.setTitleColor(colorScheme.textColor, for: [])
+        collectionCell.characterButton.tintColor = colorScheme.textColor
+        collectionCell.characterButton.defaultBackgroundColor = colorScheme.main.backgroundColor
+        collectionCell.characterButton.highlightBackgroundColor = colorScheme.main.highlightColor
         
         return cell
     }

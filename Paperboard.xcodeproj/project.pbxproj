@@ -23,10 +23,7 @@
 		0E20AB7521271C7600F6F62A /* ClearTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7421271C7600F6F62A /* ClearTextField.swift */; };
 		0E20AB7621271F5600F6F62A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB7821271F5600F6F62A /* Localizable.strings */; };
 		0E20AB7A2127247100F6F62A /* TextToSpeechProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */; };
-		0E20AB7D2127289000F6F62A /* SettingsProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */; };
 		0E20AB7F212729B400F6F62A /* SettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB7E212729B400F6F62A /* SettingsStorage.swift */; };
-		0E20AB822127386200F6F62A /* SetColumnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB802127386200F6F62A /* SetColumnsViewController.swift */; };
-		0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB812127386200F6F62A /* SetColumnsViewController.xib */; };
 		0E5433372129CD0B00DBC3DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5433392129CD0B00DBC3DD /* InfoPlist.strings */; };
 		0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E734BA82135A67B0000D02F /* Keyboards.plist */; };
 		4B4F3825B8B07B2DA6B31FA9 /* Pods_Paperboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B1B4D2410910D510A109E6 /* Pods_Paperboard.framework */; };
@@ -34,6 +31,21 @@
 		666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
 		66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20AB6E21270F1900F6F62A /* InputCollectionProcessor.swift */; };
 		66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666CF28525837F83008D1872 /* MainKeyboardViewController.swift */; };
+		730B751D25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */; };
+		730B751E25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */; };
+		7319521225F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */; };
+		7319521325F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */; };
+		7319521725F0C80D00A46256 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521625F0C80D00A46256 /* Localizable.swift */; };
+		7319521825F0C80D00A46256 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7319521625F0C80D00A46256 /* Localizable.swift */; };
+		73418C8A25FDD4BC00F536D8 /* UIView+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73418C8925FDD4BC00F536D8 /* UIView+Spacing.swift */; };
+		73418C8B25FDD4BC00F536D8 /* UIView+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73418C8925FDD4BC00F536D8 /* UIView+Spacing.swift */; };
+		73418C8F25FDD52100F536D8 /* UIButton+Centering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */; };
+		73418C9025FDD52100F536D8 /* UIButton+Centering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */; };
+		735C7B4925F63886006F23F8 /* SettingsMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */; };
+		738F2A9D25F733D2009016FC /* SettingsSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738F2A9C25F733D2009016FC /* SettingsSplitViewController.swift */; };
+		73C029D326060B5D00DFF83D /* SymbolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C029D226060B5D00DFF83D /* SymbolsViewController.swift */; };
+		73F7971E25F64B0000E8FA1B /* ColumnsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */; };
+		73F7972225F64B1A00E8FA1B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */; };
 		B051DDC62595FE060018947C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E20AB2E2125B94200F6F62A /* Assets.xcassets */; };
 		B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07516B5257F64C200BC905F /* KeyboardViewController.swift */; };
 		B07516BA257F64C200BC905F /* PaperboardKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -54,8 +66,6 @@
 		B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */; };
 		B0BCF9592585D4F700ADCBB3 /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */; };
 		B0BCF95D2585D55E00ADCBB3 /* InputKeyboardProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF95C2585D55E00ADCBB3 /* InputKeyboardProcessor.swift */; };
-		B0BCF9632585DA0E00ADCBB3 /* Date+Second.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */; };
-		B0BCF9662585DA1500ADCBB3 /* Date+Second.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */; };
 		B0BCF96B2585E1EF00ADCBB3 /* MainKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */; };
 		B0D3683D25864036007CBF35 /* UIView+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3683C25864036007CBF35 /* UIView+Audio.swift */; };
 		B0D3683E25864036007CBF35 /* UIView+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3683C25864036007CBF35 /* UIView+Audio.swift */; };
@@ -109,10 +119,7 @@
 		0E20AB7421271C7600F6F62A /* ClearTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTextField.swift; sourceTree = "<group>"; };
 		0E20AB7721271F5600F6F62A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0E20AB792127247100F6F62A /* TextToSpeechProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechProcessor.swift; sourceTree = "<group>"; };
-		0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProcessor.swift; sourceTree = "<group>"; };
 		0E20AB7E212729B400F6F62A /* SettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStorage.swift; sourceTree = "<group>"; };
-		0E20AB802127386200F6F62A /* SetColumnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColumnsViewController.swift; sourceTree = "<group>"; };
-		0E20AB812127386200F6F62A /* SetColumnsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetColumnsViewController.xib; sourceTree = "<group>"; };
 		0E5433382129CD0B00DBC3DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E54333B2129CD2600DBC3DD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0E54333C2129CD2600DBC3DD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -131,6 +138,16 @@
 		666CF27F25837F0C008D1872 /* MainKeyboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainKeyboardViewController.xib; sourceTree = "<group>"; };
 		666CF28525837F83008D1872 /* MainKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainKeyboardViewController.swift; sourceTree = "<group>"; };
 		6EB97321D070173986C89CF1 /* Pods-PaperboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HEX.swift"; sourceTree = "<group>"; };
+		7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
+		7319521625F0C80D00A46256 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		73418C8925FDD4BC00F536D8 /* UIView+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Spacing.swift"; sourceTree = "<group>"; };
+		73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Centering.swift"; sourceTree = "<group>"; };
+		735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMasterViewController.swift; sourceTree = "<group>"; };
+		738F2A9C25F733D2009016FC /* SettingsSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSplitViewController.swift; sourceTree = "<group>"; };
+		73C029D226060B5D00DFF83D /* SymbolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolsViewController.swift; sourceTree = "<group>"; };
+		73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsViewController.swift; sourceTree = "<group>"; };
+		73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		AC306E1A1BEC1FA8AC1F4878 /* Pods-PaperboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardUITests/Pods-PaperboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE4CAEE8BB897A632AAF2C8F /* Pods-PaperboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperboardTests/Pods-PaperboardTests.release.xcconfig"; sourceTree = "<group>"; };
 		B07516B3257F64C200BC905F /* PaperboardKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PaperboardKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +159,6 @@
 		B0BCF93E2584C9A600ADCBB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B0BCF9552585D48400ADCBB3 /* InputProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProcessor.swift; sourceTree = "<group>"; };
 		B0BCF95C2585D55E00ADCBB3 /* InputKeyboardProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputKeyboardProcessor.swift; sourceTree = "<group>"; };
-		B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Second.swift"; sourceTree = "<group>"; };
 		B0D3683C25864036007CBF35 /* UIView+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Audio.swift"; sourceTree = "<group>"; };
 		B0D36846258645FD007CBF35 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		B0D36853258648FB007CBF35 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
@@ -212,8 +228,11 @@
 			children = (
 				0E20AB582125C43E00F6F62A /* UIKit+Localizable.swift */,
 				0E20AB722127155F00F6F62A /* Collection+Safe.swift */,
-				B0BCF9622585DA0E00ADCBB3 /* Date+Second.swift */,
 				B0D3683C25864036007CBF35 /* UIView+Audio.swift */,
+				730B751C25F0A7FC0052ED10 /* UIColor+HEX.swift */,
+				7319521125F0C4AB00A46256 /* NSLayoutConstraint.swift */,
+				73418C8925FDD4BC00F536D8 /* UIView+Spacing.swift */,
+				73418C8E25FDD52100F536D8 /* UIButton+Centering.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,9 +249,11 @@
 		0E20AB7B2127286E00F6F62A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				0E20AB7C2127289000F6F62A /* SettingsProcessor.swift */,
-				0E20AB802127386200F6F62A /* SetColumnsViewController.swift */,
-				0E20AB812127386200F6F62A /* SetColumnsViewController.xib */,
+				738F2A9C25F733D2009016FC /* SettingsSplitViewController.swift */,
+				735C7B4825F63886006F23F8 /* SettingsMasterViewController.swift */,
+				73F7971D25F64B0000E8FA1B /* ColumnsViewController.swift */,
+				73F7972125F64B1A00E8FA1B /* KeyboardViewController.swift */,
+				73C029D226060B5D00DFF83D /* SymbolsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -328,6 +349,7 @@
 				0E20AB2E2125B94200F6F62A /* Assets.xcassets */,
 				0E734BA82135A67B0000D02F /* Keyboards.plist */,
 				0E20AB7821271F5600F6F62A /* Localizable.strings */,
+				7319521625F0C80D00A46256 /* Localizable.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -451,7 +473,6 @@
 				651B5E6C257F6E4E00583CAC /* GoogleService-Info.plist in Resources */,
 				0E20AB7621271F5600F6F62A /* Localizable.strings in Resources */,
 				0E20AB2F2125B94200F6F62A /* Assets.xcassets in Resources */,
-				0E20AB832127386200F6F62A /* SetColumnsViewController.xib in Resources */,
 				0E734BA92135A67B0000D02F /* Keyboards.plist in Resources */,
 				0E20AB5E2125CAB500F6F62A /* InputCollectionViewCell.xib in Resources */,
 				0E20AB2D2125B93F00F6F62A /* Main.storyboard in Resources */,
@@ -516,24 +537,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E20AB71212713AE00F6F62A /* InputFieldProcessor.swift in Sources */,
+				735C7B4925F63886006F23F8 /* SettingsMasterViewController.swift in Sources */,
 				B0BCF93F2584C9A600ADCBB3 /* Constants.swift in Sources */,
-				0E20AB822127386200F6F62A /* SetColumnsViewController.swift in Sources */,
 				0E20AB7F212729B400F6F62A /* SettingsStorage.swift in Sources */,
 				0E20AB2A2125B93F00F6F62A /* MainInputViewController.swift in Sources */,
 				0E20AB6F21270F1900F6F62A /* InputCollectionProcessor.swift in Sources */,
 				0E20AB282125B93F00F6F62A /* AppDelegate.swift in Sources */,
+				7319521725F0C80D00A46256 /* Localizable.swift in Sources */,
+				7319521225F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */,
 				0E20AB622125DB3000F6F62A /* InputCollectionLayout.swift in Sources */,
 				B0D3683D25864036007CBF35 /* UIView+Audio.swift in Sources */,
 				0E20AB7A2127247100F6F62A /* TextToSpeechProcessor.swift in Sources */,
 				0E20AB592125C43E00F6F62A /* UIKit+Localizable.swift in Sources */,
+				730B751D25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */,
+				73418C8F25FDD52100F536D8 /* UIButton+Centering.swift in Sources */,
 				B0D36854258648FB007CBF35 /* Styles.swift in Sources */,
 				666CF28625837F83008D1872 /* MainKeyboardViewController.swift in Sources */,
+				73F7971E25F64B0000E8FA1B /* ColumnsViewController.swift in Sources */,
 				B07516FA257F6B5100BC905F /* Settings.swift in Sources */,
-				0E20AB7D2127289000F6F62A /* SettingsProcessor.swift in Sources */,
+				73F7972225F64B1A00E8FA1B /* KeyboardViewController.swift in Sources */,
 				B0BCF9562585D48500ADCBB3 /* InputProcessor.swift in Sources */,
+				73418C8A25FDD4BC00F536D8 /* UIView+Spacing.swift in Sources */,
 				B0D36847258645FD007CBF35 /* KeyboardButton.swift in Sources */,
-				B0BCF9662585DA1500ADCBB3 /* Date+Second.swift in Sources */,
 				0E20AB732127155F00F6F62A /* Collection+Safe.swift in Sources */,
+				738F2A9D25F733D2009016FC /* SettingsSplitViewController.swift in Sources */,
+				73C029D326060B5D00DFF83D /* SymbolsViewController.swift in Sources */,
 				0E20AB5D2125CAB500F6F62A /* InputCollectionViewCell.swift in Sources */,
 				0E20AB602125CB7100F6F62A /* InputCollectionDataSource.swift in Sources */,
 				0E20AB7521271C7600F6F62A /* ClearTextField.swift in Sources */,
@@ -545,8 +573,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07516EA257F6A0000BC905F /* InputCollectionLayout.swift in Sources */,
+				7319521825F0C80D00A46256 /* Localizable.swift in Sources */,
 				B07516F4257F6ADB00BC905F /* InputCollectionViewCell.swift in Sources */,
 				B07516B6257F64C200BC905F /* KeyboardViewController.swift in Sources */,
+				730B751E25F0A7FC0052ED10 /* UIColor+HEX.swift in Sources */,
 				B07516D4257F67CB00BC905F /* Collection+Safe.swift in Sources */,
 				B0BCF95D2585D55E00ADCBB3 /* InputKeyboardProcessor.swift in Sources */,
 				B0751708257F6DDD00BC905F /* Settings.swift in Sources */,
@@ -556,12 +586,14 @@
 				B0D3685B258649CF007CBF35 /* Styles.swift in Sources */,
 				66DF1A7F25838B51000F68D8 /* InputCollectionProcessor.swift in Sources */,
 				B075170D257F6DE700BC905F /* SettingsStorage.swift in Sources */,
-				B0BCF9632585DA0E00ADCBB3 /* Date+Second.swift in Sources */,
+				73418C9025FDD52100F536D8 /* UIButton+Centering.swift in Sources */,
 				B0D3683E25864036007CBF35 /* UIView+Audio.swift in Sources */,
 				66DF1A9225838C17000F68D8 /* MainKeyboardViewController.swift in Sources */,
 				B07516EF257F6A5000BC905F /* InputCollectionDataSource.swift in Sources */,
 				B0D3684C25864647007CBF35 /* KeyboardButton.swift in Sources */,
 				B0BCF9442584CA4B00ADCBB3 /* Constants.swift in Sources */,
+				73418C8B25FDD4BC00F536D8 /* UIView+Spacing.swift in Sources */,
+				7319521325F0C4AB00A46256 /* NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +687,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -716,6 +749,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -744,6 +778,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 29HEQ626X2;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Paperboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -751,6 +786,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.4;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -776,6 +812,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.4;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -792,6 +829,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29HEQ626X2;
+				EXCLUDED_ARCHS = "";				
 				INFOPLIST_FILE = PaperboardKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -801,6 +839,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -817,6 +856,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29HEQ626X2;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = PaperboardKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -825,6 +865,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = su.linka.paperboard.keyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

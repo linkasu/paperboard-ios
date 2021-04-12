@@ -10,15 +10,15 @@ import Foundation
 import AVFoundation
 
 class TextToSpeechProcessor: NSObject {
-  
-  private let synthesizer = AVSpeechSynthesizer()
-  private let settings = Settings()
-  
-  func speechText(_ text: String) {
-    let utterance = AVSpeechUtterance(string: text)
-    if let voiceId = settings.currentKeyboard?.voiceId, let voice = AVSpeechSynthesisVoice(identifier: voiceId) {
-      utterance.voice = voice
+    
+    private let synthesizer = AVSpeechSynthesizer()
+    private let settings = Settings()
+    
+    func speechText(_ text: String) {
+        let utterance = AVSpeechUtterance(string: text)
+        if let voiceId = settings.currentKeyboard?.voiceId, let voice = AVSpeechSynthesisVoice(identifier: voiceId) {
+            utterance.voice = voice
+        }
+        synthesizer.speak(utterance)
     }
-    synthesizer.speak(utterance)
-  }
 }

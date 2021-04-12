@@ -1,28 +1,38 @@
 /* 
-  Localizable.strings
-  Paperboard
-
-  Created by Andrey Tchernov on 16.08.2018.
-  Copyright © 2018 Ice Rock. All rights reserved.
-*/
+ Localizable.strings
+ Paperboard
+ 
+ Created by Andrey Tchernov on 16.08.2018.
+ Copyright © 2018 Ice Rock. All rights reserved.
+ */
 
 //MARK: Main input screen
 
-"input.title" = "LINKa. Бумажная клавиатура";
-"input.backspace" = "ШАГ НАЗАД";
-"input.clear" = "СТЕРЕТЬ";
-"input.capslock" = "CAPS LOCK";
-"input.talk" = "СКАЗАТЬ";
+"input.clear" = "стереть";
+"input.talk" = "сказать";
 "input.alphabet" = "а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я";
-"input.done" = "ГОТОВО";
+"input.done" = "готово";
+"input.space" = "пробел";
+
+//MARK: Keyboard
+
+"keyboard.go" = "Go";
+"keyboard.search" = "Поиск";
+"keyboard.continue" = "Продолжить";
+"keyboard.return" = "Enter";
 
 //MARK: Settings
 
 "settings.title" = "Настройки";
-"settings.dialog.columns" = "Выбрать количество столбцов";
-"settings.dialog.cancel" = "Отмена";
+"settings.back" = "Назад";
 "settings.columns.title" = "Количество столбцов";
 "settings.dialog.keyboard" = "Голос и язык ввода";
 "settings.keyboard.default" = "По умолчанию";
-"settings.keyboard.title" = "Голос и язык ввода";
 "settings.keyboard.unknownLanguage" = "Не определен";
+"settings.symbols" = "Символы";
+"settings.symbols.all" = "Все";
+"settings.symbols.numbers" = "Цифры";
+"settings.symbols.punctuation" = "Знаки препинания";
+"settings.symbols.math" = "Математические знаки";
+"settings.symbols.currency" = "Валюты";
+"settings.symbols.extra" = "Дополнительные знаки";

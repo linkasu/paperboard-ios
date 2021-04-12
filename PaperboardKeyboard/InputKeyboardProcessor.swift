@@ -19,6 +19,10 @@ class InputKeyboardProcessor: InputProcessor {
         self.documentProxy = documentProxy
     }
     
+    func space() {
+        append(text: " ")
+    }
+    
     func getText() -> String {
         return (documentProxy.documentContextBeforeInput ?? "") + (documentProxy.documentContextAfterInput ?? "")
     }
@@ -40,6 +44,10 @@ class InputKeyboardProcessor: InputProcessor {
         documentProxy.deleteBackward()
     }
     
+    func changeKeyboard() {
+        inputView?.advanceToNextInputMode()
+    }
+    
     func left() {
         documentProxy.adjustTextPosition(byCharacterOffset: -1)
     }
@@ -58,5 +66,9 @@ class InputKeyboardProcessor: InputProcessor {
     
     func done() {
         inputView?.dismissKeyboard()
+    }
+    
+    func `return`() {
+        documentProxy.insertText("\n")
     }
 }

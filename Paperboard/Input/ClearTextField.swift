@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClearTextField: UITextField {
+class ClearTextField: UITextView {
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         return false
     }

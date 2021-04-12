@@ -1,26 +1,38 @@
 /* 
-  Localizable.strings
-  Paperboard
-
-  Created by Andrey Tchernov on 16.08.2018.
-  Copyright © 2018 Ice Rock. All rights reserved.
-*/
+ Localizable.strings
+ Paperboard
+ 
+ Created by Andrey Tchernov on 16.08.2018.
+ Copyright © 2018 Ice Rock. All rights reserved.
+ */
 
 //MARK: Main input screen
-"input.title" = "LINKa. Paperboard";
-"input.backspace" = "BACKSPACE";
-"input.clear" = "CLEAR";
-"input.capslock" = "CAPS LOCK";
-"input.talk" = "SAY";
+
+"input.clear" = "clear";
+"input.talk" = "say";
 "input.alphabet" = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
-"input.done" = "DONE";
+"input.done" = "done";
+"input.space" = "space";
+
+//MARK: Keyboard
+
+"keyboard.go" = "Go";
+"keyboard.search" = "Search";
+"keyboard.continue" = "Continue";
+"keyboard.return" = "Return";
 
 //MARK: Settings
+
 "settings.title" = "Settings";
-"settings.dialog.columns" = "Choose a count of columns";
-"settings.dialog.cancel" = "Cancel";
+"settings.back" = "Back";
 "settings.columns.title" = "Count of columns";
 "settings.dialog.keyboard" = "Keyboard and voice";
 "settings.keyboard.default" = "Default";
-"settings.keyboard.title" = "Voice and locale";
 "settings.keyboard.unknownLanguage" = "Unknown";
+"settings.symbols" = "Symbols";
+"settings.symbols.all" = "All";
+"settings.symbols.numbers" = "Numbers";
+"settings.symbols.punctuation" = "Punctuations";
+"settings.symbols.math" = "Math";
+"settings.symbols.currency" = "Currencies";
+"settings.symbols.extra" = "Extra";

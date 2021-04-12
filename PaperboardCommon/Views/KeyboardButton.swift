@@ -9,15 +9,8 @@
 import UIKit
 
 class KeyboardButton: UIButton {
-    var isCompact: Bool = false {
-        didSet {
-            updateFont()
-        }
-    }
-    var isPressed: Bool = false
     var defaultBackgroundColor: UIColor = .white
     var highlightBackgroundColor: UIColor = .lightGray
-    var originalFontSize: CGFloat = -1
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,26 +23,36 @@ class KeyboardButton: UIButton {
     }
     
     override func layoutSubviews() {
-      super.layoutSubviews()
-      backgroundColor = isHighlighted || isPressed ? highlightBackgroundColor : defaultBackgroundColor
+        super.layoutSubviews()
+        backgroundColor = isHighlighted ? highlightBackgroundColor : defaultBackgroundColor
     }
     
     func commonInit() {
-        layer.cornerRadius = 5.0
+        let isCompact = UIDevice.current.userInterfaceIdiom == .phone
+        layer.cornerRadius = isCompact ? 5.0 : 8.0
         layer.masksToBounds = false
         layer.shadowOffset = CGSize(width: 0, height: 1.0)
         layer.shadowRadius = 0.0
-        layer.shadowOpacity = 0.35
-        if let titleLabel = titleLabel {
-            originalFontSize = titleLabel.font.pointSize
-        }
+        layer.shadowOpacity = 0.3
+        
+        imageView?.contentMode = .scaleAspectFit
         
         updateFont()
     }
     
     func updateFont() {
+        let isCompact = UIDevice.current.userInterfaceIdiom == .phone
         if let titleLabel = titleLabel {
-            titleLabel.font = titleLabel.font.withSize(isCompact ? 20 : originalFontSize)
+            let originalFontSize = titleLabel.font.pointSize
+            titleLabel.font = titleLabel.font.withSize(isCompact ? originalFontSize/2 : originalFontSize)
         }
+    }
+    
+    func configure(colorScheme: PaperboardColors, buttonColors: ButtonColors) {
+        setTitleColor(colorScheme.textColor, for: [])
+        tintColor = colorScheme.textColor
+        
+        defaultBackgroundColor = buttonColors.backgroundColor
+        highlightBackgroundColor = buttonColors.highlightColor
     }
 }

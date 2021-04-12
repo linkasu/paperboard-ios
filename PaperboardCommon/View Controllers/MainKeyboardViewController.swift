@@ -3,23 +3,29 @@
 //  Paperboard
 //
 //  Created by Dmitry Shipinev on 11.12.2020.
-//  Copyright © 2020 Ice Rock. All rights reserved.
+//  Copyright © 2020 Exyte. All rights reserved.
 //
 
 import UIKit
 
 class MainKeyboardViewController: UIViewController {
-    
     @IBOutlet weak var inputCollectionView: UICollectionView!
     @IBOutlet weak var prevButton: KeyboardButton!
     @IBOutlet weak var nextButton: KeyboardButton!
-    
+    @IBOutlet weak var cursorRight: KeyboardButton!
+    @IBOutlet weak var cursorLeft: KeyboardButton!
     @IBOutlet weak var backspaceButton: KeyboardButton!
     @IBOutlet weak var clearButton: KeyboardButton!
     @IBOutlet weak var capsLockButton: KeyboardButton!
-    @IBOutlet weak var talkButton: KeyboardButton!
-    
-    @IBOutlet var buttonsStackViews: [UIStackView]!
+    @IBOutlet weak var talkButton: KeyboardButton?
+    @IBOutlet weak var settingsButton: KeyboardButton?
+    @IBOutlet weak var shareButton: KeyboardButton?
+    @IBOutlet weak var spaceButton: KeyboardButton!
+    @IBOutlet weak var actionButton: KeyboardButton?
+    @IBOutlet weak var changeKeyboard: KeyboardButton!
+    @IBOutlet weak var doneButton: KeyboardButton!
+    @IBOutlet weak var bottomBarView: UIView!
+    @IBOutlet weak var capsHeightConstraint: NSLayoutConstraint!
     
     let inputSource = InputCollectionDataSource()
     let inputLayout = InputCollectionLayout()
@@ -33,7 +39,21 @@ class MainKeyboardViewController: UIViewController {
     }
     
     let settings = Settings()
-    let defaultColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
+    var isClearSystem: Bool = true
+    let spacingTablet = 12
+    let spacingPhone = 6
+    
+    @IBAction func onActionTouched(_ sender: Any) {
+        inputProcessor.return()
+    }
+    
+    @IBAction func onSpaceTouched(_ sender: Any) {
+        inputProcessor.space()
+    }
+    
+    @IBAction func onKeyboardTouched(_ sender: Any) {
+        inputProcessor.changeKeyboard()
+    }
     
     @IBAction private func onSpeechButtonTouched(_ sender: UIButton!) {
         UIDevice.current.playInputClick()
@@ -48,7 +68,8 @@ class MainKeyboardViewController: UIViewController {
     @IBAction func onCapsLocktouched(_ sender: Any) {
         UIDevice.current.playInputClick()
         inputProcessor.capsLock()
-        capsLockButton.isPressed = inputProcessor.isCaps()
+        let newImage = UIImage(named: inputProcessor.isCaps() ? "shift-on" : "shift-off")
+        capsLockButton.setImage(newImage, for: .normal)
         inputCollectionView.reloadData()
     }
     
@@ -89,6 +110,7 @@ class MainKeyboardViewController: UIViewController {
         
         inputSource.numberOfColumns = settings.currentColumns
         inputSource.currentKeyboard = settings.currentKeyboard
+        inputSource.currentSumbols = settings.currentSymbols
         inputSource.setup(forCollection: inputCollectionView)
         inputLayout.inputSource = inputSource
         
@@ -117,21 +139,29 @@ class MainKeyboardViewController: UIViewController {
             self?.inputProcessor.append(text: toAppend)
         }
         
-        settings.onColumnAmountChanged = { [weak self] newColumns in
+        settings.onColumnAmountChanged.append({ [weak self] newColumns in
             guard let `self` = self else {
                 return
             }
             self.inputSource.numberOfColumns = newColumns
             self.updateCollection()
-        }
+        })
         
-        settings.onKeyboardChanged = { [weak self] newKeyboard in
+        settings.onKeyboardChanged.append({ [weak self] newKeyboard in
             guard let `self` = self else {
                 return
             }
             self.inputSource.currentKeyboard = newKeyboard
             self.updateCollection()
-        }
+        })
+        
+        settings.onSymbolsChanged.append({ [weak self] newSymbols in
+            guard let `self` = self else {
+                return
+            }
+            self.inputSource.currentSumbols = newSymbols
+            self.updateCollection()
+        })
         
         prevButton.titleLabel?.textAlignment = .center
         nextButton.titleLabel?.textAlignment = .center
@@ -139,6 +169,31 @@ class MainKeyboardViewController: UIViewController {
         nextButton.titleLabel?.numberOfLines = 2
         
         updateButtonsTitles()
+        
+        let isCompact = UIDevice.current.userInterfaceIdiom == .phone
+        
+        let spacing = isCompact ? spacingPhone : spacingTablet
+        inputLayout.spacing = NSNumber(value: spacing)
+        configureSpacing(spacing: spacing)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let bounds = inputCollectionView?.bounds {
+            let newHeight = (bounds.height - (2 * CGFloat(truncating: inputLayout.spacing))) / 3
+            capsHeightConstraint.constant = newHeight
+        }
+    }
+    
+    func configureSpacing(spacing: Int) {
+        [cursorLeft, cursorRight, prevButton, nextButton, capsLockButton,
+         backspaceButton, inputCollectionView, bottomBarView, inputCollectionView,
+         settingsButton, spaceButton, shareButton, talkButton, actionButton,
+         clearButton, doneButton, nextButton
+        ].forEach { view in
+            view?.configureSpacing(spacing: spacing)
+        }
     }
     
     func updateButtonsTitles() {
@@ -153,8 +208,10 @@ class MainKeyboardViewController: UIViewController {
             }
             return [values.prefix(2), ["..."], values.suffix(1)].flatMap({ $0 }).joined(separator: ",")
         }
-        prevButton.setTitle("⬅️\n" + titleProduce(prevSection).uppercased(), for: .normal)
-        nextButton.setTitle("➡️\n" + titleProduce(nextSection).uppercased(), for: .normal)
+        prevButton.setTitle(titleProduce(prevSection).uppercased(), for: .normal)
+        prevButton.centerVertically()
+        nextButton.setTitle(titleProduce(nextSection).uppercased(), for: .normal)
+        nextButton.centerVertically()
     }
     
     private func updateCollection() {
@@ -177,29 +234,47 @@ class MainKeyboardViewController: UIViewController {
         view.backgroundColor = colorScheme.backgroundColor
         inputCollectionView.backgroundColor = colorScheme.backgroundColor
         
-        for view in view.subviews {
-            if let button = view as? KeyboardButton {
-                configure(button: button, colorScheme: colorScheme)
-            }
-        }
-        
         for cell in inputCollectionView.visibleCells {
             if let inputCell = cell as? InputCollectionViewCell {
-                configure(button: inputCell.characterButton, colorScheme: colorScheme)
+                inputCell.characterButton.configure(
+                    colorScheme: colorScheme,
+                    buttonColors: colorScheme.main
+                )
             }
         }
         
-        configure(button: clearButton, colorScheme: colorScheme)
-        configure(button: backspaceButton, colorScheme: colorScheme)
-        configure(button: capsLockButton, colorScheme: colorScheme)
-        configure(button: talkButton, colorScheme: colorScheme)
+        setColors(colorScheme: colorScheme)
     }
     
-    func configure(button: KeyboardButton, colorScheme: PaperboardColors) {
-        button.setTitleColor(colorScheme.buttonTextColor, for: [])
-        button.tintColor = colorScheme.buttonTextColor
+    func setColors(colorScheme: PaperboardColors) {
+        spaceButton.configure(colorScheme: colorScheme, buttonColors: colorScheme.main)
         
-        button.defaultBackgroundColor = colorScheme.buttonBackgroundColor
-        button.highlightBackgroundColor = colorScheme.buttonHighlightColor
+        if isClearSystem {
+            clearButton.configure(colorScheme: colorScheme, buttonColors: colorScheme.system)
+        } else {
+            clearButton.configure(colorScheme: colorScheme, buttonColors: colorScheme.control)
+        }
+        
+        [settingsButton, shareButton].forEach {
+            $0?.configure(colorScheme: colorScheme, buttonColors: colorScheme.system)
+        }
+        
+        [changeKeyboard, doneButton, cursorLeft, cursorRight, prevButton,
+         nextButton, backspaceButton, capsLockButton].forEach {
+            $0?.configure(colorScheme: colorScheme, buttonColors: colorScheme.control)
+         }
+        [talkButton, actionButton].forEach {
+            configureFocus(button: $0, colorScheme: colorScheme)
+        }
+    }
+    
+    func configureFocus(button: KeyboardButton?, colorScheme: PaperboardColors) {
+        button?.configure(
+            colorScheme: colorScheme,
+            buttonColors: colorScheme.focus
+        )
+        
+        button?.setTitleColor(UIColor.white, for: [])
+        button?.tintColor = UIColor.white
     }
 }
