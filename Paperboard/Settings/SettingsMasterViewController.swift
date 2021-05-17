@@ -52,7 +52,7 @@ class SettingsMasterViewController: UITableViewController {
                 if let locale = self.settings.currentKeyboard?.locale {
                     cell.valueLabel.text = locale
                 } else {
-                    cell.valueLabel.text = PaperboardMessages.settingKeyboardDefault.text
+                    cell.valueLabel.text = Locale.current.languageCode
                 }
             }
         })
@@ -98,7 +98,7 @@ class SettingsMasterViewController: UITableViewController {
             if let locale = settings.currentKeyboard?.locale {
                 cell.valueLabel.text = locale
             } else {
-                cell.valueLabel.text = PaperboardMessages.settingKeyboardDefault.text
+                cell.valueLabel.text = Locale.current.languageCode
             }
         case .symbols:
             cell.nameLabel.text = PaperboardMessages.settingsSymbols.text
